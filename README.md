@@ -19,7 +19,7 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/eduardo-cpu/Ha-Assist
+git clone https://github.com/eduardo-cpu/HA--ASSIST
 # Install dependencies
 npm install
 # Run the app
