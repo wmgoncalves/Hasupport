@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    height: 100vh;
+    width: 100vw;
+
+}
+.fundo1{
+    background-color: thistle;
+    height: 100%;
+
+}
+
+/*Style padão para o menu com botões*/
+.fundo-botao{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.botao-padrao{
+    text-decoration: none;
+    margin: 10px 2px;
+    width: 85%;
+    text-align: center;
+    
+}
+.botao-padrao button{
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1.5rem 2.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    cursor: pointer;
+    
+
+}
+.botao-padrao button:hover{
+    background-color: rgb(227, 227, 227);
+
+}
