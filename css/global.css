@@ -27,7 +27,7 @@ body{
 }
 .botao-padrao{
     text-decoration: none;
-    margin: 10px 2px;
+    margin: 5px 2px;
     width: 85%;
     text-align: center;
     
@@ -35,8 +35,8 @@ body{
 .botao-padrao button{
     border: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 1.5rem 2.5rem;
-    font-size: 2rem;
+    padding: 1.2rem .5rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: black;
     background-color: white;
@@ -48,5 +48,24 @@ body{
 }
 .botao-padrao button:hover{
     background-color: rgb(227, 227, 227);
+
+}
+
+/*style para textos escondidos*/
+.text-none-style{
+    background-color: rgb(220, 220, 220);
+    padding: 1rem 2rem;
+    margin: 5px 0px;
+    width: 70%;
+    color: black;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 1.1rem;
+    box-shadow: 1px 1px 10px rgb(72, 72, 72);
+
+}
+.text-none-style p{
+    padding: 2px 0px;
 
 }
