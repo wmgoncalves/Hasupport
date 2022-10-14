@@ -13,8 +13,8 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
-  mainWindow.loadfile('enf.png')
+  mainWindow.loadFile('./pages/cadastro.html')
+ 
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
