@@ -5,19 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.css">
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/menu4.css">
     <title>HA assist</title>
 </head>
 <body>
     <div class="fundo1">
-        <form action="">
-            <input type="text" placeholder="Nome" id="nome"/>
-            <input type="number" placeholder="Idadde" id="idade"/>
-            <button type="submit" onclick="insertDados()">Enviar</button>
-        </form>
-        <a href="./menu4.html">Voltar</a>
+        <div class="menu">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./menu1.html">INICIO</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./menu3.html">VOLTAR</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#">AVANÇAR</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
     </div>
     <script src="../js/insertDadosStorage.js"></script>
+    <script src="../js/bootstrap-js/bootstrap.js"></script>
 </body>
 </html>
