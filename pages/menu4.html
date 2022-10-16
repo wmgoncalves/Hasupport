@@ -35,7 +35,7 @@
               </nav>
         </div>
         <div class="fundo-botao">
-            <a href="#" class="botao-padrao">
+            <a class="botao-padrao">
                 <button id="btn-aspectos">ASPECTOS A SEREM AVALIADOS</button>
             </a>
             <div class="text-none-aspectos text-none-style">
@@ -60,7 +60,7 @@
                     <p> (texto explicativo)</p>
                 </div>
             </div>
-            <a href="#" class="botao-padrao">
+            <a class="botao-padrao">
                 <button id="btn-proped">TÉCNICAS PROPEDÊUTICAS</button>
             </a>
             <div class="text-none-proped text-none-style">
@@ -78,7 +78,7 @@
                     <p> (imagem)</p>
                 </div>
             </div>
-            <a href="#" class="botao-padrao">
+            <a class="botao-padrao">
                 <button id="btn-sinais">SINAIS VITAIS</button>
             </a>
             <div class="text-none-sinais text-none-style">
@@ -105,8 +105,8 @@
                     <p> (texto com as orientações para o preparo e procedimento)</p>
                 </div>
             </div>
-            <a href="#" class="botao-padrao">
-                <button>RASTREAMENTO DA HIPERTENSÃO ARTERIAL</button>
+            <a class="botao-padrao">
+                <button id="btn-rastreamento">RASTREAMENTO DA HIPERTENSÃO ARTERIAL</button>
             </a>
             <div class="text-none-rastreamento text-none-style">
                 <div>
@@ -115,23 +115,80 @@
                 </div>
                 <div>
                     <h4>- Valores aferidos</h4>
-                    <form action="" id="form-pas-pad">
-                        <label for="">PAS:</label>
-                        <input id="pas" type="number" placeholder="mmHg">
-                        <label id="pad" for="">PAD:</label>
-                        <input type="number" placeholder="mmHg">
-                        <button id="btn-pas-pad">Calcular</button>
+                    <form class="form-style" onsubmit="return false">
+                        <div>
+                            <label for="">PAS:</label>
+                            <input id="pas" type="number" placeholder="mmHg">
+                        </div>
+                        <div>
+                            <label for="">PAD:</label>
+                            <input id="pad" type="number" placeholder="mmHg">
+                        </div>
+                        <div>
+                            <button id="btn-pas-pad">Calcular</button>
+                        </div>
                     </form>
+                    <p id="retorno-calculo">Resultado...</p>
                 </div>
             </div>
-            <a href="#" class="botao-padrao">
-                <button>DADOS ANTROPOMÉTRICOS</button>
+            <a class="botao-padrao">
+                <button id="btn-antropom">DADOS ANTROPOMÉTRICOS</button>
             </a>
-            <a href="#" class="botao-padrao">
+            <div class="text-none-antropom text-none-style">
+                <div class="flex-ajuste">
+                    <a class="botao-padrao botao-padrao-interno">
+                        <button id="btn-imc">ÍNDICE DE MASSA CORPORAL (IMC)</button>
+                    </a>
+                    <div class="text-none-imc text-none-style-interno">
+                        <div>
+                            <h4>- Valores aferidos</h4>
+                            <form action="" class="form-style-interno" onsubmit="return false">
+                                <div>
+                                    <label for="">Peso(kg):</label>
+                                    <input id="imc-peso" type="number" placeholder="Peso">
+                                </div>
+                                <div>
+                                    <label for="">Altura:</label>
+                                    <input id="imc-altura" type="number" placeholder="Altura">
+                                </div>
+                                <div>
+                                    <label for="">Idade:</label>
+                                    <input id="imc-idade" type="number" placeholder="Idade">
+                                </div>
+                                <div>
+                                    <label for="">Sexo:</label>
+                                    <input id="imc-seco" type="text" placeholder="Sexo">
+                                </div>
+                                <div>
+                                    <button id="btn-imc">Calcular</button>
+                                </div>
+                            </form>
+                            <p>IMC: <span id="retorno-calculo-imc">...</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-ajuste">
+                    <a class="botao-padrao botao-padrao-interno">
+                        <button>CIRCUNFERÊNCIA ABDOMINAL</button>
+                    </a>
+                </div>
+                <div class="flex-ajuste">
+                    <a class="botao-padrao botao-padrao-interno">
+                        <button>RELAÇÃO CINTURA-QUADRIL</button>
+                    </a>
+                </div>
+                <div class="flex-ajuste">
+                    <a class="botao-padrao botao-padrao-interno">
+                        <button>ÍNDICE TORNOZELO-BRAQUIAL</button>
+                    </a>
+                </div>
+            </div>
+            <a class="botao-padrao">
                 <button>ESTRATIFICAÇÃO DO RISCO CARDIOVASCULAR</button>
             </a>
         </div>
     </div>
+    <script type="module" src="../js/insertDadosStorage.js"></script>
     <script type="module" src="../js/global.js"></script>
     <script src="../js/bootstrap-js/bootstrap.js"></script>
 </body>

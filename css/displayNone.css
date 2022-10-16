@@ -1,6 +1,14 @@
+/*Disable textos*/
 .text-none-aspectos, 
 .text-none-proped,
-.text-none-sinais{
+.text-none-sinais,
+.text-none-rastreamento,
+.text-none-antropom{
     display: none;
     
+}
+
+/*Disable textos internos*/
+.text-none-imc{
+    display: none;
 }
