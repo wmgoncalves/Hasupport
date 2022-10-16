@@ -20,6 +20,9 @@ body{
 }
 .navbar-collapse{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
 
 }
 .menu .navbar-nav{
@@ -29,21 +32,22 @@ body{
     width: 100%;
 
 }
-.menu .navbar-nav .nav-item{
-    padding: 5px 30px;
+.menu .nav-item{
+    padding: 5px;
     margin: 5px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgb(122, 122, 122);
 
-}
-.menu .navbar-nav .nav-item:hover{
-    background-color: rgba(255, 255, 255, 0.7);
-    
 }
 .menu .navbar-nav a{
     color: black;
     font-weight: 500;
 
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 48
 }
 
 /*Formatação padão para os botões globais*/
