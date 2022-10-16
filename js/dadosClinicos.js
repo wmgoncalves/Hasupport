@@ -1,24 +1,15 @@
-let dados = [
-    {
-        nome: '',
-        idade: null,
-        peso: null,
-        altura: null,
-        sexo: '',
-        pas: null,
-        pad: null
-    }
-];
+let pas = '';
+let pad = '';
 
-function insertDados(){
-    dados[0].nome = localStorage.getItem('nome');
-    dados[0].idade = localStorage.getItem('idade');
-    dados[0].pas = localStorage.getItem('pas');
-    dados[0].pad = localStorage.getItem('pad');
-
+function insertDados(pass, padd){
     console.log('Sucesso Cad Dados Clinicos');
-    console.log(dados[0].pas, dados[0].pad);
+    getDados();
+    
+}
+function getDados(){
+    console.log(pas, pad);
+    console.log(localStorage.getItem('pas'), localStorage.getItem('pad'));
 
 }
 
-export default {dados, insertDados};
+export default {insertDados, getDados};

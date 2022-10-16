@@ -117,12 +117,10 @@
                     <h4>- Valores aferidos</h4>
                     <form class="form-style" onsubmit="return false">
                         <div>
-                            <label for="">PAS:</label>
-                            <input id="pas" type="number" placeholder="mmHg">
+                            <input id="pas" type="number" placeholder="Pad: mmHg">
                         </div>
                         <div>
-                            <label for="">PAD:</label>
-                            <input id="pad" type="number" placeholder="mmHg">
+                            <input id="pad" type="number" placeholder="Pas: mmHg">
                         </div>
                         <div>
                             <button id="btn-pas-pad">Calcular</button>
@@ -141,26 +139,22 @@
                     </a>
                     <div class="text-none-imc text-none-style-interno">
                         <div>
-                            <h4>- Valores aferidos</h4>
+                            <h4>ÍNDICE DE MASSA CORPORAL (IMC)</h4>
                             <form action="" class="form-style-interno" onsubmit="return false">
                                 <div>
-                                    <label for="">Peso(kg):</label>
                                     <input id="imc-peso" type="number" placeholder="Peso">
                                 </div>
                                 <div>
-                                    <label for="">Altura:</label>
                                     <input id="imc-altura" type="number" placeholder="Altura">
                                 </div>
                                 <div>
-                                    <label for="">Idade:</label>
                                     <input id="imc-idade" type="number" placeholder="Idade">
                                 </div>
                                 <div>
-                                    <label for="">Sexo:</label>
-                                    <input id="imc-seco" type="text" placeholder="Sexo">
+                                    <input id="imc-sexo" type="text" placeholder="Sexo">
                                 </div>
                                 <div>
-                                    <button id="btn-imc">Calcular</button>
+                                    <button id="btn-imc-calcular">Calcular</button>
                                 </div>
                             </form>
                             <p>IMC: <span id="retorno-calculo-imc">...</span></p>
@@ -169,18 +163,72 @@
                 </div>
                 <div class="flex-ajuste">
                     <a class="botao-padrao botao-padrao-interno">
-                        <button>CIRCUNFERÊNCIA ABDOMINAL</button>
+                        <button id="btn-circ-abdom">CIRCUNFERÊNCIA ABDOMINAL</button>
                     </a>
+                    <div class="text-none-circ-abdom text-none-style-interno">
+                        <div>
+                            <h4>CIRCUNFERÊNCIA ABDOMINAL</h4>
+                            <form action="" class="form-style-interno" onsubmit="return false">
+                                <div>
+                                    <input id="circ-abdom-cm" type="number" placeholder="cm">
+                                </div>
+                                <div>
+                                    <input id="circ-abdom-sexo" type="text" placeholder="Sexo">
+                                </div>
+                                <div>
+                                    <button id="btn-circ-abdom-calcular">Calcular</button>
+                                </div>
+                            </form>
+                            <p>Resultado: <span id="retorno-calculo-circ-abdom">...</span></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="flex-ajuste">
                     <a class="botao-padrao botao-padrao-interno">
-                        <button>RELAÇÃO CINTURA-QUADRIL</button>
+                        <button id="btn-cint-quadr">RELAÇÃO CINTURA-QUADRIL</button>
                     </a>
+                    <div class="text-none-cint-quadr text-none-style-interno">
+                        <div>
+                            <h4>RELAÇÃO CINTURA-QUADRIL</h4>
+                            <form action="" class="form-style-interno" onsubmit="return false">
+                                <div>
+                                    <input id="cint-quadr-abdom-cm" type="number" placeholder="(Cm) Circunferência abdominal">
+                                </div>
+                                <div>
+                                    <input id="cint-quadr-quadr-cm" type="number" placeholder="(Cm) Circunferência do quadril">
+                                </div>
+                                <div>
+                                    <input id="cint-quadr-sexo" type="text" placeholder="Sexo">
+                                </div>
+                                <div>
+                                    <button id="btn-cint-quadr-calcular">Calcular</button>
+                                </div>
+                            </form>
+                            <p>Resultado: <span id="retorno-calculo-cint-quadr">...</span></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="flex-ajuste">
                     <a class="botao-padrao botao-padrao-interno">
-                        <button>ÍNDICE TORNOZELO-BRAQUIAL</button>
+                        <button id="btn-torn-braq">ÍNDICE TORNOZELO-BRAQUIAL</button>
                     </a>
+                    <div class="text-none-torn-braq text-none-style-interno">
+                        <div>
+                            <h4>ÍNDICE TORNOZELO-BRAQUIAL</h4>
+                            <form action="" class="form-style-interno" onsubmit="return false">
+                                <div>
+                                    <input id="torn-braq-pas-torn" type="number" placeholder="Valor da maior PAS do tornozelo">
+                                </div>
+                                <div>
+                                    <input id="torn-braq-pas-bra" type="number" placeholder="Valor da PAS do braço">
+                                </div>
+                                <div>
+                                    <button id="btn-torn-braq-calcular">Calcular</button>
+                                </div>
+                            </form>
+                            <p>Resultado: <span id="retorno-calculo-torn-braq">...</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <a class="botao-padrao">

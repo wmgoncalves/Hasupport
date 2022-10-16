@@ -5,6 +5,9 @@ const btn4 = document.querySelector('#btn-rastreamento');
 const btn5 = document.querySelector('#btn-antropom');
 
 const btn6 = document.querySelector('#btn-imc');
+const btn7 = document.querySelector('#btn-circ-abdom');
+const btn8 = document.querySelector('#btn-cint-quadr');
+const btn9 = document.querySelector('#btn-torn-braq');
 
 function carrega1(){
     const el = document.querySelector('.text-none-aspectos');
@@ -72,6 +75,39 @@ function carrega6(){
         btn6.textContent = 'FECHAR';
     }
 }
+function carrega7(){
+    const el = document.querySelector('.text-none-circ-abdom');
+    if(el.style.display === 'block'){
+        el.style.display = 'none';
+        btn7.textContent = 'CIRCUNFERÊNCIA ABDOMINAL';        
+    
+    } else {
+        el.style.display = 'block';
+        btn7.textContent = 'FECHAR';
+    }
+}
+function carrega8(){
+    const el = document.querySelector('.text-none-cint-quadr');
+    if(el.style.display === 'block'){
+        el.style.display = 'none';
+        btn8.textContent = 'RELAÇÃO CINTURA-QUADRIL';        
+    
+    } else {
+        el.style.display = 'block';
+        btn8.textContent = 'FECHAR';
+    }
+}
+function carrega9(){
+    const el = document.querySelector('.text-none-torn-braq');
+    if(el.style.display === 'block'){
+        el.style.display = 'none';
+        btn9.textContent = 'ÍNDICE TORNOZELO-BRAQUIAL';        
+    
+    } else {
+        el.style.display = 'block';
+        btn9.textContent = 'FECHAR';
+    }
+}
 btn1.addEventListener("click", carrega1);
 btn2.addEventListener("click", carrega2);
 btn3.addEventListener("click", carrega3);
@@ -79,3 +115,6 @@ btn4.addEventListener("click", carrega4);
 btn5.addEventListener("click", carrega5);
 
 btn6.addEventListener("click", carrega6);
+btn7.addEventListener("click", carrega7);
+btn8.addEventListener("click", carrega8);
+btn9.addEventListener("click", carrega9);

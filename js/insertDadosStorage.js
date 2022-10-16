@@ -1,4 +1,4 @@
-import dados from './dadosClinicos.js';
+//import dados from './dadosClinicos.js';
 const btnPasPad = document.querySelector('#btn-pas-pad');
 
 function insertPasPad(){
@@ -8,7 +8,8 @@ function insertPasPad(){
     localStorage.setItem('pas', pas);
     localStorage.setItem('pad', pad);
 
-    dados.insertDados();
+    //dados.insertDados(pas, pad);
+    console.log('Sucesso Cad Storage:', pas, pad);
     calculaPasPad(pas, pad);
     
 }

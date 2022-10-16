@@ -53,13 +53,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;   
+    width: 100%; 
 
 }
 .botao-padrao{
     text-decoration: none;
     margin: 5px 2px;
-    width: 85%;
+    width: 90%;
     text-align: center;
     
 }
@@ -87,7 +87,7 @@ body{
     background-color: white;
     padding: 1rem 2rem;
     margin: 5px 0px;
-    width: 80%;
+    width: 85%;
     color: black;
     font-weight: 500;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -108,15 +108,15 @@ body{
     flex-direction: column;
     width: 100%;
 
-}
+}/*
 .form-style label{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
 
-}
+}*/
 .form-style input{
-    width: 70%;
-    height: 40px;
+    width: 60%;
+    height: 50px;
     border: none;
     padding: 5px;
     margin: 5px;
@@ -128,13 +128,13 @@ body{
     border: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 15px 0px;
-    margin: 5px;
+    margin: 20px 0;
     font-size: 1rem;
     font-weight: 600;
     color: black;
     background-color: rgba(219, 219, 219, 0.6);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
-    width: 70%;
+    width: 50%;
 
 }
 .form-style button:hover{
@@ -147,12 +147,13 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 
 }
 .text-none-style-interno{
     padding: 5px 5px;
     margin: 5px 5px;
-    width: 80%;
+    width: 85%;
     color: black;
     font-weight: 500;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -184,15 +185,15 @@ body{
 .form-style-interno div{
     display: block;
 
-}
+}/*
 .form-style-interno label{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
 
-}
+}*/
 .form-style-interno input{
     width: 60%;
-    height: 40px;
+    height: 50px;
     border: none;
     padding: 5px;
     margin: 5px;
@@ -203,14 +204,14 @@ body{
 .form-style-interno button{
     border: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 10px 0px;
-    margin: 5px;
+    padding: 15px 0px;
+    margin: 20px 0;
     font-size: 1rem;
     font-weight: 600;
     color: black;
     background-color: rgba(219, 219, 219, 0.6);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
-    width: 60%;
+    width: 50%;
 
 }
 .form-style-interno button:hover{

@@ -9,6 +9,9 @@
 }
 
 /*Disable textos internos*/
-.text-none-imc{
+.text-none-imc,
+.text-none-circ-abdom,
+.text-none-cint-quadr,
+.text-none-torn-braq{
     display: none;
 }
