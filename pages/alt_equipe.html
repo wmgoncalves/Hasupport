@@ -13,21 +13,24 @@
     <title>HA assist</title>
 </head>
 <body>
-    <div class="botao-padrao">
-      <label for="Login_Equipe"></label>
-      <input id="Login_Equipe" name="Login_Equipe" required="required" type="text" placeholder="Login da Equipe"/>
-    </div>
-    <div class="botao-padrao">
-      <label for="senha_equipe"></label>
-      <input id="senha_equipe" name="senha_equipe" required="required" type="password" placeholder="Senha da Equipe"/>
-    </div>
-    <div class="botao-padrao">
-        <label for="membros_equipe"></label>
-        <input id="membros_equipe" name="membros_equipe" required="required" type="text" placeholder="Membros da Equipe"/>
+    <div class="fundo-cadastro">
+        <div class="form">
+          <form>
+            <div>
+              <input class="login" name="login" required="required" type="text" placeholder="Login da Equipe"/>
+            </div>
+            <div>
+              <input class="senha" name="senha" required="required" type="password" placeholder="Senha da Equipe"/>
+            </div>
+            <div>
+                <input class="membros_equipe" name="membros_equipe" required="required" type="password" placeholder="Membros da Equipe"/>
+              </div>
+            <div>
+              <button id="login">ALTERAR</button>
+            </div>
+          </form>
+        </div>
       </div>
-      <a href="./adm_area.html">
-        <input class="botao-padrao" id="Cadastrar_equipe" type="submit" value="Cadastrar Equipe"/>
-      </a>
     <script type="module" src="../js/login.js"></script>
 </body>
 </html>

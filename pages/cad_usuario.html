@@ -13,25 +13,28 @@
     <title>HA assist</title>
 </head>
 <body>
-    <div class="botao-padrao">
-      <label for="Nome"></label>
-      <input id="Nome" name="nome" required="required" type="text" placeholder="Nome"/>
+
+  <div class="fundo-cadastro">
+    <div class="form">
+      <form>
+        <div>
+          <input class="nome" name="nome" required="required" type="text" placeholder="Nome"/>
+        </div>
+        <div>
+          <input class="data_nascimento" name="data_nascimento" required="required" type="date" placeholder="Data de Nascimento"/>
+        </div>
+        <div>
+            <input class="cpf" name="cpf" required="required" type="number" placeholder="CPF"/>
+          </div>
+          <div>
+            <input class="cartao_sus" name="cartao_sus" required="required" type="number" placeholder="Cartão do Sus"/>
+          </div>
+        <div>
+          <button id="cadastrar">CADASTRAR</button>
+        </div>
+      </form>
     </div>
-    <div class="botao-padrao">
-      <label for="Data_Nascimento"></label>
-      <input id="Data_Nascimento" name="Data_Nascimento" required="required" type="date" placeholder="Senha"/>
-    </div>
-    <div class="botao-padrao">
-        <label for="CPF"></label>
-        <input id="CPF" name="CPF" required="required" type="number" placeholder="CPF"/>
-      </div>
-      <div class="botao-padrao">
-        <label for="Cartao-SUS"></label>
-        <input id="Cartao-SUS" name="Cartao-SUS" required="required" type="Cartao-SUS" placeholder="Cartao SUS"/>
-      </div>
-      <a href="./menu1.html">
-        <input class="botao-padrao" id="Cadastrar" type="submit" value="Cadastrar"/>
-      </a>
+  </div>
     <script type="module" src="../js/login.js"></script>
 </body>
 </html>
