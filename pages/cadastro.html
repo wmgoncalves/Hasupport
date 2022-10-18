@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,19 +11,20 @@
 </head>
 <body>
   <a href="./menu1.html">MENU</a>
-  <div class="">
-  <img src="../assets/enf2.png" width="400" height="200" allign="center">
-  <p>
-    <label for="Login"></label>
-    <input id="Login" name="login" required="required" type="text" placeholder="Nome de usuário"/>
-    <p>
+  <div class="botao-padrao">
+    <img src="../assets/enf2.png" width="300" height="150" >
+  </div>
+    <div class="botao-padrao">
+      <label for="Login"></label>
+      <input id="Login" name="login" required="required" type="text" placeholder="Nome de usuário"/>
+    </div>
+    <div class="botao-padrao">
       <label for="senha_login"></label>
-      <input id="senha_login" name="senha_login" required="required" type="password" placeholder="Senha" allign="center" />
-    </p>
-    <p>
-      <input id="Logar" type="submit" value="Logar" />
-    </p>
-
+      <input id="senha_login" name="senha_login" required="required" type="password" placeholder="Senha"/>
+    </div>
+    <a href="./adm_area.html">
+      <input class="botao-padrao" id="Logar" type="submit" value="Logar"/>
+    </a>
     <script type="module" src="../js/login.js"></script>
 </body>
 </html>
