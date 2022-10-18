@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "electron:serve": "electron:serve",
-    "package-win": "electron-packager . ha-assist --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"HA Assist App\""
+    "package-win32": "electron-packager . ha-assist --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"HA Assist App\""
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [

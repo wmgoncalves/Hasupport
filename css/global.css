@@ -61,7 +61,7 @@ body{
 }
 .botao-padrao{
     text-decoration: none;
-    margin: 5px 2px;
+    margin: 10px 2px;
     width: 90%;
     text-align: center;
     
@@ -74,7 +74,8 @@ body{
     font-weight: 600;
     color: black;
     background-color: #80cc80;
-    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgb(150, 150, 150);
     width: 100%;
     cursor: pointer;
     
@@ -87,7 +88,7 @@ body{
 /*Formatação para os textos escondidos*/
 .text-none-style, .text-none-tec-proped{
     background-color: white;
-    padding: 1rem 2rem;
+    padding: 1.5rem 1rem;
     margin: 5px 0px;
     width: 85%;
     color: black;
@@ -103,6 +104,11 @@ body{
     padding: 2px 0px;
 
 }
+.text-none-style h4{
+    padding: 10px 0px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
 
 /*Formatação para inputs globais*/
 .form-style{
@@ -110,20 +116,15 @@ body{
     flex-direction: column;
     width: 100%;
 
-}/*
-.form-style label{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
-
-}*/
+}
 .form-style input{
     width: 60%;
     height: 50px;
-    border: none;
     padding: 5px;
     margin: 5px;
-    box-shadow: 2px 2px 2px black;
-    background-color: rgba(219, 219, 219, 0.555);
+    border: 1px solid rgb(150, 150, 150);
+    box-shadow: 0px 0px 5px rgb(150, 150, 150);
+    background-color: rgba(219, 219, 219, 0.5);
 
 }
 .form-style button{
@@ -134,9 +135,10 @@ body{
     font-size: 1rem;
     font-weight: 600;
     color: black;
-    background-color: #80cc80;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
     width: 50%;
+    border: 1px solid rgb(150, 150, 150);
+    background-color: #80cc80;
+    box-shadow: 0px 0px 5px rgb(150, 150, 150);
 
 }
 .form-style button:hover{
@@ -150,7 +152,7 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
-
+    
 }
 .text-none-style-interno{
     padding: 5px 5px;
@@ -162,21 +164,27 @@ body{
     text-align: center;
     font-size: 1rem;
     box-shadow: 1px 1px 10px rgb(72, 72, 72);
-
+    
 }
 .text-none-style-interno div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+}
+.botao-padrao-interno{
+    margin: 7px 0px;
+    width: 90%;
 
 }
 .botao-padrao-interno button{
-    margin: 5px 0px;
     width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     font-weight: 600;
-
+    background-color: #80cc80;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgb(150, 150, 150);
 
 }
 .form-style-interno{
@@ -188,20 +196,16 @@ body{
 .form-style-interno div{
     display: block;
 
-}/*
-.form-style-interno label{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
-
-}*/
+}
 .form-style-interno input{
     width: 60%;
     height: 50px;
     border: none;
     padding: 5px;
     margin: 5px;
-    box-shadow: 2px 2px 2px black;
-    background-color: rgba(219, 219, 219, 0.555);
+    border: 1px solid rgb(150, 150, 150);
+    box-shadow: 0px 0px 5px rgb(150, 150, 150);
+    background-color: rgba(219, 219, 219, 0.5);
 
 }
 .form-style-interno button{
@@ -212,9 +216,10 @@ body{
     font-size: 1rem;
     font-weight: 600;
     color: black;
-    background-color: #80cc80;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
     width: 50%;
+    border: 1px solid rgb(150, 150, 150);
+    background-color: #80cc80;
+    box-shadow: 0px 0px 5px rgb(150, 150, 150);
 
 }
 .form-style-interno button:hover{
