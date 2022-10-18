@@ -12,21 +12,26 @@
     <title>HA assist</title>
 </head>
 <body>
-  <a href="./menu1.html">MENU</a>
-  <div class="botao-padrao">
-    <img src="../assets/enf2.png" width="300" height="150" >
+  <div class="fundo-cadastro">
+    <a href="./menu1.html">MENU</a>
+    <div class="img">
+      <img src="../assets/enf2.png" width="300" height="150" >
+    </div>
+    <div class="form">
+      <form>
+        <div>
+          <input class="login" name="login" required="required" type="text" placeholder="Nome de usuário"/>
+        </div>
+        <div>
+          <input class="senha" name="senha" required="required" type="password" placeholder="Senha"/>
+        </div>
+        <div>
+          <button id="login">ENTRAR</button>
+        </div>
+      </form>
+    </div>
   </div>
-    <div class="botao-padrao">
-      <label for="Login"></label>
-      <input id="Login" name="login" required="required" type="text" placeholder="Nome de usuário"/>
-    </div>
-    <div class="botao-padrao">
-      <label for="senha_login"></label>
-      <input id="senha_login" name="senha_login" required="required" type="password" placeholder="Senha"/>
-    </div>
-    <a href="./adm_area.html">
-      <input class="botao-padrao" id="Logar" type="submit" value="Logar"/>
-    </a>
+
     <script type="module" src="../js/login.js"></script>
 </body>
 </html>

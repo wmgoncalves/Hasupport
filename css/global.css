@@ -108,8 +108,20 @@ body{
     padding: 10px 0px;
     font-weight: 600;
     font-size: 1.1rem;
-}
 
+}
+.text-none-style .ajuste-text p,
+.text-none-style .ajuste-text h5{
+    text-align: left;
+
+}
+.text-none-style .ajuste-text
+.ajuste-text-destaque{
+    padding: 5px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 7px rgb(102, 102, 102);
+
+}
 /*Formatação para inputs globais*/
 .form-style{
     display: flex;

@@ -1,11 +1,11 @@
 import { selectEquipe } from "./connection/db_connect.js";
 
-const btnLogin = document.querySelector("#Logar");
+const btnLogin = document.querySelector("#logar");
 
 async function logar(){
     console.log("COMEÇOU!");
 
-    let login = document.querySelector("#Login").value;
+    let login = document.querySelector("#login").value;
     let senha = document.querySelector("#senha_login").value;
 
     let sql = `SELECT * FROM usuario WHERE login='${login}' AND senha='${senha}'`;

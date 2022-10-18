@@ -1,0 +1,53 @@
+.fundo-cadastro{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.fundo-cadastro img{
+    width: 20rem;
+    height: 10rem;
+
+}
+.fundo-cadastro .img{
+    margin: 10px;
+
+}
+.fundo-cadastro form{
+    padding: 5px;
+    margin: 20px 0px;
+    
+}
+.fundo-cadastro form div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.fundo-cadastro .form{
+    width: 60%;
+
+}
+.fundo-cadastro input{
+    border: none;
+    border-bottom: 2px solid rgb(177, 177, 177);
+    padding: 10px 0px;
+    margin: 10px 0px;
+    width: 90%;
+
+}
+.fundo-cadastro button{
+    margin: 10px 0px;
+    width: 90%;
+    border: none;
+    background-color: #a5d6a7;
+    box-shadow: 1px 1px 2px rgb(83, 83, 83);
+    padding: 20px 0px;
+    font-size: 1.1rem;
+    font-weight: 700;
+
+}
