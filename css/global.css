@@ -238,3 +238,16 @@ body{
     background-color: #80cc80d4;
 
 }
+
+/*Formatação das paginas só com texto*/
+.text-style-pure{
+    padding: 5rem 3rem;
+
+}
+.text-style-pure p{
+    text-align: justify;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+
+}

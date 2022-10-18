@@ -1,6 +1,6 @@
 import { selectEquipe, insertEquipe } from "./connection/db_connect.js";
 
-const btnLogin = document.querySelector("#dadastrar");
+const btnLogin = document.querySelector("#cadastrar");
 
 async function cadastrar(){
     let login = document.querySelector("#login").value;
