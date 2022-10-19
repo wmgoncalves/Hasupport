@@ -51,3 +51,41 @@
     font-weight: 700;
 
 }
+/*Formatação para o menu global*/
+.menu{
+    width: 100%;
+    background-color: #a5d6a7;
+    box-shadow: 0px 5px 5px rgb(133, 133, 133);
+
+}
+.navbar-collapse{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+
+}
+.menu .navbar-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+}
+.menu .nav-item{
+    padding: 0px 5px;
+    margin: 1px 5px;
+
+}
+.menu .navbar-nav a{
+    color: black;
+    font-weight: 500;
+
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 48
+}
