@@ -1,13 +1,13 @@
-import { selectEquipe, insertEquipe } from "./connection/db_connect.js";
+import { insertEquipe, equipeExists } from "../connection/equipe_db.js";
 
-const btnLogin = document.querySelector("#cadastrar");
+const btnCadast = document.querySelector("#cadastrar");
 
 async function cadastrar(){
     let login = document.querySelector("#login").value;
     let senha = document.querySelector("#senha").value;
     let membros = document.querySelector("#membros").value;
 
-    let rows = await selectEquipe(login, senha);
+    let rows = await equipeExists(login);
 
     if(rows.length > 0){
         window.alert('Equipe já cadastrada no sistema!!');
@@ -19,4 +19,4 @@ async function cadastrar(){
             window.alert('ERRO!\nNão foi possível cadastrar a equipe!!');
     }
 }
-btnLogin.addEventListener("click", cadastrar);
+btnCadast.addEventListener("click", cadastrar);
