@@ -54,15 +54,24 @@ body{
     width: 90%;
 
 }
+.fundo-cadastro input:focus{   
+    border-bottom: 2px solid rgb(98, 98, 98);
+    outline: none;
+
+}
 .fundo-cadastro button{
     margin: 10px 0px;
     width: 90%;
     border: none;
-    background-color: #a5d6a7;
+    background-color: #80cc80;
     box-shadow: 1px 1px 2px rgb(83, 83, 83);
     padding: 20px 0px;
     font-size: 1.1rem;
     font-weight: 700;
+
+}
+.fundo-cadastro button:hover{
+    background-color: #80cc80d4; 
 
 }
 /*Formatação para o menu global*/
