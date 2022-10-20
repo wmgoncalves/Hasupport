@@ -10,13 +10,13 @@ async function cadastrar(){
     let rows = await selectEquipe(login, senha);
 
     if(rows.length > 0){
-        window.alert('Usuário já cadastrado no sistema!!');
+        window.alert('Equipe já cadastrada no sistema!!');
     } else {
         let result = insertEquipe(login, senha, membros);
         if(result > 0)
-            window.alert('Usuário cadastrado com sucesso.');
+            window.alert('Equipe cadastrada com sucesso.');
         else
-            window.alert('ERRO!\nNão foi possível cadastrar o usuário!!');
+            window.alert('ERRO!\nNão foi possível cadastrar a equipe!!');
     }
 }
 btnLogin.addEventListener("click", cadastrar);
