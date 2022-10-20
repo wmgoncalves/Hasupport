@@ -1,9 +1,23 @@
-.fundo-cadastro{
+.fundo-cadastro-global{
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.fundo-cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100%;
 
 }
 .fundo-cadastro img{
@@ -35,7 +49,7 @@
 .fundo-cadastro input{
     border: none;
     border-bottom: 2px solid rgb(177, 177, 177);
-    padding: 10px 0px;
+    padding: 10px 5px;
     margin: 10px 0px;
     width: 90%;
 
