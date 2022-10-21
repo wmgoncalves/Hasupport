@@ -4,6 +4,7 @@ const btn6 = document.querySelector('#btn-imc');
 const btn7 = document.querySelector('#btn-circ-abdom');
 const btn8 = document.querySelector('#btn-cint-quadr');
 const btn9 = document.querySelector('#btn-torn-braq');
+const btn10 = document.querySelector('#btn-estrat-risco');
 
 function carrega4(){
     const el = document.querySelector('.text-none-rastreamento');
@@ -71,9 +72,21 @@ function carrega9(){
         btn9.textContent = 'FECHAR';
     }
 }
+function carrega10(){
+    const el = document.querySelector('.text-none-estrat-risco');
+    if(el.style.display === 'block'){
+        el.style.display = 'none';
+        btn10.textContent = 'ESTRATIFICAÇÃO DO RISCO CARDIOVASCULAR';        
+    
+    } else {
+        el.style.display = 'block';
+        btn10.textContent = 'FECHAR';
+    }
+}
 btn4.addEventListener("click", carrega4);
 btn5.addEventListener("click", carrega5);
 btn6.addEventListener("click", carrega6);
 btn7.addEventListener("click", carrega7);
 btn8.addEventListener("click", carrega8);
 btn9.addEventListener("click", carrega9);
+btn10.addEventListener("click", carrega10);

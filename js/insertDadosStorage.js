@@ -1,6 +1,7 @@
 //import dados from './dadosClinicos.js';
 const btnPasPad = document.querySelector('#btn-calcular-pas-pad');
 const btnImc = document.querySelector('#btn-imc-calcular');
+const btnEstratCalcular = document.querySelector('#btn-estrat-calcular');
 
 function insertPasPad(){
     let pad = document.querySelector('#pad').value;
@@ -24,6 +25,227 @@ function insertImc(){
     calculaImc(peso, altura);
     
 }
+function insertEstratificacao(){
+    /*Variaveis Risco Baixo*/
+    let brIdade = document.querySelector('#br-idade');
+    let brSexMasc = document.querySelector('#br-sex-masc');
+    let brTabag = document.querySelector('#br-tabag');
+    let brHipert = document.querySelector('#br-hipert');
+    let brObs = document.querySelector('#br-obs');
+    let brSedent = document.querySelector('#br-sedent');
+    let brHistoFam = document.querySelector('#br-histo-fam');
+    let brHistoDoenca = document.querySelector('#br-histo-doenca');
+    let brManifest = document.querySelector('#br-manifest');
+    let brDiagnDislip = document.querySelector('#br-diagn-dislip');
+    let brDiagnPolic = document.querySelector('#br-diagn-polic');
+    
+    /*Variaveis Risco Alto */
+    let arAcidVasc = document.querySelector('#ar-acid-vasc');
+    let arInfartAgud = document.querySelector('#ar-infart-agud');
+    let arLesPerif = document.querySelector('#ar-les-perif');
+    let arAtaqIsqu = document.querySelector('#ar-ataq-isqu');
+    let arHiperVentr = document.querySelector('#ar-hiper-ventr');
+    let arNefrop = document.querySelector('#ar-nefrop');
+    let arRetin = document.querySelector('#ar-retin');
+    let arAneur = document.querySelector('#ar-aneur');
+    let arEsten = document.querySelector('#ar-esten');
+    let arDiabet = document.querySelector('#ar-diabet');
+    let arDoenVasc = document.querySelector('#ar-doen-vasc');
+    let arInsuf = document.querySelector('#ar-insuf');
+    let arAngina = document.querySelector('#ar-angina');
+    let arDoencRenal = document.querySelector('#ar-doenc-renal');
+
+    /*Condição Risco Baixo*/
+    if(brIdade.checked == true){
+        brIdade = document.querySelector('#br-idade').name;
+    }else{
+        brIdade = "vazio"
+    }
+
+    if(brSexMasc.checked == true){
+        brSexMasc = document.querySelector('#br-sex-masc').name;
+    }else{
+        brSexMasc = "vazio"
+    }
+
+    if(brTabag.checked == true){
+        brTabag = document.querySelector('#br-tabag').name;
+    }else{
+        brTabag = "vazio"
+    }
+
+    if(brHipert.checked == true){
+        brHipert = document.querySelector('#br-hipert').name;    
+    }else{
+        brHipert = "vazio"
+    }
+
+    if(brObs.checked == true){
+        brObs = document.querySelector('#br-obs').name;    
+    }else{
+        brObs = "vazio"
+    }
+
+    if(brSedent.checked == true){
+        brSedent = document.querySelector('#br-sedent').name;    
+    }else{
+        brSedent = "vazio"
+    }
+
+    if(brHistoFam.checked == true){
+        brHistoFam = document.querySelector('#br-histo-fam').name;
+    }else{
+        brHistoFam = "vazio"
+    }
+
+    if(brHistoDoenca.checked == true){
+        brHistoDoenca = document.querySelector('#br-histo-doenca').name;
+    }else{
+        brHistoDoenca = "vazio"
+    }
+
+    if(brManifest.checked == true){
+        brManifest = document.querySelector('#br-manifest').name;    
+    }else{
+        brManifest = "vazio"
+    }
+
+    if(brDiagnDislip.checked == true){
+        brDiagnDislip = document.querySelector('#br-diagn-dislip').name;    
+    }else{
+        brDiagnDislip = "vazio"
+    }
+
+    if(brDiagnPolic.checked == true){
+        brDiagnPolic = document.querySelector('#br-diagn-polic').name;
+    }else{
+        brDiagnPolic = "vazio"
+    }
+
+    /*Condição Risco Alto*/
+    if(arAcidVasc.checked == true){
+        arAcidVasc = document.querySelector('#ar-acid-vasc').name;
+    }else{
+        arAcidVasc = "vazio"
+    }
+
+    if(arInfartAgud.checked == true){
+        arInfartAgud = document.querySelector('#ar-infart-agud').name;
+    }else{
+        arInfartAgud = "vazio"
+    }
+
+    if(arLesPerif.checked == true){
+        arLesPerif = document.querySelector('#ar-les-perif').name;
+    }else{
+        arLesPerif = "vazio"
+    }
+    
+    if(arAtaqIsqu.checked == true){
+        arAtaqIsqu = document.querySelector('#ar-ataq-isqu').name;
+    }else{
+        arAtaqIsqu = "vazio"
+    }
+
+    if(arHiperVentr.checked == true){
+        arHiperVentr = document.querySelector('#ar-hiper-ventr').name;
+    }else{
+        arHiperVentr = "vazio"
+    }
+
+    if(arNefrop.checked == true){
+        arNefrop = document.querySelector('#ar-nefrop').name;
+    }else{
+        arNefrop = "vazio"
+    }
+
+    if(arRetin.checked == true){
+        arRetin = document.querySelector('#ar-retin').name;
+    }else{
+        arRetin = "vazio"
+    }
+
+    if(arAneur.checked == true){
+        arAneur = document.querySelector('#ar-aneur').name;
+    }else{
+        arAneur = "vazio"
+    }
+
+    if(arEsten.checked == true){
+        arEsten = document.querySelector('#ar-esten').name;
+    }else{
+        arEsten = "vazio"
+    }
+
+    if(arDiabet.checked == true){
+        arDiabet = document.querySelector('#ar-diabet').name;
+    }else{
+        arDiabet = "vazio"
+    }
+
+    if(arDoenVasc.checked == true){
+        arDoenVasc = document.querySelector('#ar-doen-vasc').name;
+    }else{
+        arDoenVasc = "vazio"
+    }
+
+    if(arInsuf.checked == true){
+        arInsuf = document.querySelector('#ar-insuf').name;
+    }else{
+        arInsuf = "vazio"
+    }
+
+    if(arAngina.checked == true){
+        arAngina = document.querySelector('#ar-angina').name;
+    }else{
+        arAngina = "vazio"
+    }
+
+    if(arDoencRenal.checked == true){
+        arDoencRenal = document.querySelector('#ar-doenc-renal').name;
+    }else{
+        arDoencRenal = "vazio"
+    }
+    
+    console.log('Sucesso Estratificação Baixo:', brIdade, brSexMasc, brTabag, brHipert, brObs,
+         brSedent, brHistoFam, brHistoDoenca, brManifest,
+         brDiagnDislip, brDiagnPolic);
+
+    console.log('Sucesso Estratificação Alto:', arAcidVasc,arInfartAgud, arLesPerif,
+        arAtaqIsqu, arHiperVentr, arNefrop, arRetin,
+        arAneur, arEsten, arDiabet, arDoenVasc, arInsuf,
+        arAngina, arDoencRenal);
+
+        /*Salva Baixo Risco em LocalStorage */
+        localStorage.setItem('brIdade', brIdade);
+        localStorage.setItem('brSexMasc', brSexMasc);
+        localStorage.setItem('brTabag', brTabag);
+        localStorage.setItem('brHipert', brHipert);
+        localStorage.setItem('brObs', brObs);
+        localStorage.setItem('brSedent', brSedent);
+        localStorage.setItem('brHistoFam', brHistoFam);
+        localStorage.setItem('brHistoDoenca', brHistoDoenca);
+        localStorage.setItem('brManifest', brManifest);
+        localStorage.setItem('brDiagnDislip', brDiagnDislip);
+        localStorage.setItem('brDiagnPolic', brDiagnPolic);
+
+        /*Salva Baixo Risco em LocalStorage */
+        localStorage.setItem('rAcidVasc', arAcidVasc);
+        localStorage.setItem('arInfartAgud', arInfartAgud);
+        localStorage.setItem('arLesPerif', arLesPerif);
+        localStorage.setItem('arAtaqIsqu', arAtaqIsqu);
+        localStorage.setItem('arHiperVentr', arHiperVentr);
+        localStorage.setItem('arNefrop', arNefrop);
+        localStorage.setItem('arRetin', arRetin);
+        localStorage.setItem('arAneur', arAneur);
+        localStorage.setItem('arEsten', arEsten);
+        localStorage.setItem('arDiabet', arDiabet);
+        localStorage.setItem('arDoenVasc', arDoenVasc);
+        localStorage.setItem('arInsuf', arInsuf);
+        localStorage.setItem('arAngina', arAngina);
+        localStorage.setItem('arDoencRenal', arDoencRenal);
+        
+    }
 function calculaPasPad(pad, pas){
     let el = document.querySelector('#retorno-calculo-pas-pad');
     if((parseInt(pad) < 85) && (parseInt(pas) < 130)){
@@ -65,3 +287,4 @@ function calculaImc(peso, altura){
 
 btnPasPad.addEventListener("click", insertPasPad);
 btnImc.addEventListener("click", insertImc);
+btnEstratCalcular.addEventListener("click", insertEstratificacao);

@@ -236,6 +236,53 @@ body{
 
 }
 
+/*Formatação especifica para inputs checkbox*/
+.form-style-checkbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+
+}
+.form-style-checkbox h5{
+    font-weight: 600;
+    padding: 20px 0px 5px 0px;
+    font-size: 1rem;
+
+}
+.form-style-checkbox h6{
+    font-weight: 600;
+    font-size: 1rem;
+
+}
+.form-style-checkbox .form-style{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 0px;
+
+}
+.form-style-checkbox .style-checkbox{
+    display: flex;
+    align-items: center;
+    margin: 7px 0px;
+
+}
+.style-checkbox input{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    box-shadow: none;
+    
+}
+.style-checkbox label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: .8rem;
+    text-align: left;
+
+}
+
 /*Formatação das paginas só com texto*/
 .text-style-pure{
     padding: 5rem 3rem;
@@ -246,5 +293,22 @@ body{
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
+
+}
+.text-style-pure2{
+    padding: 1rem 1rem 2.5rem 1rem;
+
+}
+.text-style-pure2 p{
+    text-align: justify;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    padding: 0;
+
+}
+.text-style-pure2 .sub-title{
+    font-weight: 600;
+    text-align: justify;
 
 }

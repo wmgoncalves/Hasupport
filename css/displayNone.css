@@ -3,7 +3,8 @@
 .text-none-proped,
 .text-none-sinais,
 .text-none-rastreamento,
-.text-none-antropom{
+.text-none-antropom,
+.text-none-estrat-risco{
     display: none;
     
 }

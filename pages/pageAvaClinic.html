@@ -80,8 +80,8 @@
                         <button id="btn-imc">ÍNDICE DE MASSA CORPORAL (IMC)</button>
                     </a>
                     <div class="text-none-imc text-none-style-interno">
+                        <h4>ÍNDICE DE MASSA CORPORAL (IMC)</h4>
                         <div>
-                            <h4>ÍNDICE DE MASSA CORPORAL (IMC)</h4>
                             <div>
                                 <p>IDADE:<span>23</span>&emsp;SEXO:<span>Masculino</span></p>
                             </div>
@@ -105,14 +105,14 @@
                         <button id="btn-circ-abdom">CIRCUNFERÊNCIA ABDOMINAL</button>
                     </a>
                     <div class="text-none-circ-abdom text-none-style-interno">
+                        <h4>CIRCUNFERÊNCIA ABDOMINAL</h4>
                         <div>
-                            <h4>CIRCUNFERÊNCIA ABDOMINAL</h4>
+                            <div>
+                                <p>SEXO:<span>Masculino</span></p>
+                            </div>
                             <form action="" class="form-style-interno" onsubmit="return false">
                                 <div>
-                                    <input id="circ-abdom-cm" type="number" placeholder="cm">
-                                </div>
-                                <div>
-                                    <input id="circ-abdom-sexo" type="text" placeholder="Sexo">
+                                    <input id="circ-abdom-cm" type="number" placeholder="(Cm)">
                                 </div>
                                 <div>
                                     <button id="btn-circ-abdom-calcular">Calcular</button>
@@ -127,8 +127,8 @@
                         <button id="btn-cint-quadr">RELAÇÃO CINTURA-QUADRIL</button>
                     </a>
                     <div class="text-none-cint-quadr text-none-style-interno">
+                        <h4>RELAÇÃO CINTURA-QUADRIL</h4>
                         <div>
-                            <h4>RELAÇÃO CINTURA-QUADRIL</h4>
                             <div>
                                 <p>SEXO:<span>Masculino</span></p>
                             </div>
@@ -152,8 +152,8 @@
                         <button id="btn-torn-braq">ÍNDICE TORNOZELO-BRAQUIAL</button>
                     </a>
                     <div class="text-none-torn-braq text-none-style-interno">
+                        <h4>ÍNDICE TORNOZELO-BRAQUIAL</h4>
                         <div>
-                            <h4>ÍNDICE TORNOZELO-BRAQUIAL</h4>
                             <form action="" class="form-style-interno" onsubmit="return false">
                                 <div>
                                     <input id="torn-braq-pas-torn" type="number" placeholder="Valor da maior PAS do tornozelo">
@@ -171,8 +171,143 @@
                 </div>
             </div>
             <a class="botao-padrao">
-                <button>ESTRATIFICAÇÃO DO RISCO CARDIOVASCULAR</button>
+                <button id="btn-estrat-risco">ESTRATIFICAÇÃO DO RISCO CARDIOVASCULAR</button>
             </a>
+            <div class="text-none-estrat-risco text-none-style">
+                <h4>ESTRATIFICAÇÃO DO RISCO CARDIOVASCULAR</h4>
+                <div class="text-style-pure2">
+                    <p>A seguir será apresentada a Escala de Risco de Framingham (ERF), a qual foi
+                        definida para realizar a estratificação do risco cardiovascular (RCV). Após a anamnese e
+                        exame físico, serão analisados os fatores de risco presentes no quadro abaixo, que compõe
+                        a Etapa 1 da ERF, dessa forma, se o(a) usuário(a) apresentar apenas um fator de risco
+                        baixo/intermediário, não hoverá necessidade de calcular o escore, pois será
+                        considerado(a) como baixo RCV. Se apresentar ao menos um fator de alto risco, também
+                        não hoverá necessidade de calcular o escore, pois essa o(a) usuário(a) já será
+                        considerado(a) como alto RCV. Dessa forma, o cálculo só será realizado quando o(a)
+                        usuário(a) apresentar mais de um fator de risco baixo/intermediário, passando assim para
+                        a etapa 2.</p>
+                </div>
+                <div class="form-style-checkbox">
+                    <h5>Etapa 1:</h5>
+                    <h6>Indicadores de risco baixo/intermediário</h6>
+                    <form action="" class="form-style" onsubmit="return false">
+                        <div class="style-checkbox">
+                            <input id="br-idade" type="checkbox" name="Idade > 65">
+                            <label for="br-idade">Idade > 65;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-sex-masc" type="checkbox" name="Sexo masculino">
+                            <label for="br-sex-masc">Sexo masculino;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-tabag" type="checkbox" name="Tabagismo">
+                            <label for="br-tabag">Tabagismo;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-hipert" type="checkbox" name="Hipertensão (> 140/90 mmHg) ou história de pré-eclâmpsia">
+                            <label for="br-hipert">Hipertensão (> 140/90 mmHg) ou história de pré-eclâmpsia;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-obs" type="checkbox" name="Obesidade (IMC > 30kg/m2) ou obesidade central (cintura medida na crista ilíaca: > 88 cm em mulheres; > 102 cm em homens)">
+                            <label for="br-obs">Obesidade (IMC > 30kg/m2) ou obesidade central (cintura medida na crista ilíaca: > 88 cm em mulheres; > 102 cm em homens).</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-sedent" type="checkbox" name="Sedentarismo">
+                            <label for="br-sedent">Sedentarismo;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-histo-fam" type="checkbox" name="História familiar de evento cardiovascular prematuro em familiares de 1o grau –
+                            pai, mãe, irmãos (homens < 55 anos e mulheres < 65 anos)">
+                            <label for="br-histo-fam">História familiar de evento cardiovascular prematuro em familiares de 1o grau –
+                                pai, mãe, irmãos (homens < 55 anos e mulheres < 65 anos);</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-histo-doenca" type="checkbox" name="História de doença renal na família (para risco de insuficiência renal)">
+                            <label for="br-histo-doenca">História de doença renal na família (para risco de insuficiência renal);</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-manifest" type="checkbox" name="Manifestações de aterosclerose: sopros arteriais carotídeos; diminuição ou
+                            ausência de pulsos periféricos">
+                            <label for="br-manifest">Manifestações de aterosclerose: sopros arteriais carotídeos; diminuição ou
+                                ausência de pulsos periféricos.</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-diagn-dislip" type="checkbox" name="Diagnóstico prévio de dislipidemia">
+                            <label for="br-diagn-dislip">Diagnóstico prévio de dislipidemia;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-diagn-polic" type="checkbox" name="Diagnóstico prévio de síndrome de ovário policístico">
+                            <label for="br-diagn-polic">Diagnóstico prévio de síndrome de ovário policístico.</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <h5>Indicadores de alto risco</h5>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-acid-vasc" type="checkbox" name="Acidente vascular encefálico (AVE) prévio">
+                            <label for="ar-acid-vasc">Acidente vascular encefálico (AVE) prévio;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-infart-agud" type="checkbox" name="Infarto agudo do miocárdio (IAM) prévio">
+                            <label for="ar-infart-agud">Infarto agudo do miocárdio (IAM) prévio;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-les-perif" type="checkbox" name="Lesão periférica – Lesão de órgão-alvo (LOA)">
+                            <label for="ar-les-perif">Lesão periférica – Lesão de órgão-alvo (LOA);</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-ataq-isqu" type="checkbox" name="Ataque isquêmico transitório (AIT)">
+                            <label for="ar-ataq-isqu">Ataque isquêmico transitório (AIT);</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-hiper-ventr" type="checkbox" name="Hipertrofia de ventrículo esquerdo (HVE)">
+                            <label for="ar-hiper-ventr">Hipertrofia de ventrículo esquerdo (HVE);</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-nefrop" type="checkbox" name="Nefropatia">
+                            <label for="ar-nefrop">Nefropatia;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-retin" type="checkbox" name="Retinopatia">
+                            <label for="ar-retin">Retinopatia;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-aneur" type="checkbox" name="Aneurisma de aorta abdominal">
+                            <label for="ar-aneur">Aneurisma de aorta abdominal;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-esten" type="checkbox" name="Estenose de carótida sintomática">
+                            <label for="ar-esten">Estenose de carótida sintomática;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-diabet" type="checkbox" name="Diabetes mellitus">
+                            <label for="ar-diabet">Diabetes mellitus;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-doen-vasc" type="checkbox" name="Doença vascular periférica">
+                            <label for="ar-doen-vasc">Doença vascular periférica;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-insuf" type="checkbox" name="Insuficiência cardíaca congestiva de etiologia isquêmica">
+                            <label for="ar-insuf">Insuficiência cardíaca congestiva de etiologia isquêmica;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-angina" type="checkbox" name="Angina no peito">
+                            <label for="ar-angina">Angina no peito.</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-doenc-renal" type="checkbox" name="Doença renal crônica">
+                            <label for="ar-doenc-renal">Doença renal crônica</label>
+                        </div>
+                        <div>
+                            <button type="submit" id="btn-estrat-calcular">Calcular</button>
+                        </div>
+                    </form>
+                    <p>Classificação: <span id="retorno-calculo-estrat">Aguardando velores...</span></p>
+                </div>
+                <div>
+                    <h5>Etapa 2:</h5>
+                </div>
+            </div>
         </div>
     </div>
     <script type="module" src="../js/insertDadosStorage.js"></script>
