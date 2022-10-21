@@ -1,6 +1,10 @@
 //import dados from './dadosClinicos.js';
 const btnPasPad = document.querySelector('#btn-calcular-pas-pad');
 const btnImc = document.querySelector('#btn-imc-calcular');
+const btnCircAbdom = document.querySelector('#btn-circ-abdom-calcular');
+const btnCintQuadr = document.querySelector('#btn-cint-quadr-calcular');
+const btnTornBraq = document.querySelector('#btn-torn-braq-calcular');
+
 const btnEstratCalcular = document.querySelector('#btn-estrat-calcular');
 
 function insertPasPad(){
@@ -20,9 +24,37 @@ function insertImc(){
     
     localStorage.setItem('peso', peso);
     localStorage.setItem('altura', altura);
-
+    
     console.log('Sucesso Peso-Altura:', peso, altura);
     calculaImc(peso, altura);
+    
+}
+function insertCircAbdom(){
+    let circCbdomCm = document.querySelector('#circ-abdom-cm').value;
+    
+    localStorage.setItem('circCbdomCm', circCbdomCm);
+    
+    console.log('Sucesso Circunferencia Abdominal:', circCbdomCm);
+    
+}
+function insertCintQuadr(){
+    let cintQuadrAbdomCm = document.querySelector('#cint-quadr-abdom-cm').value;
+    let cintQuadrQuadrCm = document.querySelector('#cint-quadr-quadr-cm').value;
+    
+    localStorage.setItem('cintQuadrAbdomCm', cintQuadrAbdomCm);
+    localStorage.setItem('cintQuadrQuadrCm', cintQuadrQuadrCm);
+    
+    console.log('Sucesso Cintura-Quadril:', cintQuadrAbdomCm, cintQuadrQuadrCm);
+    
+}
+function insertTornBraq(){
+    let tornBraqPasTorn = document.querySelector('#torn-braq-pas-torn').value;
+    let tornBraqPasBra = document.querySelector('#torn-braq-pas-bra').value;
+    
+    localStorage.setItem('tornBraqPasTorn', tornBraqPasTorn);
+    localStorage.setItem('tornBraqPasTorn', tornBraqPasTorn);
+    
+    console.log('Sucesso Tornozelo-Braquial:', tornBraqPasTorn, tornBraqPasBra);
     
 }
 function insertEstratificacao(){
@@ -288,3 +320,6 @@ function calculaImc(peso, altura){
 btnPasPad.addEventListener("click", insertPasPad);
 btnImc.addEventListener("click", insertImc);
 btnEstratCalcular.addEventListener("click", insertEstratificacao);
+btnCircAbdom.addEventListener("click", insertCircAbdom);
+btnCintQuadr.addEventListener("click", insertCintQuadr);
+btnTornBraq.addEventListener("click", insertTornBraq);
