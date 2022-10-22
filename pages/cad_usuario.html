@@ -49,29 +49,35 @@
     </div>
   <div class="fundo-cadastro">
     <div class="form">
-      <form>
+      <form onsubmit="return false">
         <div>
-          <input class="nome" name="nome" required="required" type="text" placeholder="Nome"/>
+          <input id="nome" class="nome" name="nome" required="required" type="text" placeholder="Nome"/>
         </div>
         <div>
-          <input class="data_nascimento" name="data_nascimento" required="required" type="date" placeholder="Data de Nascimento"/>
+          <input id="dataNasc" class="data_nascimento" name="data_nascimento" required="required" type="date" placeholder="Data de Nascimento"/>
         </div>
         <div>
-            <input class="cpf" name="cpf" required="required" type="number" placeholder="CPF"/>
-          </div>
-          <div>
-            <input class="cartao_sus" name="cartao_sus" required="required" type="number" placeholder="Cartão do Sus" />
-          </div>
-          <div>
-            <input class="agente_sus" name="agente_sus" required="required" type="text" placeholder="Agente Comunitaria(o) de Saúde" />
-          </div>
+          <input id="cpf" class="cpf" name="cpf" required="required" type="number" placeholder="CPF"/>
+        </div>
+        <div>
+          <input id="cartSus" class="cartao_sus" name="cartao_sus" required="required" type="number" placeholder="Cartão do Sus" />
+        </div>
+        <div>
+          <input class="agente_sus" name="agente_sus" required="required" type="text" placeholder="Agente Comunitaria(o) de Saúde" />
+        </div>
+        <div>
+          <input type="radio" id="masc" name="sexo" value="Masculino">
+          <label for="masc">Masculino</label>
+          <input type="radio" id="femi" name="sexo" value="Feminino">
+          <label for="femi">Feminino</label>
+        </div>
         <div>
           <button id="cadastrar">CADASTRAR</button>
         </div>
       </form>
     </div>
   </div>
-  <script type="module" src="../js/login.js"></script>
+  <script type="module" src="../backend/user_sus/cadastro.js"></script>
   <script src="../js/bootstrap-js/bootstrap.js"></script>
 </body>
 </html>

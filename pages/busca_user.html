@@ -48,13 +48,27 @@
       </nav>
     </div>
     <div class="fundo-cadastro">
+      <div class="form" onsubmit="return false">
+        <form>
+            <div>
+                <input id="user_sus" class="user_sus" name="user_sus" required="required" type="text" placeholder="Cartão do SUS, CPF ou Nome"/>
+            </div>
+            <div>
+                <button id="buscar">BUSCAR</button>
+            </div>
+        </form>
+      </div>
+      <div id="result">
+          <!--Lista de Usuários do SUS-->
+      </div>
       <div class="form">
         <a href="./cad_usuario.html">
           <button id="cadastrar">CADASTRAR NOVO USUÁRIO</button>
         </a>
       </div>
     </div>
-    <script type="module" src="../js/login.js"></script>
+    <script type="module" src="../backend/user_sus/busca.js"></script>
+    <script type="text/javascript" src="../backend/user_sus/seleciona.js"></script>
     <script src="../js/bootstrap-js/bootstrap.js"></script>
 </body>
 </html>
