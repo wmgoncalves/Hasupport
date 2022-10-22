@@ -1,4 +1,3 @@
-//import dados from './dadosClinicos.js';
 const btnPasPad = document.querySelector('#btn-calcular-pas-pad');
 const btnImc = document.querySelector('#btn-imc-calcular');
 const btnCircAbdom = document.querySelector('#btn-circ-abdom-calcular');
@@ -15,7 +14,6 @@ function insertPasPad(){
     localStorage.setItem('pas', pas);
 
     console.log('Sucesso Pad-Pas:', pad, pas);
-    calculaPasPad(pad, pas);
     
 }
 function insertImc(){
@@ -87,69 +85,83 @@ function insertEstratificacao(){
     let arAngina = document.querySelector('#ar-angina');
     let arDoencRenal = document.querySelector('#ar-doenc-renal');
 
+    let contBaixoRisco = 0;
+    let contAltoRisco = 0;
+
     /*Condição Risco Baixo*/
     if(brIdade.checked == true){
         brIdade = document.querySelector('#br-idade').name;
+        contBaixoRisco++;
     }else{
         brIdade = "vazio"
     }
 
     if(brSexMasc.checked == true){
         brSexMasc = document.querySelector('#br-sex-masc').name;
+        contBaixoRisco++;
     }else{
         brSexMasc = "vazio"
     }
 
     if(brTabag.checked == true){
         brTabag = document.querySelector('#br-tabag').name;
+        contBaixoRisco++;
     }else{
         brTabag = "vazio"
     }
 
     if(brHipert.checked == true){
-        brHipert = document.querySelector('#br-hipert').name;    
+        brHipert = document.querySelector('#br-hipert').name;
+        contBaixoRisco++;    
     }else{
         brHipert = "vazio"
     }
 
     if(brObs.checked == true){
-        brObs = document.querySelector('#br-obs').name;    
+        brObs = document.querySelector('#br-obs').name;
+        contBaixoRisco++;    
     }else{
         brObs = "vazio"
     }
 
     if(brSedent.checked == true){
-        brSedent = document.querySelector('#br-sedent').name;    
+        brSedent = document.querySelector('#br-sedent').name;
+        contBaixoRisco++;    
     }else{
         brSedent = "vazio"
     }
 
     if(brHistoFam.checked == true){
         brHistoFam = document.querySelector('#br-histo-fam').name;
+        contBaixoRisco++;
     }else{
         brHistoFam = "vazio"
     }
 
     if(brHistoDoenca.checked == true){
         brHistoDoenca = document.querySelector('#br-histo-doenca').name;
+        contBaixoRisco++;
     }else{
         brHistoDoenca = "vazio"
     }
 
     if(brManifest.checked == true){
-        brManifest = document.querySelector('#br-manifest').name;    
+        brManifest = document.querySelector('#br-manifest').name;
+        contBaixoRisco++;    
     }else{
         brManifest = "vazio"
     }
 
     if(brDiagnDislip.checked == true){
-        brDiagnDislip = document.querySelector('#br-diagn-dislip').name;    
+        brDiagnDislip = document.querySelector('#br-diagn-dislip').name;
+        contBaixoRisco++;    
     }else{
         brDiagnDislip = "vazio"
     }
 
     if(brDiagnPolic.checked == true){
         brDiagnPolic = document.querySelector('#br-diagn-polic').name;
+        contBaixoRisco++;
     }else{
         brDiagnPolic = "vazio"
     }
@@ -157,87 +169,102 @@ function insertEstratificacao(){
     /*Condição Risco Alto*/
     if(arAcidVasc.checked == true){
         arAcidVasc = document.querySelector('#ar-acid-vasc').name;
+        contAltoRisco++;
     }else{
         arAcidVasc = "vazio"
     }
 
     if(arInfartAgud.checked == true){
         arInfartAgud = document.querySelector('#ar-infart-agud').name;
+        contAltoRisco++;
     }else{
         arInfartAgud = "vazio"
     }
 
     if(arLesPerif.checked == true){
         arLesPerif = document.querySelector('#ar-les-perif').name;
+        contAltoRisco++;
     }else{
         arLesPerif = "vazio"
     }
     
     if(arAtaqIsqu.checked == true){
         arAtaqIsqu = document.querySelector('#ar-ataq-isqu').name;
+        contAltoRisco++;
     }else{
         arAtaqIsqu = "vazio"
     }
 
     if(arHiperVentr.checked == true){
         arHiperVentr = document.querySelector('#ar-hiper-ventr').name;
+        contAltoRisco++;
     }else{
         arHiperVentr = "vazio"
     }
 
     if(arNefrop.checked == true){
         arNefrop = document.querySelector('#ar-nefrop').name;
+        contAltoRisco++;
     }else{
         arNefrop = "vazio"
     }
 
     if(arRetin.checked == true){
         arRetin = document.querySelector('#ar-retin').name;
+        contAltoRisco++;
     }else{
         arRetin = "vazio"
     }
 
     if(arAneur.checked == true){
         arAneur = document.querySelector('#ar-aneur').name;
+        contAltoRisco++;
     }else{
         arAneur = "vazio"
     }
 
     if(arEsten.checked == true){
         arEsten = document.querySelector('#ar-esten').name;
+        contAltoRisco++;
     }else{
         arEsten = "vazio"
     }
 
     if(arDiabet.checked == true){
         arDiabet = document.querySelector('#ar-diabet').name;
+        contAltoRisco++;
     }else{
         arDiabet = "vazio"
     }
 
     if(arDoenVasc.checked == true){
         arDoenVasc = document.querySelector('#ar-doen-vasc').name;
+        contAltoRisco++;
     }else{
         arDoenVasc = "vazio"
     }
 
     if(arInsuf.checked == true){
         arInsuf = document.querySelector('#ar-insuf').name;
+        contAltoRisco++;
     }else{
         arInsuf = "vazio"
     }
 
     if(arAngina.checked == true){
         arAngina = document.querySelector('#ar-angina').name;
+        contAltoRisco++;
     }else{
         arAngina = "vazio"
     }
 
     if(arDoencRenal.checked == true){
         arDoencRenal = document.querySelector('#ar-doenc-renal').name;
+        contAltoRisco++;
     }else{
         arDoencRenal = "vazio"
     }
+
     
     console.log('Sucesso Estratificação Baixo:', brIdade, brSexMasc, brTabag, brHipert, brObs,
          brSedent, brHistoFam, brHistoDoenca, brManifest,
@@ -247,49 +274,38 @@ function insertEstratificacao(){
         arAtaqIsqu, arHiperVentr, arNefrop, arRetin,
         arAneur, arEsten, arDiabet, arDoenVasc, arInsuf,
         arAngina, arDoencRenal);
+    
+    verificaRisco(contBaixoRisco, contAltoRisco);
 
-        /*Salva Baixo Risco em LocalStorage */
-        localStorage.setItem('brIdade', brIdade);
-        localStorage.setItem('brSexMasc', brSexMasc);
-        localStorage.setItem('brTabag', brTabag);
-        localStorage.setItem('brHipert', brHipert);
-        localStorage.setItem('brObs', brObs);
-        localStorage.setItem('brSedent', brSedent);
-        localStorage.setItem('brHistoFam', brHistoFam);
-        localStorage.setItem('brHistoDoenca', brHistoDoenca);
-        localStorage.setItem('brManifest', brManifest);
-        localStorage.setItem('brDiagnDislip', brDiagnDislip);
-        localStorage.setItem('brDiagnPolic', brDiagnPolic);
+    /*Salva Baixo Risco em LocalStorage */
+    localStorage.setItem('brIdade', brIdade);
+    localStorage.setItem('brSexMasc', brSexMasc);
+    localStorage.setItem('brTabag', brTabag);
+    localStorage.setItem('brHipert', brHipert);
+    localStorage.setItem('brObs', brObs);
+    localStorage.setItem('brSedent', brSedent);
+    localStorage.setItem('brHistoFam', brHistoFam);
+    localStorage.setItem('brHistoDoenca', brHistoDoenca);
+    localStorage.setItem('brManifest', brManifest);
+    localStorage.setItem('brDiagnDislip', brDiagnDislip);
+    localStorage.setItem('brDiagnPolic', brDiagnPolic);
 
-        /*Salva Baixo Risco em LocalStorage */
-        localStorage.setItem('rAcidVasc', arAcidVasc);
-        localStorage.setItem('arInfartAgud', arInfartAgud);
-        localStorage.setItem('arLesPerif', arLesPerif);
-        localStorage.setItem('arAtaqIsqu', arAtaqIsqu);
-        localStorage.setItem('arHiperVentr', arHiperVentr);
-        localStorage.setItem('arNefrop', arNefrop);
-        localStorage.setItem('arRetin', arRetin);
-        localStorage.setItem('arAneur', arAneur);
-        localStorage.setItem('arEsten', arEsten);
-        localStorage.setItem('arDiabet', arDiabet);
-        localStorage.setItem('arDoenVasc', arDoenVasc);
-        localStorage.setItem('arInsuf', arInsuf);
-        localStorage.setItem('arAngina', arAngina);
-        localStorage.setItem('arDoencRenal', arDoencRenal);
+    /*Salva Baixo Risco em LocalStorage */
+    localStorage.setItem('arAcidVasc', arAcidVasc);
+    localStorage.setItem('arInfartAgud', arInfartAgud);
+    localStorage.setItem('arLesPerif', arLesPerif);
+    localStorage.setItem('arAtaqIsqu', arAtaqIsqu);
+    localStorage.setItem('arHiperVentr', arHiperVentr);
+    localStorage.setItem('arNefrop', arNefrop);
+    localStorage.setItem('arRetin', arRetin);
+    localStorage.setItem('arAneur', arAneur);
+    localStorage.setItem('arEsten', arEsten);
+    localStorage.setItem('arDiabet', arDiabet);
+    localStorage.setItem('arDoenVasc', arDoenVasc);
+    localStorage.setItem('arInsuf', arInsuf);
+    localStorage.setItem('arAngina', arAngina);
+    localStorage.setItem('arDoencRenal', arDoencRenal);
         
-    }
-function calculaPasPad(pad, pas){
-    let el = document.querySelector('#retorno-calculo-pas-pad');
-    if((parseInt(pad) < 85) && (parseInt(pas) < 130)){
-        el.innerHTML = 'Normal'
-        
-    }else if(((parseInt(pad) >= 85) && (parseInt(pad) < 90)) && (parseInt(pas) >= 130) && (parseInt(pas) < 140)){
-        el.innerHTML = 'Peso limítrofe'
-
-    }else if(((parseInt(pad) >= 90) && (parseInt(pad) < 100)) && (parseInt(pas) >= 140) && (parseInt(pas) < 160)){
-        el.innerHTML = 'Hipertensão leve (estágio 1)'
-
-    }
 }
 function calculaImc(peso, altura){
     let el = document.querySelector('#retorno-calculo-imc');
@@ -313,6 +329,23 @@ function calculaImc(peso, altura){
 
     }else if(result >= 40){
         el.innerHTML = 'Obesidade classe III'
+
+    }
+}
+function verificaRisco(contBaixoRisco, contAltoRisco){
+    let el = document.querySelector('#retorno-calculo-estrat');
+    let el2 = document.querySelector('.etapa-2');
+    el.innerHTML = 'INDEFINIDO'
+    el2.style.display = 'none';
+    if(contBaixoRisco == 1){
+        console.log('baixo risco', contBaixoRisco);
+        el.innerHTML = 'BAIXO RISCO'
+
+    }
+    if((contBaixoRisco >= 2) || (contAltoRisco >= 1)){
+        el.innerHTML = 'ALTO RISCO'
+        console.log('', contBaixoRisco);
+        el2.style.display = 'block';
 
     }
 }

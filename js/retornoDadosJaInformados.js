@@ -9,5 +9,6 @@ function retornaSexoIdade(){
 
     circAbdomRetornoSexo.innerHTML = 'Masc';
     cintQuadrRetornoSexo.innerHTML = 'Masc';
+    
 }
 retornaSexoIdade();

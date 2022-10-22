@@ -34,6 +34,13 @@ body{
 .menu .nav-item{
     padding: 0px 5px;
     margin: 1px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.menu .nav-item::marker{
+    font-size: 0rem; 
 
 }
 .menu .navbar-nav a{

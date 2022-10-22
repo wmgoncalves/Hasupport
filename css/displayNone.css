@@ -15,9 +15,17 @@
 .text-none-cint-quadr,
 .text-none-torn-braq{
     display: none;
+
 }
 
 .text-none-obj-entrevista,
 .text-none-quest-import{
     display: none;
+
+}
+
+/*Disable etapa 2 'estratificação de risco'*/
+.etapa-2{
+    display: none;
+
 }
