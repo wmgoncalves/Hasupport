@@ -16,4 +16,9 @@ async function buscar(){
         }
     }
 }
+
+function selectEquipe(){
+    
+}
+
 btnBusca.addEventListener("click", buscar);

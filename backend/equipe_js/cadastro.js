@@ -12,7 +12,7 @@ async function cadastrar(){
     if(rows.length > 0){
         window.alert('Equipe já cadastrada no sistema!!');
     } else {
-        let result = insertEquipe(login, senha, membros);
+        let result = await insertEquipe(login, senha, membros);
         if(result > 0)
             window.alert('Equipe cadastrada com sucesso.');
         else
