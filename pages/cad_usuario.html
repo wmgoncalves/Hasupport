@@ -48,22 +48,32 @@
       </nav>
     </div>
   <div class="fundo-cadastro">
-    <div class="form">
+    <div class="form" onsubmit="return false">
       <form>
         <div>
-          <input class="nome" name="nome" required="required" type="text" placeholder="Nome"/>
+          <input id="user-cad-nome" class="nome" name="nome" required="required" type="text" placeholder="Nome"/>
         </div>
         <div>
-          <input class="data_nascimento" name="data_nascimento" required="required" type="date" placeholder="Data de Nascimento"/>
+          <input id="user-cad-data" class="data_nascimento" name="data_nascimento" required="required" type="date" placeholder="Data de Nascimento"/>
         </div>
         <div>
-            <input class="cpf" name="cpf" required="required" type="number" placeholder="CPF"/>
+            <input id="user-cad-cpf" class="cpf" name="cpf" required="required" type="text" placeholder="CPF"/>
           </div>
           <div>
-            <input class="cartao_sus" name="cartao_sus" required="required" type="number" placeholder="Cartão do Sus" />
+            <input id="user-cad-cartao" class="cartao_sus" name="cartao_sus" required="required" type="text" placeholder="Cartão do Sus" />
           </div>
           <div>
-            <input class="agente_sus" name="agente_sus" required="required" type="text" placeholder="Agente Comunitaria(o) de Saúde" />
+            <input id="user-cad-agente" class="agente_sus" name="agente_sus" required="required" type="text" placeholder="Agente Comunitaria(o) de Saúde" />
+          </div>
+          <div class="input-radio">
+            <div>
+              <input id="user-cad-masc" name="sexo-user" type="radio" value="Masculino" checked>
+              <label for="">Masculino</label>
+            </div>
+            <div>
+              <input id="user-cad-fem" name="sexo-user" type="radio" value="Feminino">
+              <label for="">Feminino</label>
+            </div>
           </div>
         <div>
           <button id="cadastrar">CADASTRAR</button>
@@ -71,7 +81,7 @@
       </form>
     </div>
   </div>
-  <script type="module" src="../js/login.js"></script>
+  <script type="module" src="../js/saveCadastros/cadUsuario.js"></script>
   <script src="../js/bootstrap-js/bootstrap.js"></script>
 </body>
 </html>

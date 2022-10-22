@@ -10,6 +10,7 @@ let etapa2ColestTotal = document.querySelector('#etapa2-colest-total');
 let etapa2Hdl = document.querySelector('#etapa2-hdl');
 
 let checkMasc = document.querySelector('#br-sex-masc');
+let checkIdade = document.querySelector('#br-idade');
 
 function retornaSexoIdade(){
     imcRetornoIdade.innerHTML = 30;
@@ -34,11 +35,22 @@ retornaValoresHemograma();
 /*Funcão teste para marcar checkeds,
 ateriormente informados*/
 function verificaCheckeds(){
-    if(localStorage.getItem('hemogHdl') == 'Masculino'){
+    let dataAtual = parseInt(new Date().toLocaleString().substring(6, 10));
+    let dataInformada = parseInt((localStorage.getItem('userCadData')).toLocaleString().substring(0, 4));
+    console.log('Data hj: ', dataAtual, dataInformada, (dataAtual-dataInformada));
+    
+    if(localStorage.getItem('userCadSexo') === 'Masculino'){
         checkMasc.checked = true;
 
-    }else{
+    }else if(localStorage.getItem('userCadSexo') === 'Feminino'){
         checkMasc.checked = false;
+
+    }
+    if((dataAtual-dataInformada) > 65){
+        checkIdade.checked = true;
+
+    }else{
+        checkIdade.checked = false;
 
     }
 

@@ -59,6 +59,27 @@ body{
     outline: none;
 
 }
+.fundo-cadastro .input-radio{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+.fundo-cadastro .input-radio div{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px;
+
+}
+.fundo-cadastro .input-radio input{
+    width: 20px;
+
+}
+.fundo-cadastro .input-radio label{
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
 .fundo-cadastro button{
     margin: 10px 0px;
     width: 90%;
@@ -104,11 +125,4 @@ body{
     color: black;
     font-weight: 500;
 
-}
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 600,
-  'GRAD' 0,
-  'opsz' 48
 }
