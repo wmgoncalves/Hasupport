@@ -334,18 +334,20 @@ function calculaImc(peso, altura){
 }
 function verificaRisco(contBaixoRisco, contAltoRisco){
     let el = document.querySelector('#retorno-calculo-estrat');
-    let el2 = document.querySelector('.etapa-2');
+    let el2 = document.querySelector('.disable-etapa-2');
+    let el3 = document.querySelector('.disable-etapa-3');
     el.innerHTML = 'INDEFINIDO'
     el2.style.display = 'none';
+    el3.style.display = 'none';
     if(contBaixoRisco == 1){
-        console.log('baixo risco', contBaixoRisco);
         el.innerHTML = 'BAIXO RISCO'
 
     }
     if((contBaixoRisco >= 2) || (contAltoRisco >= 1)){
         el.innerHTML = 'ALTO RISCO'
-        console.log('', contBaixoRisco);
-        el2.style.display = 'block';
+        el2.style.display = 'flex';
+        el3.style.display = 'block';
+        //el3.style.display = 'flex';
 
     }
 }

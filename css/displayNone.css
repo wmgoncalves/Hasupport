@@ -25,7 +25,8 @@
 }
 
 /*Disable etapa 2 'estratificação de risco'*/
-.etapa-2{
+.disable-etapa-2,
+.disable-etapa-3{
     display: none;
 
 }

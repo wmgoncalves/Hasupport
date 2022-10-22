@@ -1,7 +1,13 @@
 let imcRetornoSexo = document.querySelector('#imc-retorno-sexo');
 let imcRetornoIdade = document.querySelector('#imc-retorno-idade');
+
 let circAbdomRetornoSexo = document.querySelector('#circ-abdom-retorno-sexo');
 let cintQuadrRetornoSexo = document.querySelector('#cint-quadr-retorno-sexo');
+
+let etapa2RetornoIdade = document.querySelector('#etapa2-retorno-idade');
+let etapa2RetornoSexo = document.querySelector('#etapa2-retorno-sexo');
+let etapa2ColestTotal = document.querySelector('#etapa2-colest-total');
+let etapa2Hdl = document.querySelector('#etapa2-hdl');
 
 function retornaSexoIdade(){
     imcRetornoIdade.innerHTML = 30;;
@@ -9,6 +15,17 @@ function retornaSexoIdade(){
 
     circAbdomRetornoSexo.innerHTML = 'Masc';
     cintQuadrRetornoSexo.innerHTML = 'Masc';
+
+    etapa2RetornoIdade.innerHTML = 45;
+    etapa2RetornoSexo.innerHTML = 'Masc'
+
     
 }
 retornaSexoIdade();
+
+function retornaValoresHemograma(){
+    etapa2ColestTotal.value = localStorage.getItem('hemogColes');
+    etapa2Hdl.value = localStorage.getItem('hemogHdl');
+
+}
+retornaValoresHemograma();

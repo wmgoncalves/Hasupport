@@ -319,3 +319,94 @@ body{
     text-align: justify;
 
 }
+
+/*Formatação estratificação etapa 2*/
+.etapa-2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 50px 0px;
+
+}
+.etapa-2 h5{
+    font-weight: 600;
+    font-size: 1rem;
+
+}
+.etapa-2 .etapa-2-form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+.etapa-2 .etapa-2-form form{
+    display: flex;
+    flex-direction: column;
+
+}
+.etapa-2 .etapa-2-form form div{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+.etapa-2 .etapa-2-form input{
+    width: 100%;
+
+}
+.etapa-2 .etapa-2-form .style-checkbox{
+    width: 30%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+
+}
+.etapa-2 .etapa-2-form button{
+    width: 100%;
+
+}
+.etapa-2 .etapa-2-img{
+    width: 60%;
+
+}
+
+/*Formatação estratificação etapa 3*/
+.etapa-3{
+    width: 100%;
+    margin: 50px 0px;
+    
+}
+
+/*Formatação pagina hemograma*/
+.form-style-hemograma{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    
+}
+.form-style-hemograma h5{
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 0px 5px 20px 5px;
+}
+.form-style-hemograma div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 15px 5px;
+
+}
+.form-style-hemograma label{
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.form-style-hemograma input{
+    width: 100%;
+
+}
+.form-style-hemograma button{
+    width: 80%;
+}
