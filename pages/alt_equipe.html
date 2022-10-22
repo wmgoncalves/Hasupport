@@ -22,7 +22,7 @@
             <div>
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="./adm_area.html">
+                  <a class="nav-link" href="./busca_equipe.html">
                     <img class="icons-menu" src="../assets/icons/arrow_back_icon.svg">
                   </a>
                 </li>
@@ -48,26 +48,26 @@
       </nav>
     </div>
     <div class="fundo-cadastro">
-    <div class="form">
-      <form>
+      <div class="form" onsubmit="return false">
+        <form>
           <div>
-            <input class="login" name="login" required="required" type="text" placeholder="Login da Equipe" />
+            <input id="login" class="login" name="login" required="required" type="text" placeholder="Login da Equipe"/>
           </div>
           <div>
-            <input class="senha" name="senha" required="required" type="password" placeholder="Senha da Equipe" />
+            <input id="senha" class="senha" name="senha" required="required" type="password" placeholder="Senha da Equipe"/>
           </div>
           <div>
-            <input class="membros_equipe" name="membros_equipe" required="required" type="password"
-              placeholder="Membros da Equipe" />
+            <textarea id="membros" class="membros" name="membros" required="required" placeholder="Membros da Equipe">
+            </textarea>
           </div>
           <div>
-            <button id="login">ALTERAR</button>
+            <button id="alterar">ALTERAR</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-  <script type="module" src="../js/login.js"></script>
+  <script type="module" src="../backend/equipe_js/update.js"></script>
   <script src="../js/bootstrap-js/bootstrap.js"></script>
 </body>
 </html>

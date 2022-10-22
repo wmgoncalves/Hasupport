@@ -32,8 +32,7 @@ function retornaValoresHemograma(){
 }
 retornaValoresHemograma();
 
-/*Funcão teste para marcar checkeds,
-ateriormente informados*/
+/*Funcão para marcar checkeds, ateriormente informados*/
 function verificaCheckeds(){
     let dataAtual = parseInt(new Date().toLocaleString().substring(6, 10));
     let dataInformada = parseInt((localStorage.getItem('userCadData')).toLocaleString().substring(0, 4));

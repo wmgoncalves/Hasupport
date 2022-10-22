@@ -12,11 +12,12 @@ async function logar(){
     // console.log(sql);
 
     let rows = await selectEquipe(login, senha);
-    console.log(rows);
+    // console.log(rows);
 
     if(rows.length > 0){
         // console.log("Usuário encontrado!");
-        window.location = "../pages/menu1.html";
+        localStorage.setItem('id_equipe', rows[0].id);
+        window.location = "../pages/busca_user.html";
     } else {
         // console.log("Acesso NEGADO!!");
         window.alert('Falha ao acessar o sistema!\nUsuário ou Senha incorreto(s)!');

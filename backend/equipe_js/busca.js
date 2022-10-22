@@ -7,18 +7,15 @@ async function buscar(){
     let result = document.querySelector("#result");
 
     let rows = await searchEquipes(login);
+    // console.log(rows.length);
 
     if(rows.length > 0){
-        window.alert('Nenhuma equipe encontrada!!');
-    } else {
-        for(i=0; i<rows.length; i++){
-            result.innerHTML += `<br>Login: ${rows[i].login} / Membros: ${rows[i].membros}`;
+        for(let i=0; i<rows.length; i++){
+            result.innerHTML += `<button class="equipe" onclick="selecionarEquipe(this)" value="${rows[i].id}">Login: ${rows[i].login} / Membros: ${rows[i].membros}</button><br>`;
         }
+    } else {
+        window.alert("Nenhuma equipe encontrada!!!");
     }
-}
-
-function selectEquipe(){
-    
 }
 
 btnBusca.addEventListener("click", buscar);
