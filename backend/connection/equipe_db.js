@@ -14,6 +14,13 @@ export async function equipeExists(login){
     return rows;
 }
 
+export async function loadEquipe(idEquipe){
+    const conn = await connect();
+    let [row] = await conn.query('SELECT * FROM usuario WHERE id=?', [idEquipe]);
+    await conn.end();
+    return row;
+}
+
 export async function insertEquipe(login, senha, membros){
     const conn = await connect();
     let [results] = await conn.query(
@@ -27,10 +34,12 @@ export async function insertEquipe(login, senha, membros){
     return results.affectedRows;
 }
 
-//FUNÇÃO NÃO TESTADA
 export async function searchEquipes(login){
     const conn = await connect();
-    let [rows] = await conn.quary("SELECT * FROM usuario WHERE login LIKE '%?%'", [login]);
+    login = '%' + login + '%';
+    let [rows] = await conn.query("SELECT * FROM usuario WHERE login LIKE ?", [login]);
+    // let [rows] = await conn.query("SELECT * FROM usuario");
+    // console.log(rows);
     await conn.end();
     return rows;
 }
