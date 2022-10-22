@@ -1,13 +1,13 @@
 const btnCadastrar = document.querySelector('#cadastrar');
 
 function insertNovoUsuario(){
-    let userCadNome = document.querySelector('#user-cad-nome').value;
-    let userCadData = document.querySelector('#user-cad-data').value;
-    let userCadCpf = document.querySelector('#user-cad-cpf').value;
-    let userCadCartao = document.querySelector('#user-cad-cartao').value;
-    let userCadAgente = document.querySelector('#user-cad-agente').value;
-    let userCadMasc = document.querySelector('#user-cad-masc');
-    let userCadFem = document.querySelector('#user-cad-fem');
+    let userCadNome = document.querySelector('#nome').value;
+    let userCadData = document.querySelector('#dataNasc').value;
+    let userCadCpf = document.querySelector('#cpf').value;
+    let userCadCartao = document.querySelector('#cartSus').value;
+    let userCadAgente = document.querySelector('#agenteSus').value;
+    let userCadMasc = document.querySelector('#masc');
+    let userCadFem = document.querySelector('#femi');
     
     if(userCadMasc.checked == true){
         localStorage.setItem('userCadSexo', userCadMasc.value);
