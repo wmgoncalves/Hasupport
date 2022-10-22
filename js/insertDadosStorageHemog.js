@@ -48,6 +48,10 @@ function insertHemograma(){
          hemogHemogGlic, hemogCreat, hemogPotass, hemogEqu, hemogMicroa, hemogAlbum,
          hemogAcid, hemogUreia,hemogTgo, hemogTgp);
 
+    let hemogramaSalvo = document.querySelector('#retorno-salvo-hemograma');
+    hemogramaSalvo.innerHTML = 'Salvo com sucesso';
+    hemogramaSalvo.style.color = 'green';
+
 }
 
 btnHemogCalcular.addEventListener("click", insertHemograma);

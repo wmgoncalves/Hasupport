@@ -143,6 +143,11 @@ body{
     background-color: rgba(219, 219, 219, 0.5);
 
 }
+.form-style input::placeholder{
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+    
+}
 .form-style button{
     border: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -223,6 +228,11 @@ body{
     box-shadow: 0px 0px 5px rgb(150, 150, 150);
     background-color: rgba(219, 219, 219, 0.5);
 
+}
+.form-style-interno input::placeholder{
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+    
 }
 .form-style-interno button{
     border: none;
@@ -325,7 +335,10 @@ body{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: 50px 0px;
+    margin: 20px 0px;
+    padding: 20px 0px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 
 }
 .etapa-2 h5{
@@ -355,6 +368,11 @@ body{
     width: 100%;
 
 }
+.etapa-2 .etapa-2-form input::placeholder{
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+    
+}
 .etapa-2 .etapa-2-form .style-checkbox{
     width: 30%;
     height: 30%;
@@ -377,6 +395,11 @@ body{
     margin: 50px 0px;
     
 }
+.etapa-3 h5{
+    font-weight: 600;
+    font-size: 1rem;
+
+}
 
 /*Formatação pagina hemograma*/
 .form-style-hemograma{
@@ -389,6 +412,14 @@ body{
     font-weight: 700;
     font-size: 1.5rem;
     padding: 0px 5px 20px 5px;
+
+}
+.form-style-hemograma p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+
 }
 .form-style-hemograma div{
     display: flex;
