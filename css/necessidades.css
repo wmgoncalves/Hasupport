@@ -1,0 +1,22 @@
+.form-necessidades{
+    width: 100%;
+    padding: 0px 10px;
+
+}
+.form-necessidades p{
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    padding: 20px 0px 0px 0px;
+}
+.form-necessidades .style-checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.form-necessidades button{
+    width: 100%;
+    margin-top: 30px;
+
+}
