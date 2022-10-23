@@ -4,7 +4,6 @@ function insertOxigenacao(){
     let el = document.querySelector('#retorno-oxigenacao');
     el.innerHTML = "Salvo com sucesso";
     setTimeout(function(){
-        //window.location.href = '';
 
     }, 2000);
     
