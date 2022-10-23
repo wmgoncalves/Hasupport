@@ -1,37 +1,34 @@
-body{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 .fundo-cadastro-global{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 
 }
 .fundo-cadastro{
+    height: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100%;
+    justify-content: center;
 
 }
-.fundo-cadastro img{
-    width: 20rem;
-    height: 10rem;
-
-}
-.fundo-cadastro .img{
-    margin: 10px;
+.fundo-cadastro .img img{
+    padding: 5px;
+    height: 150px;
+    margin: 20px;
 
 }
 .fundo-cadastro form{
+    width: 100%;
     padding: 5px;
-    margin: 20px 0px;
+    margin: 10px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +44,8 @@ body{
 
 }
 .fundo-cadastro .form{
-    width: 60%;
+    width: 100%;
+    text-align: center;
 
 }
 .fundo-cadastro .btn-cad-novo-user{
@@ -102,6 +100,20 @@ body{
 }
 .fundo-cadastro button:hover{
     background-color: #80cc80d4; 
+
+}
+/*Formatação para o footer*/
+.fundo-cadastro-global .footer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.fundo-cadastro-global .footer img{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
 
 }
 /*Formatação para o menu global*/
