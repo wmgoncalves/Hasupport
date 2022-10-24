@@ -52,6 +52,11 @@ function insertHemograma(){
     hemogramaSalvo.innerHTML = 'Salvo com sucesso';
     hemogramaSalvo.style.color = 'green';
 
+    setTimeout(function(){
+        history.go(-1);
+
+    }, 3000);
+
 }
 
 btnHemogCalcular.addEventListener("click", insertHemograma);

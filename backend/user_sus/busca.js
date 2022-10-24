@@ -2,6 +2,7 @@ import { searchUserSus } from "../connection/userSus_db.js";
 
 const btnBusca = document.querySelector("#buscar");
 const idEquipe = localStorage.getItem('id_equipe');
+const retornoBuscaUserSucess = document.querySelector('#retorno-busca-user-sucess');
 
 async function buscar(){
     let user_sus = document.querySelector("#user_sus").value;
@@ -18,7 +19,12 @@ async function buscar(){
                 CPF: ${rows[i].cpf}</button><br>`;
         }
     } else {
-        window.alert("Nenhum usuário do SUS encontrado!!!");
+        retornoBuscaUserSucess.innerHTML = 'Nenhum usuário do SUS encontrado!!!';
+        setTimeout(function(){
+            retornoBuscaUserSucess.innerHTML = '...';
+
+        }, 3000);
+        //window.alert("Nenhum usuário do SUS encontrado!!!");
     }
 }
 
