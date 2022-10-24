@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
 }
 .fundo-cadastro-global{
     height: 100vh;
@@ -102,6 +103,15 @@
     background-color: #80cc80d4; 
 
 }
+
+/*Formatação dos dados de retorno*/
+.fundo-cadastro .result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
 /*Formatação para o footer*/
 .fundo-cadastro-global .footer{
     width: 100%;
