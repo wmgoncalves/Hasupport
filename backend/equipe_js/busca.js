@@ -14,7 +14,7 @@ async function buscar(){
             result.innerHTML += `<button class="equipe" onclick="selecionarEquipe(this)" value="${rows[i].id}">Login: ${rows[i].login} / Membros: ${rows[i].membros}</button><br>`;
         }
     } else {
-        window.alert("Nenhuma equipe encontrada!!!");
+        //window.alert("Nenhuma equipe encontrada!!!");
     }
 }
 

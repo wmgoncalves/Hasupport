@@ -339,16 +339,23 @@ function verificaRisco(contBaixoRisco, contAltoRisco){
     el.innerHTML = 'INDEFINIDO'
     el2.style.display = 'none';
     el3.style.display = 'none';
-    if(contBaixoRisco == 1){
-        el.innerHTML = 'BAIXO RISCO'
 
-    }
-    if((contBaixoRisco >= 2) || (contAltoRisco >= 1)){
-        el.innerHTML = 'ALTO RISCO'
-        el2.style.display = 'flex';
+    if(contAltoRisco >= 1){
+        el.innerHTML = 'ALTO RISCO';
+        el2.style.display = 'none';
         el3.style.display = 'block';
-        //el3.style.display = 'flex';
 
+    }else{
+        if(contBaixoRisco == 1){
+            el.innerHTML = 'BAIXO RISCO';
+    
+        }
+        if(contBaixoRisco >= 2){
+            el.innerHTML = 'ALTO RISCO'
+            el2.style.display = 'flex';
+            el3.style.display = 'block';
+    
+        }
     }
 }
 
