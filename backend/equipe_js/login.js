@@ -8,6 +8,8 @@ async function logar(){
     let login = document.querySelector("#login").value;
     let senha = document.querySelector("#senha").value;
 
+    let retornoLogin = document.querySelector("#acesso-negado");
+
     // let sql = `SELECT * FROM usuario WHERE login='${login}' AND senha='${senha}'`;
     // console.log(sql);
 
@@ -20,7 +22,11 @@ async function logar(){
         window.location = "../pages/adm_area.html";
     } else {
         // console.log("Acesso NEGADO!!");
-        window.alert('Falha ao acessar o sistema!\nUsuário ou Senha incorreto(s)!');
+        retornoLogin.innerHTML = 'Falha ao acessar o sistema!\nUsuário ou Senha incorreto(s)!';
+        retornoLogin.style.color = 'red';
+        setTimeout(function(){
+            retornoLogin.innerHTML = "";
+        }, 5000);
     }
     
 }

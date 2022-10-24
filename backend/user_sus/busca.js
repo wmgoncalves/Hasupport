@@ -2,29 +2,41 @@ import { searchUserSus } from "../connection/userSus_db.js";
 
 const btnBusca = document.querySelector("#buscar");
 const idEquipe = localStorage.getItem('id_equipe');
-const retornoBuscaUserSucess = document.querySelector('#retorno-busca-user-sucess');
+const retornoBuscaUser = document.querySelector('#retorno-busca-user');
+
+const isEmpty = str => !str.trim().length;
 
 async function buscar(){
     let user_sus = document.querySelector("#user_sus").value;
     let result = document.querySelector("#result");
 
-    let rows = await searchUserSus(user_sus, idEquipe);
-    // console.log(rows);
+    result.innerHTML = "";
 
-    if(rows.length > 0){
-        for(let i=0; i<rows.length; i++){
-            result.innerHTML += `<button class="equipe" onclick="selecionarUserSus(this)" value="${rows[i].cart_sus}">
-                Cartão SUS: ${rows[i].cart_sus}<br> 
-                Nome: ${rows[i].nome} / 
-                CPF: ${rows[i].cpf}</button><br>`;
-        }
-    } else {
-        retornoBuscaUserSucess.innerHTML = 'Nenhum usuário do SUS encontrado!!!';
+    if(isEmpty(login)){
+        retornoBuscaUser.innerHTML = "ERRO -> Nenhum valor inserido na busca!";
+        retornoBuscaUser.style.color = 'red';
         setTimeout(function(){
-            retornoBuscaUserSucess.innerHTML = '...';
+            retornoBuscaUser.innerHTML = "";
+        }, 5000);
+    }
+    else {
+        let rows = await searchUserSus(user_sus, idEquipe);
+        // console.log(rows);
 
-        }, 3000);
-        //window.alert("Nenhum usuário do SUS encontrado!!!");
+        if(rows.length > 0){
+            for(let i=0; i<rows.length; i++){
+                result.innerHTML += `<button class="equipe" onclick="selecionarUserSus(this)" value="${rows[i].cart_sus}">
+                    Cartão SUS: ${rows[i].cart_sus}<br> 
+                    Nome: ${rows[i].nome} / 
+                    CPF: ${rows[i].cpf}</button><br>`;
+            }
+        } else {
+            retornoBuscaUser.innerHTML = 'Nenhum usuário(a) do SUS encontrado(a)!!!';
+            retornoBuscaUser.style.color = 'green';
+            setTimeout(function(){
+                retornoBuscaUser.innerHTML = "";
+            }, 3000);
+        }
     }
 }
 
