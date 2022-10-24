@@ -13,14 +13,14 @@ let checkMasc = document.querySelector('#br-sex-masc');
 let checkIdade = document.querySelector('#br-idade');
 
 function retornaSexoIdade(){
-    imcRetornoIdade.innerHTML = 30;
-    imcRetornoSexo.innerHTML = 'Masc';
+    imcRetornoIdade.innerHTML = localStorage.getItem('userCadIdade');
+    imcRetornoSexo.innerHTML = localStorage.getItem('userCadSexo');
 
-    circAbdomRetornoSexo.innerHTML = 'Masc';
-    cintQuadrRetornoSexo.innerHTML = 'Masc';
+    circAbdomRetornoSexo.innerHTML = localStorage.getItem('userCadSexo');
+    cintQuadrRetornoSexo.innerHTML = localStorage.getItem('userCadSexo');
 
-    etapa2RetornoIdade.innerHTML = 45;
-    etapa2RetornoSexo.innerHTML = 'Masc'
+    etapa2RetornoIdade.innerHTML = localStorage.getItem('userCadIdade');
+    etapa2RetornoSexo.innerHTML = localStorage.getItem('userCadSexo');
 
 }
 retornaSexoIdade();
@@ -36,6 +36,8 @@ retornaValoresHemograma();
 function verificaCheckeds(){
     let dataAtual = parseInt(new Date().toLocaleString().substring(6, 10));
     let dataInformada = parseInt((localStorage.getItem('userCadData')).toLocaleString().substring(0, 4));
+    localStorage.setItem('userCadIdade', (dataAtual-dataInformada));
+
     console.log('Data hj: ', dataAtual, dataInformada, (dataAtual-dataInformada));
     
     if(localStorage.getItem('userCadSexo') === 'Masculino'){

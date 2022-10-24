@@ -17,7 +17,7 @@ async function logar(){
     if(rows.length > 0){
         // console.log("Usuário encontrado!");
         localStorage.setItem('id_equipe', rows[0].id);
-        window.location = "../pages/busca_user.html";
+        window.location = "../pages/adm_area.html";
     } else {
         // console.log("Acesso NEGADO!!");
         window.alert('Falha ao acessar o sistema!\nUsuário ou Senha incorreto(s)!');
