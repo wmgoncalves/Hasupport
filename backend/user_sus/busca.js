@@ -12,7 +12,7 @@ async function buscar(){
 
     result.innerHTML = "";
 
-    if(isEmpty(login)){
+    if(isEmpty(user_sus)){
         retornoBuscaUser.innerHTML = "ERRO -> Nenhum valor inserido na busca!";
         retornoBuscaUser.style.color = 'red';
         setTimeout(function(){

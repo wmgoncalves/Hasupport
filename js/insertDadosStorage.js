@@ -312,22 +312,30 @@ function calculaImc(peso, altura){
     let result = parseInt(peso)/(parseFloat(altura)*parseFloat(altura));
     console.log(result);
 
+    localStorage.setItem('imc', result);
+
     if(result < 18.5){
+        localStorage.setItem('clas_imc', 'Abaixo do peso');
         el.innerHTML = 'Abaixo do peso'
         
     }else if((result >= 18.5) && (result < 25)){
+        localStorage.setItem('clas_imc', 'Peso normal');
         el.innerHTML = 'Peso normal'
 
     }else if((result >= 25) && (result < 30)){
+        localStorage.setItem('clas_imc', 'Excesso de peso');
         el.innerHTML = 'Excesso de peso'
 
     }else if((result >= 30) && (result < 35)){
+        localStorage.setItem('clas_imc', 'Obesidade classe I');
         el.innerHTML = 'Obesidade classe I'
 
     }else if((result >= 35) && (result < 40)){
+        localStorage.setItem('clas_imc', 'Obesidade classe II');
         el.innerHTML = 'Obesidade classe II'
 
     }else if(result >= 40){
+        localStorage.setItem('clas_imc', 'Obesidade classe III');
         el.innerHTML = 'Obesidade classe III'
 
     }
@@ -341,16 +349,19 @@ function verificaRisco(contBaixoRisco, contAltoRisco){
     el3.style.display = 'none';
 
     if(contAltoRisco >= 1){
+        localStorage.setItem('clas_estrat', 'ALTO RISCO');
         el.innerHTML = 'ALTO RISCO';
         el2.style.display = 'none';
         el3.style.display = 'block';
 
     }else{
         if(contBaixoRisco == 1){
+            localStorage.setItem('clas_estrat', 'BAIXO RISCO');
             el.innerHTML = 'BAIXO RISCO';
     
         }
         if(contBaixoRisco >= 2){
+            localStorage.setItem('clas_estrat', 'ALTO RISCO');
             el.innerHTML = 'ALTO RISCO'
             el2.style.display = 'flex';
             el3.style.display = 'block';

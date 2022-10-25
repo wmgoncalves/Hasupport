@@ -28,14 +28,10 @@ function calcular_pas_pad() {
 	else { //pas < 120 and pad < 80
 		ha = 'PA ótima'
 	}
+
+	localStorage.setItem('clas_ha', ha);
 	result.innerHTML = ha;
 }
-
-
-
-//=========================================================================================================
-
-//  Calculo IMC //
 
 /*
 function calculo_imc()
@@ -75,6 +71,7 @@ function classif_circ_abdominal() {
 			classificacao = 'Risco Muito Elevado';
 		}
 	}
+	localStorage.setItem('clas_abdo', classificacao);
 	resultado_circ.innerHTML = classificacao;
 }
 
@@ -100,10 +97,11 @@ function cint_quadril() {
 			result = 'Risco elevado';
 		}
 		else {
-			self.clas_quadril = 'Normal';
+			result = 'Normal';
 		}
 
 	}
+	localStorage.setItem('clas_cint_quad', result);
 	result_final.innerHTML = result;
 }
 
@@ -127,6 +125,7 @@ function torno_brac() {
 	else {
 		result_torno_braquial = 'Incompressibilidade arterial devido a provável calcificação';
 	}
+	localStorage.setItem('clas_torn_braq', result_torno_braquial);
 	result_final_tornozelobraquial.innerHTML = result_torno_braquial;
 
 }
