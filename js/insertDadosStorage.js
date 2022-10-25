@@ -335,6 +335,7 @@ function insertEstratificacaoEtapa2(){
     localStorage.setItem('etapa2PaSistol', etapa2PaSistol);
 
     console.log(localStorage.getItem('etapa2Fumante'), localStorage.getItem('etapa2Tratada'));
+    console.log(etapa2ColestTotal);
 
 }
 function calculaImc(peso, altura){

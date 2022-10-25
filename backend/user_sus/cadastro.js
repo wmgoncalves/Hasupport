@@ -23,7 +23,7 @@ async function cadastrar(){
             setTimeout(function(){
                 window.location = "../pages/menu1.html";
 
-            }, 3000);
+            }, 2000);
         }
         else
             retornoCadUserSucess.innerHTML = 'ERRO!\nNão foi possível cadastrar o(a) Usuário(a)!!';
