@@ -2,6 +2,7 @@ const btnPasPad = document.querySelector("#btn-calcular-pas-pad");
 const btnCirAbd = document.querySelector("#btn-circ-abdom-calcular");
 const btnCintQuad = document.querySelector("#btn-cint-quadr-calcular");
 const btnTornBraq = document.querySelector("#btn-torn-braq-calcular");
+const btnEstrat2Calcular = document.querySelector('#btn-estrat2-calcular');
 
 function calcular_pas_pad() {
 	let pas = document.querySelector("#pas").value;
@@ -130,7 +131,82 @@ function torno_brac() {
 	result_final_tornozelobraquial.innerHTML = result_torno_braquial;
 
 }
+
+function calcularEstratificacaoParte2(){
+	/*
+	let pontos = 0;
+	let idade = localStorage.getItem('userCadIdade')
+	
+	if((localStorage.getItem('userCadSexo')) === 'Masculino'){
+		if((idade > 20)&&(idade <= 34)){
+			pontos = -9;
+
+		}else if((idade > 34)&&(idade <= 39)){
+			pontos = -4;
+
+		}else if((idade > 40)&&(idade <= 44)){
+			pontos = 0;
+
+		}else if((idade > 45)&&(idade <= 49)){
+			pontos = 3;
+
+		}else if((idade > 50)&&(idade <= 54)){
+			pontos = 6;
+
+		}else if((idade > 55)&&(idade <= 59)){
+			pontos = 8;
+
+		}else if((idade > 60)&&(idade <= 64)){
+			pontos = 10;
+
+		}else if((idade > 65)&&(idade <= 69)){
+			pontos = 11;
+
+		}else if((idade > 70)&&(idade < 74)){
+			pontos = 12;
+
+		}else if((idade > 75)&&(idade <= 79)){
+			pontos = 13;
+
+		}
+	}else{
+		if((idade >= 20)&&(idade <= 34)){
+			pontos = -7;
+
+		}else if((idade > 34)&&(idade <= 39)){
+			pontos = -3;
+
+		}else if((idade > 40)&&(idade <= 44)){
+			pontos = 0;
+
+		}else if((idade > 45)&&(idade <= 49)){
+			pontos = 3;
+
+		}else if((idade > 50)&&(idade <= 54)){
+			pontos = 6;
+
+		}else if((idade > 55)&&(idade <= 59)){
+			pontos = 8;
+
+		}else if((idade > 60)&&(idade <= 64)){
+			pontos = 10;
+
+		}else if((idade > 65)&&(idade <= 69)){
+			pontos = 12;
+
+		}else if((idade > 70)&&(idade < 74)){
+			pontos = 14;
+
+		}else if((idade > 75)&&(idade <= 79)){
+			pontos = 16;
+			
+		}
+	}
+	console.log(pontos, idade);
+	*/
+}
 btnPasPad.addEventListener("click", calcular_pas_pad);
 btnCirAbd.addEventListener("click", classif_circ_abdominal);
 btnCintQuad.addEventListener("click", cint_quadril);
 btnTornBraq.addEventListener("click", torno_brac);
+btnEstrat2Calcular.addEventListener("click", calcularEstratificacaoParte2);

@@ -5,6 +5,7 @@ const btnCintQuadr = document.querySelector('#btn-cint-quadr-calcular');
 const btnTornBraq = document.querySelector('#btn-torn-braq-calcular');
 
 const btnEstratCalcular = document.querySelector('#btn-estrat-calcular');
+const btnEstrat2Calcular = document.querySelector('#btn-estrat2-calcular');
 
 function insertPasPad(){
     let pad = document.querySelector('#pad').value;
@@ -307,6 +308,35 @@ function insertEstratificacao(){
     localStorage.setItem('arDoencRenal', arDoencRenal);
         
 }
+function insertEstratificacaoEtapa2(){
+    let etapa2ColestTotal = document.querySelector('#etapa2-colest-total').value;
+    let etapa2Fumante = document.querySelector('#etapa2-fumante');
+    let etapa2Hdl = document.querySelector('#etapa2-hdl').value;
+    let etapa2PaSistol = document.querySelector('#etapa2-pa-sistol').value;
+    let etapa2Tratada = document.querySelector('#etapa2-tratada');
+
+    if(etapa2Fumante.checked == true){
+        localStorage.setItem('etapa2Fumante', etapa2Fumante.name);
+        
+    }else{
+        localStorage.setItem('etapa2Fumante', 'Não fumante');
+        
+    }
+    if(etapa2Tratada.checked == true){
+        localStorage.setItem('etapa2Tratada', etapa2Tratada.name);
+        
+    }else{
+        localStorage.setItem('etapa2Tratada', 'Não tratada');
+
+    }
+
+    localStorage.setItem('hemogColes', etapa2ColestTotal);
+    localStorage.setItem('hemogHdl', etapa2Hdl);
+    localStorage.setItem('etapa2PaSistol', etapa2PaSistol);
+
+    console.log(localStorage.getItem('etapa2Fumante'), localStorage.getItem('etapa2Tratada'));
+
+}
 function calculaImc(peso, altura){
     let el = document.querySelector('#retorno-calculo-imc');
     let result = parseInt(peso)/(parseFloat(altura)*parseFloat(altura));
@@ -365,3 +395,4 @@ btnEstratCalcular.addEventListener("click", insertEstratificacao);
 btnCircAbdom.addEventListener("click", insertCircAbdom);
 btnCintQuadr.addEventListener("click", insertCintQuadr);
 btnTornBraq.addEventListener("click", insertTornBraq);
+btnEstrat2Calcular.addEventListener('click', insertEstratificacaoEtapa2);
