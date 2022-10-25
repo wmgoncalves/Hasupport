@@ -21,7 +21,7 @@ async function cadastrar(){
             retornoCadUserSucess.innerHTML = 'Usuário(a) cadastrado(a) com sucesso.';
             //window.alert('Usuário(a) cadastrado(a) com sucesso.');
             setTimeout(function(){
-                window.location = "../pages/menu1.html";
+                window.location = "./menu1.html";
 
             }, 2000);
         }
