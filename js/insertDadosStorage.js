@@ -7,6 +7,9 @@ const btnTornBraq = document.querySelector('#btn-torn-braq-calcular');
 const btnEstratCalcular = document.querySelector('#btn-estrat-calcular');
 const btnEstrat2Calcular = document.querySelector('#btn-estrat2-calcular');
 
+const etapa2PaSistol = document.querySelector('#etapa2-pa-sistol');
+//const tornBraqPasBra = document.querySelector('#torn-braq-pas-bra');
+
 function insertPasPad(){
     let pad = document.querySelector('#pad').value;
     let pas = document.querySelector('#pas').value;
@@ -14,7 +17,9 @@ function insertPasPad(){
     localStorage.setItem('pad', pad);
     localStorage.setItem('pas', pas);
 
-    console.log('Sucesso Pad-Pas:', pad, pas);
+    etapa2PaSistol.value = pas;
+    tornBraqPasBra.value = pas;
+    console.log('Sucesso Pas-Pad:', pas, pad);
     
 }
 function insertImc(){
@@ -51,7 +56,10 @@ function insertTornBraq(){
     let tornBraqPasBra = document.querySelector('#torn-braq-pas-bra').value;
     
     localStorage.setItem('tornBraqPasTorn', tornBraqPasTorn);
-    localStorage.setItem('tornBraqPasTorn', tornBraqPasTorn);
+    localStorage.setItem('pas', tornBraqPasBra);
+
+    etapa2PaSistol.value = localStorage.getItem('pas');
+    pas.value = localStorage.getItem('pas');
     
     console.log('Sucesso Tornozelo-Braquial:', tornBraqPasTorn, tornBraqPasBra);
     
@@ -86,6 +94,10 @@ function insertEstratificacao(){
     let arAngina = document.querySelector('#ar-angina');
     let arDoencRenal = document.querySelector('#ar-doenc-renal');
 
+    /*Variavel da etapa 2*/
+    let checkFumante = document.querySelector('#etapa2-fumante');
+    checkFumante.checked = false;
+    
     let contBaixoRisco = 0;
     let contAltoRisco = 0;
 
@@ -106,6 +118,7 @@ function insertEstratificacao(){
 
     if(brTabag.checked == true){
         brTabag = document.querySelector('#br-tabag').name;
+        checkFumante.checked = true;
         contBaixoRisco++;
     }else{
         brTabag = "vazio"
@@ -332,7 +345,10 @@ function insertEstratificacaoEtapa2(){
 
     localStorage.setItem('hemogColes', etapa2ColestTotal);
     localStorage.setItem('hemogHdl', etapa2Hdl);
-    localStorage.setItem('etapa2PaSistol', etapa2PaSistol);
+    localStorage.setItem('pas', etapa2PaSistol);
+    
+    tornBraqPasBra.value = localStorage.getItem('pas');
+    pas.value = localStorage.getItem('pas');
 
     console.log(localStorage.getItem('etapa2Fumante'), localStorage.getItem('etapa2Tratada'));
     console.log(etapa2ColestTotal);
@@ -383,7 +399,7 @@ function verificaRisco(contBaixoRisco, contAltoRisco){
         localStorage.setItem('clas_estrat', 'ALTO RISCO');
         el.innerHTML = 'ALTO RISCO';
         el2.style.display = 'none';
-        el3.style.display = 'block';
+        el3.style.display = 'none';
 
     }else{
         if(contBaixoRisco == 1){

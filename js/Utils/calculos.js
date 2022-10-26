@@ -107,8 +107,8 @@ function cint_quadril() {
 }
 
 function torno_brac() {
-	let tornozelo = document.querySelector("#torn-braq-pas-torn");
-	let braquial = document.querySelector("#torn-braq-pas-bra");
+	let tornozelo = parseInt(document.querySelector("#torn-braq-pas-torn").value);
+	let braquial = parseInt(document.querySelector("#torn-braq-pas-bra").value);
 	let result_torno_braquial;
 	let result_final_tornozelobraquial = document.querySelector("#retorno-calculo-torn-braq");
 

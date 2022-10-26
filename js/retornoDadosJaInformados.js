@@ -9,9 +9,10 @@ let etapa2RetornoSexo = document.querySelector('#etapa2-retorno-sexo');
 let etapa2ColestTotal = document.querySelector('#etapa2-colest-total');
 let etapa2Hdl = document.querySelector('#etapa2-hdl');
 
+let tornBraqPasBra = document.querySelector('#torn-braq-pas-bra');
+
 let checkMasc = document.querySelector('#br-sex-masc');
 let checkIdade = document.querySelector('#br-idade');
-
 
 function retornaValoresHemograma(){
     etapa2ColestTotal.value = localStorage.getItem('hemogColes');
@@ -20,10 +21,20 @@ function retornaValoresHemograma(){
 }
 retornaValoresHemograma();
 
+
+
 /*Funcão para marcar checkeds, ateriormente informados*/
 function verificaCheckeds(){
     let dataAtual = parseInt(new Date().toLocaleString().substring(6, 10));
-    let dataInformada = parseInt((localStorage.getItem('userCadData')).toLocaleString().substring(0, 4));
+    let dataInformada = 0;
+    //dataInformada = parseInt((localStorage.getItem('userCadData')).toLocaleString().substring(0, 4));
+    if((localStorage.getItem('userCadData')) == null){
+        dataInformada = parseInt(new Date().toLocaleString().substring(6, 10));
+        
+    }else{
+        dataInformada = parseInt((localStorage.getItem('userCadData')).toLocaleString().substring(0, 4));
+
+    }
     
     /*Salva idade em localstorage*/
     localStorage.setItem('userCadIdade', (dataAtual-dataInformada));
@@ -60,3 +71,18 @@ function retornaSexoIdade(){
 
 }
 retornaSexoIdade();
+
+/*Função que preenche input anteriormente informados*/
+function retornaDadosInputs(){
+    let pad = document.querySelector('#pad');
+    let pas = document.querySelector('#pas');
+    let peso = document.querySelector('#imc-peso');
+    let altura = document.querySelector('#imc-altura');
+ 
+    pas.value = localStorage.getItem('pas');
+    pad.value = localStorage.getItem('pad');
+    peso.value = localStorage.getItem('peso');
+    altura.value = localStorage.getItem('altura');
+
+}
+retornaDadosInputs();

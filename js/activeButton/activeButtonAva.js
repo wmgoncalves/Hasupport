@@ -6,6 +6,8 @@ const btn8 = document.querySelector('#btn-cint-quadr');
 const btn9 = document.querySelector('#btn-torn-braq');
 const btn10 = document.querySelector('#btn-estrat-risco');
 
+const tornBraqPasBra = document.querySelector('#torn-braq-pas-bra');
+
 function carrega4(){
     const el = document.querySelector('.text-none-rastreamento');
     if(el.style.display === 'block'){
@@ -71,6 +73,9 @@ function carrega9(){
         el.style.display = 'block';
         btn9.textContent = 'FECHAR';
     }
+    //Retorna 'pas' informado no rastreamento
+    //retornaPas();
+
 }
 function carrega10(){
     const el = document.querySelector('.text-none-estrat-risco');
@@ -82,6 +87,11 @@ function carrega10(){
         el.style.display = 'block';
         btn10.textContent = 'FECHAR';
     }
+}
+
+function retornaPas(){
+    tornBraqPasBra.value = localStorage.getItem('tornBraqPasBra');
+
 }
 
 btn4.addEventListener("click", carrega4);
