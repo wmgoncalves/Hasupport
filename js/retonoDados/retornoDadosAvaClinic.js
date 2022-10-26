@@ -74,15 +74,26 @@ retornaSexoIdade();
 
 /*Função que preenche input anteriormente informados*/
 function retornaDadosInputs(){
-    let pad = document.querySelector('#pad');
     let pas = document.querySelector('#pas');
+    let pad = document.querySelector('#pad');
     let peso = document.querySelector('#imc-peso');
     let altura = document.querySelector('#imc-altura');
+    let brHipert = document.querySelector('#br-hipert');
  
     pas.value = localStorage.getItem('pas');
     pad.value = localStorage.getItem('pad');
     peso.value = localStorage.getItem('peso');
     altura.value = localStorage.getItem('altura');
+
+    if((localStorage.getItem('brHipert') == null) || (localStorage.getItem('brHipert') == 'vazio')){
+        console.log('false', localStorage.getItem('brHipert'));
+        brHipert.checked = false;
+        
+    }else{
+        console.log('true', localStorage.getItem('brHipert'));
+        brHipert.checked = true;
+
+    }
 
 }
 retornaDadosInputs();

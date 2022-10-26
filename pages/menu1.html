@@ -19,11 +19,13 @@
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <div>
                       <ul class="navbar-nav">
+                        <!--
                         <li class="nav-item">
                           <a class="nav-link" href="./adm_area.html">
                             <img class="icons-menu" src="../assets/icons/arrow_back_icon.svg">
                           </a>
                         </li>
+                      -->
                         <li class="nav-item">
                           <a class="nav-link" aria-current="page" href="./menu1.html">
                             <img class="icons-menu" src="../assets/icons/home_icon.svg">
@@ -62,8 +64,19 @@
                 <button>5 - AVALIAÇÃO DE ENFERMAGEM</button>
             </a>
             <div>
-              <a><button id="clean-localstorage">Finalizar (limpa storage)</button></a>
+              <a class="botao-padrao">
+                <button id="clean-localstorage">Finalizar (limpa storage)</button>
+              </a>
             </div>
+            <p id="retorno-fizalizacao-cosulta">...</p>
+        </div>
+        <div class="navegacao-footer">
+          <a href="./adm_area.html" class="botao-padrao">
+            <button>VOLTAR</button>
+        </a>
+        <a href="./pageHistoricoEnf.html" class="botao-padrao">
+            <button>AVANÇAR</button>
+        </a>
         </div>
     </div>
     <script type="module" src="../backend/user_sus/loadDataUser.js"></script>

@@ -329,10 +329,11 @@ function insertEstratificacaoEtapa2(){
     let etapa2Tratada = document.querySelector('#etapa2-tratada');
 
     if(etapa2Fumante.checked == true){
-        localStorage.setItem('etapa2Fumante', etapa2Fumante.name);
+        localStorage.setItem('brTabag', etapa2Fumante.name);
+        //localStorage.setItem('etapa2Fumante', etapa2Fumante.name);
         
     }else{
-        localStorage.setItem('etapa2Fumante', 'Não fumante');
+        localStorage.setItem('brTabag', 'Não fumante');
         
     }
     if(etapa2Tratada.checked == true){
@@ -350,7 +351,7 @@ function insertEstratificacaoEtapa2(){
     tornBraqPasBra.value = localStorage.getItem('pas');
     pas.value = localStorage.getItem('pas');
 
-    console.log(localStorage.getItem('etapa2Fumante'), localStorage.getItem('etapa2Tratada'));
+    console.log(localStorage.getItem('brTabag'), localStorage.getItem('etapa2Tratada'));
     console.log(etapa2ColestTotal);
 
 }

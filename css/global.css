@@ -55,7 +55,7 @@ body{
 
 /*Formatação padão para os botões globais*/
 .fundo-botao{
-    padding: 3rem 0;
+    padding: 2rem 0 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -440,4 +440,30 @@ body{
 }
 .form-style-hemograma button{
     width: 80%;
+
+}
+/*Formatação botão finalizar*/
+.fundo-botao .botao-padrao #clean-localstorage{
+    padding: 1.5rem .3rem;
+    margin: 10px 0;
+
+}
+.fundo-botao .botao-padrao #clean-localstorage:hover{
+    background-color: #558a55;
+
+}
+/*Formatação navegação rodapé*/
+.navegacao-footer{
+    display: flex;
+    justify-content: space-around;
+
+}
+.navegacao-footer .botao-padrao{
+    width: 35%;
+    margin: 5px 0;
+    
+}
+.navegacao-footer .botao-padrao button{
+    padding: 1.5rem 0;
+
 }
