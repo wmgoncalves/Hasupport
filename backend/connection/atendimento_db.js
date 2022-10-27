@@ -1,10 +1,12 @@
 import { connect } from "./db_connect.js";
 
-const btnFinaliza = document.querySelector("#clean-localstorage");
+const btnFinaliza = document.querySelector("#btn-finaliza-consulta");
 
 export async function saveConsulta(){
     let date = new Date();
     let cur_date = date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+    // Data informada se novo cadastro/ tbm pode ser retorno do banco
+    // let cur_date = localStorage.getItem('userCadData');
     // console.log(cur_date);
 
     let cart_sus = localStorage.getItem('cart_sus');
