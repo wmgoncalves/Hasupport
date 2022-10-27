@@ -30,3 +30,9 @@
     display: none;
 
 }
+
+/*Disable caso login não 'admin'*/
+.enabled-case-admin{
+    display: none;
+    
+}

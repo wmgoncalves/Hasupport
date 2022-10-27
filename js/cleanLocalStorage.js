@@ -8,6 +8,7 @@ function cleanStorage(){
     retornoFizalizacaoCosulta.style.fontSize = '1.2rem';
     setTimeout(function(){
         retornoFizalizacaoCosulta.innerHTML = '...';
+        retornoFizalizacaoCosulta.style.color = 'black';
 
     }, 3000);    
 }

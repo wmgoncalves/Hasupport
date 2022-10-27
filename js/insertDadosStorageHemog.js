@@ -51,9 +51,8 @@ function insertHemograma(){
     let hemogramaSalvo = document.querySelector('#retorno-salvo-hemograma');
     hemogramaSalvo.innerHTML = 'Salvo com sucesso';
     hemogramaSalvo.style.color = 'green';
-
     setTimeout(function(){
-        history.go(-1);
+        hemogramaSalvo.innerHTML = '...';
 
     }, 3000);
 
