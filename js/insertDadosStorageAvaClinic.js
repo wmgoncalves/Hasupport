@@ -8,7 +8,7 @@ const btnEstratCalcular = document.querySelector('#btn-estrat-calcular');
 const btnEstrat2Calcular = document.querySelector('#btn-estrat2-calcular');
 
 const etapa2PaSistol = document.querySelector('#etapa2-pa-sistol');
-//const tornBraqPasBra = document.querySelector('#torn-braq-pas-bra');
+const tornBraqPasBra = document.querySelector('#torn-braq-pas-bra');
 
 function insertPasPad(){
     let pad = document.querySelector('#pad').value;
@@ -17,8 +17,8 @@ function insertPasPad(){
     localStorage.setItem('pad', pad);
     localStorage.setItem('pas', pas);
 
-    etapa2PaSistol.value = pas;
-    tornBraqPasBra.value = pas;
+    etapa2PaSistol.value = localStorage.getItem('pas');
+    tornBraqPasBra.value = localStorage.getItem('pas');
     console.log('Sucesso Pas-Pad:', pas, pad);
     
 }
@@ -34,11 +34,11 @@ function insertImc(){
     
 }
 function insertCircAbdom(){
-    let circCbdomCm = document.querySelector('#circ-abdom-cm').value;
+    let circAbdomCm = document.querySelector('#circ-abdom-cm').value;
     
-    localStorage.setItem('circCbdomCm', circCbdomCm);
+    localStorage.setItem('circAbdomCm', circAbdomCm);
     
-    console.log('Sucesso Circunferencia Abdominal:', circCbdomCm);
+    console.log('Sucesso Circunferencia Abdominal:', circAbdomCm);
     
 }
 function insertCintQuadr(){
@@ -59,7 +59,7 @@ function insertTornBraq(){
     localStorage.setItem('pas', tornBraqPasBra);
 
     etapa2PaSistol.value = localStorage.getItem('pas');
-    pas.value = localStorage.getItem('pas');
+    pas = localStorage.getItem('pas');
     
     console.log('Sucesso Tornozelo-Braquial:', tornBraqPasTorn, tornBraqPasBra);
     
@@ -351,8 +351,8 @@ function insertEstratificacaoEtapa2(){
     tornBraqPasBra.value = localStorage.getItem('pas');
     pas.value = localStorage.getItem('pas');
 
-    console.log(localStorage.getItem('brTabag'), localStorage.getItem('etapa2Tratada'));
-    console.log(etapa2ColestTotal);
+    console.log(etapa2ColestTotal, localStorage.getItem('brTabag'), etapa2Hdl,
+        etapa2PaSistol, localStorage.getItem('etapa2Tratada'));
 
 }
 function calculaImc(peso, altura){

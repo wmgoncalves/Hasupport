@@ -40,7 +40,7 @@ function insertHemograma(){
     localStorage.setItem('hemogAlbum', hemogAlbum);
     localStorage.setItem('hemogAcid', hemogAcid);
     localStorage.setItem('hemogUreia', hemogUreia);
-    localStorage.setItem('hemogTgo',hemogTgo);
+    localStorage.setItem('hemogTgo', hemogTgo);
     localStorage.setItem('hemogTgp', hemogTgp);
 
     console.log('Sucesso Hemograma:', hemogHemac, hemogHemogl, hemogHemat, hemogHeuc,
