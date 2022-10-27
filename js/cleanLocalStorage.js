@@ -1,4 +1,4 @@
-const btnClean = document.querySelector('#clean-localstorage');
+const btnFinalizaConsulta = document.querySelector('#btn-finaliza-consulta');
 const retornoFizalizacaoCosulta = document.querySelector('#retorno-fizalizacao-cosulta');
 
 function cleanStorage(){
@@ -13,4 +13,4 @@ function cleanStorage(){
     }, 3000);    
 }
 
-btnClean.addEventListener("click", cleanStorage);
+btnFinalizaConsulta.addEventListener("click", cleanStorage);

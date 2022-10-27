@@ -451,14 +451,16 @@ body{
 
 }
 /*Formatação botão finalizar*/
-.fundo-botao .botao-padrao #clean-localstorage{
+.fundo-botao .botao-padrao #btn-finaliza-consulta,
+.fundo-botao .botao-padrao #btn-finaliza-ava-clinic{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 1.3rem 1rem;
     margin: 10px 0;
     font-size: 1rem;
 
 }
-.fundo-botao .botao-padrao #clean-localstorage:hover{
+.fundo-botao .botao-padrao #btn-finaliza-consulta:hover,
+.fundo-botao .botao-padrao #btn-finaliza-ava-clinic:hover{
     background-color: #558a55;
 
 }
@@ -470,7 +472,7 @@ body{
 }
 .navegacao-footer .botao-padrao{
     width: 35%;
-    margin: 5px 0;
+    margin: 5px 0 10px 0;
     
 }
 .navegacao-footer .botao-padrao button{

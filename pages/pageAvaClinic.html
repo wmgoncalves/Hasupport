@@ -16,7 +16,8 @@
         <div class="menu">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
@@ -82,7 +83,7 @@
                             <input id="pad" type="number" placeholder="PAD: MMHG">
                         </div>
                         <div>
-                            <button id="btn-calcular-pas-pad">Calcular</button>
+                            <button id="btn-calcular-pas-pad">CALCULAR</button>
                         </div>
                     </form>
                     <p>Classificação: <span id="retorno-calculo-pas-pad">Aguardando velores...</span></p>
@@ -100,7 +101,8 @@
                         <h4>ÍNDICE DE MASSA CORPORAL (IMC)</h4>
                         <div>
                             <div>
-                                <p>IDADE:<span id="imc-retorno-idade">...</span>&emsp;SEXO:<span id="imc-retorno-sexo">...</span></p>
+                                <p>IDADE:<span id="imc-retorno-idade">...</span>&emsp;SEXO:<span
+                                        id="imc-retorno-sexo">...</span></p>
                             </div>
                             <form action="" class="form-style-interno" onsubmit="return false">
                                 <div>
@@ -110,7 +112,7 @@
                                     <input id="imc-altura" type="text" placeholder="ALTURA(M): 1.70">
                                 </div>
                                 <div>
-                                    <button id="btn-imc-calcular">Calcular</button>
+                                    <button id="btn-imc-calcular">CALCULAR</button>
                                 </div>
                             </form>
                             <p>Classificação: <span id="retorno-calculo-imc">Aguardando velores...</span></p>
@@ -132,7 +134,7 @@
                                     <input id="circ-abdom-cm" type="number" placeholder="(CM)">
                                 </div>
                                 <div>
-                                    <button id="btn-circ-abdom-calcular">Calcular</button>
+                                    <button id="btn-circ-abdom-calcular">CALCULAR</button>
                                 </div>
                             </form>
                             <p>Classificação: <span id="retorno-calculo-circ-abdom">Aguardando velores...</span></p>
@@ -151,13 +153,15 @@
                             </div>
                             <form action="" class="form-style-interno" onsubmit="return false">
                                 <div>
-                                    <input id="cint-quadr-abdom-cm" type="number" placeholder="(CM) CIRCUNFÊRENCIA ABDOMINAL">
+                                    <input id="cint-quadr-abdom-cm" type="number"
+                                        placeholder="(CM) CIRCUNFÊRENCIA ABDOMINAL">
                                 </div>
                                 <div>
-                                    <input id="cint-quadr-quadr-cm" type="number" placeholder="(CM) CIRCUNFERÊNCIA DO QUADRIL">
+                                    <input id="cint-quadr-quadr-cm" type="number"
+                                        placeholder="(CM) CIRCUNFERÊNCIA DO QUADRIL">
                                 </div>
                                 <div>
-                                    <button id="btn-cint-quadr-calcular">Calcular</button>
+                                    <button id="btn-cint-quadr-calcular">CALCULAR</button>
                                 </div>
                             </form>
                             <p>Classificação: <span id="retorno-calculo-cint-quadr">Aguardando velores...</span></p>
@@ -173,13 +177,14 @@
                         <div>
                             <form action="" class="form-style-interno" onsubmit="return false">
                                 <div>
-                                    <input id="torn-braq-pas-torn" type="number" placeholder="VALOR DA MAIOR PAS DO TORNOZELO">
+                                    <input id="torn-braq-pas-torn" type="number"
+                                        placeholder="VALOR DA MAIOR PAS DO TORNOZELO">
                                 </div>
                                 <div>
                                     <input id="torn-braq-pas-bra" type="number" placeholder="VALOR DA PAS DO BRAÇO">
                                 </div>
                                 <div>
-                                    <button id="btn-torn-braq-calcular">Calcular</button>
+                                    <button id="btn-torn-braq-calcular">CALCULAR</button>
                                 </div>
                             </form>
                             <p>Classificação: <span id="retorno-calculo-torn-braq">Aguardando velores...</span></p>
@@ -221,12 +226,15 @@
                             <label for="br-tabag">Tabagismo;</label>
                         </div>
                         <div class="style-checkbox">
-                            <input id="br-hipert" type="checkbox" name="Hipertensão (> 140/90 mmHg) ou história de pré-eclâmpsia">
+                            <input id="br-hipert" type="checkbox"
+                                name="Hipertensão (> 140/90 mmHg) ou história de pré-eclâmpsia">
                             <label for="br-hipert">Hipertensão (> 140/90 mmHg) ou história de pré-eclâmpsia;</label>
                         </div>
                         <div class="style-checkbox">
-                            <input id="br-obs" type="checkbox" name="Obesidade (IMC > 30kg/m2) ou obesidade central (cintura medida na crista ilíaca: > 88 cm em mulheres; > 102 cm em homens)">
-                            <label for="br-obs">Obesidade (IMC > 30kg/m2) ou obesidade central (cintura medida na crista ilíaca: > 88 cm em mulheres; > 102 cm em homens).</label>
+                            <input id="br-obs" type="checkbox"
+                                name="Obesidade (IMC > 30kg/m2) ou obesidade central (cintura medida na crista ilíaca: > 88 cm em mulheres; > 102 cm em homens)">
+                            <label for="br-obs">Obesidade (IMC > 30kg/m2) ou obesidade central (cintura medida na crista
+                                ilíaca: > 88 cm em mulheres; > 102 cm em homens).</label>
                         </div>
                         <div class="style-checkbox">
                             <input id="br-sedent" type="checkbox" name="Sedentarismo">
@@ -235,17 +243,21 @@
                         <div class="style-checkbox">
                             <input id="br-histo-fam" type="checkbox" name="História familiar de evento cardiovascular prematuro em familiares de 1o grau –
                             pai, mãe, irmãos (homens < 55 anos e mulheres < 65 anos)">
-                            <label for="br-histo-fam">História familiar de evento cardiovascular prematuro em familiares de 1o grau –
+                            <label for="br-histo-fam">História familiar de evento cardiovascular prematuro em familiares
+                                de 1o grau –
                                 pai, mãe, irmãos (homens < 55 anos e mulheres < 65 anos);</label>
                         </div>
                         <div class="style-checkbox">
-                            <input id="br-histo-doenca" type="checkbox" name="História de doença renal na família (para risco de insuficiência renal)">
-                            <label for="br-histo-doenca">História de doença renal na família (para risco de insuficiência renal);</label>
+                            <input id="br-histo-doenca" type="checkbox"
+                                name="História de doença renal na família (para risco de insuficiência renal)">
+                            <label for="br-histo-doenca">História de doença renal na família (para risco de
+                                insuficiência renal);</label>
                         </div>
                         <div class="style-checkbox">
                             <input id="br-manifest" type="checkbox" name="Manifestações de aterosclerose: sopros arteriais carotídeos; diminuição ou
                             ausência de pulsos periféricos">
-                            <label for="br-manifest">Manifestações de aterosclerose: sopros arteriais carotídeos; diminuição ou
+                            <label for="br-manifest">Manifestações de aterosclerose: sopros arteriais carotídeos;
+                                diminuição ou
                                 ausência de pulsos periféricos.</label>
                         </div>
                         <div class="style-checkbox">
@@ -253,7 +265,8 @@
                             <label for="br-diagn-dislip">Diagnóstico prévio de dislipidemia;</label>
                         </div>
                         <div class="style-checkbox">
-                            <input id="br-diagn-polic" type="checkbox" name="Diagnóstico prévio de síndrome de ovário policístico">
+                            <input id="br-diagn-polic" type="checkbox"
+                                name="Diagnóstico prévio de síndrome de ovário policístico">
                             <label for="br-diagn-polic">Diagnóstico prévio de síndrome de ovário policístico.</label>
                         </div>
                         <div class="style-checkbox">
@@ -268,7 +281,8 @@
                             <label for="ar-infart-agud">Infarto agudo do miocárdio (IAM) prévio;</label>
                         </div>
                         <div class="style-checkbox">
-                            <input id="ar-les-perif" type="checkbox" name="Lesão periférica – Lesão de órgão-alvo (LOA)">
+                            <input id="ar-les-perif" type="checkbox"
+                                name="Lesão periférica – Lesão de órgão-alvo (LOA)">
                             <label for="ar-les-perif">Lesão periférica – Lesão de órgão-alvo (LOA);</label>
                         </div>
                         <div class="style-checkbox">
@@ -304,7 +318,8 @@
                             <label for="ar-doen-vasc">Doença vascular periférica;</label>
                         </div>
                         <div class="style-checkbox">
-                            <input id="ar-insuf" type="checkbox" name="Insuficiência cardíaca congestiva de etiologia isquêmica">
+                            <input id="ar-insuf" type="checkbox"
+                                name="Insuficiência cardíaca congestiva de etiologia isquêmica">
                             <label for="ar-insuf">Insuficiência cardíaca congestiva de etiologia isquêmica;</label>
                         </div>
                         <div class="style-checkbox">
@@ -316,7 +331,7 @@
                             <label for="ar-doenc-renal">Doença renal crônica</label>
                         </div>
                         <div>
-                            <button type="submit" id="btn-estrat-calcular">Calcular</button>
+                            <button type="submit" id="btn-estrat-calcular">CALCULAR</button>
                         </div>
                     </form>
                     <p>Classificação: <span id="retorno-calculo-estrat">Aguardando velores...</span></p>
@@ -324,7 +339,8 @@
                 <div class="disable-etapa-2 etapa-2">
                     <div class="etapa-2-form">
                         <h5>Etapa 2:</h5>
-                        <p>IDADE:<span id="etapa2-retorno-idade">...</span>&emsp;SEXO:<span id="etapa2-retorno-sexo">...</span></p>
+                        <p>IDADE:<span id="etapa2-retorno-idade">...</span>&emsp;SEXO:<span
+                                id="etapa2-retorno-sexo">...</span></p>
                         <form action="" class="form-style-interno" onsubmit="return false">
                             <div>
                                 <input id="etapa2-colest-total" type="number" placeholder="COLESTEROL TOTAL">
@@ -344,7 +360,7 @@
                                 <label for="etapa2-tratada">Tratada</label>
                             </div>
                             <div>
-                                <button id="btn-estrat2-calcular">Calcular</button>
+                                <button id="btn-estrat2-calcular">CALCULAR</button>
                             </div>
                         </form>
                     </div>
@@ -359,15 +375,21 @@
                     </div>
                 </div>
             </div>
+            <div>
+                <a class="botao-padrao">
+                    <button id="btn-finaliza-ava-clinic">FINALIZAR AVALIAÇÃO</button>
+                </a>
+            </div>
+            <p id="retorno-fizalizacao-ava-clinic">...</p>
         </div>
         <div class="navegacao-footer">
             <a href="./pageExamesLab.html" class="botao-padrao">
-              <button>VOLTAR</button>
+                <button>VOLTAR</button>
             </a>
             <a href="./pageDiagnosEnf.html" class="botao-padrao">
-              <button>AVANÇAR</button>
+                <button>AVANÇAR</button>
             </a>
-          </div>
+        </div>
     </div>
     <script type="module" src="../js/insertDadosStorageAvaClinic.js"></script>
     <script src="../js/retonoDados/retornoDadosAvaClinic.js"></script>
@@ -375,4 +397,5 @@
     <script type="module" src="../js/activeButton/activeButtonAva.js"></script>
     <script src="../js/bootstrap-js/bootstrap.js"></script>
 </body>
+
 </html>
