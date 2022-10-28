@@ -1,18 +1,14 @@
-const enabledCaseAdmin = document.querySelector('.enabled-case-admin');
-
 function enabledAdmin(){
-    //if((localStorage.getItem('ehAdmin') != null) || (localStorage.getItem('ehAdmin') != 'vazio'))
-    if(true){
+    let enabledCaseAdmin = document.querySelector('#enabled-case-admin');
+    //enabledCaseAdmin.style.display = 'block';
+    if(localStorage.getItem('ehAdmin') == 'ehAdmin'){
         enabledCaseAdmin.style.display = 'block';
-        console.log('É admin');
+        console.log('É admin: ', localStorage.getItem('ehAdmin'));
         
-    }else{
+    }else if(localStorage.getItem('ehAdmin') == 'naoEhAdmin'){
         enabledCaseAdmin.style.display = 'none';
-        console.log('Não é admin');
+        console.log('Não é admin: ', localStorage.getItem('ehAdmin'));
         
     }
 }
-setTimeout(function(){
-    enabledAdmin();
-
-}, 2000);
+enabledAdmin();

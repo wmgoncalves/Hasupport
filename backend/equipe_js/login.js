@@ -19,6 +19,13 @@ async function logar(){
     if(rows.length > 0){
         // console.log("Usuário encontrado!");
         localStorage.setItem('id_equipe', rows[0].id);
+        if(rows[0].id == 1){
+            localStorage.setItem('ehAdmin', 'ehAdmin');
+
+        }else{
+            localStorage.setItem('ehAdmin', 'naoEhAdmin');
+
+        }
         window.location = "../pages/adm_area.html";
     } else {
         // console.log("Acesso NEGADO!!");
