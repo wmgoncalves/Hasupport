@@ -59,7 +59,7 @@ function insertTornBraq(){
     localStorage.setItem('pas', tornBraqPasBra);
 
     etapa2PaSistol.value = localStorage.getItem('pas');
-    pas = localStorage.getItem('pas');
+    pas.value = localStorage.getItem('pas');
     
     console.log('Sucesso Tornozelo-Braquial:', tornBraqPasTorn, tornBraqPasBra);
     

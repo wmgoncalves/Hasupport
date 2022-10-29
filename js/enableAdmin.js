@@ -5,7 +5,7 @@ function enabledAdmin(){
         enabledCaseAdmin.style.display = 'block';
         console.log('É admin: ', localStorage.getItem('ehAdmin'));
         
-    }else if(localStorage.getItem('ehAdmin') == 'naoEhAdmin'){
+    }else if((localStorage.getItem('ehAdmin') == 'naoEhAdmin') || (localStorage.getItem('ehAdmin') == null)){
         enabledCaseAdmin.style.display = 'none';
         console.log('Não é admin: ', localStorage.getItem('ehAdmin'));
         
