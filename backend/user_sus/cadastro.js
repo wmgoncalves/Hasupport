@@ -14,7 +14,8 @@ async function cadastrar(){
     let rows = await userSusExists(cartSus, cpf);
 
     if(rows.length > 0){
-        window.alert('Usuário(a) do SUS já cadastrado(a) no sistema!!');
+        //window.alert('Usuário(a) do SUS já cadastrado(a) no sistema!!');
+        retornoCadUserSucess.innerHTML = 'Usuário(a) do SUS já cadastrado(a) no sistema!!';
     } else {
         let result = await insertUserSus(cartSus, cpf, nome, dataNasc, sexo, idEquipe);
         if(result > 0){

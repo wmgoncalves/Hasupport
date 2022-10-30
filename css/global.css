@@ -487,15 +487,43 @@ body{
 .fundo-botao-print{
     display: flex;
     height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.fundo-botao-print div{
+    width: 60%;
+    display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
 
-    
-}.fundo-botao-print button{
-    width: 50%;
-    font-size: 1.2rem;
-    padding: 1.5rem 0;
+}
+.fundo-botao-print button{
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1.3rem 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+}
+.fundo-botao-print #return-busca{
+    width: 95%;
+    
+}
+.fundo-botao-print #return-busca table{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .8rem;
+
+}
+#return-busca th{
+    background-color: rgb(190, 190, 190);
+    padding: 7px;
+    border: 1px solid black;
+
+}
+#return-busca td{
+    background-color: rgb(225, 225, 225);
+    padding: 7px;
+    border: 1px solid black;
+    
 }
