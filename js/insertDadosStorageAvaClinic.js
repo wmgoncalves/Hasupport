@@ -409,8 +409,7 @@ function verificaRisco(contBaixoRisco, contAltoRisco){
     
         }
         if(contBaixoRisco >= 2){
-            localStorage.setItem('clas_estrat', 'ALTO RISCO');
-            el.innerHTML = 'ALTO RISCO'
+            el.innerHTML = 'Risco Indefinido! Prossiga para a Etapa 2 ...'
             el2.style.display = 'flex';
             el3.style.display = 'block';
     

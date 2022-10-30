@@ -25,7 +25,7 @@ async function buscar(){
 
         if(rows.length > 0){
             for(let i=0; i<rows.length; i++){
-                result.innerHTML += `<button class="equipe" onclick="selecionarUserSus(this)" value="${rows[i].cart_sus}">
+                result.innerHTML += `<button class="equipe" onclick="selecionarUserSus(this)" value="${rows[i].id_usersus}">
                     Cartão SUS: ${rows[i].cart_sus}<br> 
                     Nome: ${rows[i].nome} / 
                     CPF: ${rows[i].cpf}</button><br>`;

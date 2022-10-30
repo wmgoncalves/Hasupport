@@ -1,4 +1,4 @@
-import { insertUserSus, userSusExists } from "../connection/userSus_db.js";
+import { insertUserSus, userSusExists, lastUserSus } from "../connection/userSus_db.js";
 
 const btnCadast = document.querySelector("#cadastrar");
 const idEquipe = localStorage.getItem('id_equipe');
@@ -20,10 +20,12 @@ async function cadastrar(){
         if(result > 0){
             retornoCadUserSucess.innerHTML = 'Usuário(a) cadastrado(a) com sucesso.';
             //window.alert('Usuário(a) cadastrado(a) com sucesso.');
+            let last = await lastUserSus();
+            console.log(last[0].lastId);
+            localStorage.setItem('idUserSus', last[0].lastId);
             setTimeout(function(){
                 window.location = "./menu1.html";
-
-            }, 2000);
+            }, 3000);
         }
         else
             retornoCadUserSucess.innerHTML = 'ERRO!\nNão foi possível cadastrar o(a) Usuário(a)!!';

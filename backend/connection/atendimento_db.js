@@ -9,7 +9,7 @@ export async function saveConsulta(){
     // let cur_date = localStorage.getItem('userCadData');
     // console.log(cur_date);
 
-    let cart_sus = localStorage.getItem('cart_sus');
+    let idUserSus = localStorage.getItem('idUserSus');
     let pas = localStorage.getItem('pas');
     let clas_ha = localStorage.getItem('clas_ha');
     let imc = localStorage.getItem('imc');
@@ -26,8 +26,8 @@ export async function saveConsulta(){
     
     const conn = await connect();
     let [results] = await conn.query(
-        'INSERT INTO consulta (data_cons, fk_cart_sus, pas, clas_ha, imc, clas_imc, clas_abdo, clas_cint_quad, clas_torn_brac, indicadores, clas_estrat, list_psicobio, list_psicosoc, list_psicoesp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-        [cur_date, cart_sus, pas, clas_ha, imc, clas_imc, clas_abdo, clas_cint_quad, clas_torn_braq, indicadores, clas_estrat, list_psicobio, list_psicosoc, list_psicoesp],
+        'INSERT INTO consulta (data_cons, fk_id_usersus, pas, clas_ha, imc, clas_imc, clas_abdo, clas_cint_quad, clas_torn_brac, indicadores, clas_estrat, list_psicobio, list_psicosoc, list_psicoesp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+        [cur_date, idUserSus, pas, clas_ha, imc, clas_imc, clas_abdo, clas_cint_quad, clas_torn_braq, indicadores, clas_estrat, list_psicobio, list_psicosoc, list_psicoesp],
         function(err){
             if(err) throw err;
         }

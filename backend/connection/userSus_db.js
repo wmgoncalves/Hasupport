@@ -8,10 +8,17 @@ export async function userSusExists(cartSus, cpf){
     return rows;
 }
 
-//ALTERAR
-export async function loadUserSus(cart_sus){
+export async function lastUserSus(){
     const conn = await connect();
-    let [row] = await conn.query('SELECT * FROM user_sus WHERE cart_sus=?', [cart_sus]);
+    let [rows] = await conn.query('SELECT MAX(id_usersus) AS lastId FROM user_sus');
+    await conn.end();
+    return rows;
+}
+
+//ALTERAR
+export async function loadUserSus(idUserSus){
+    const conn = await connect();
+    let [row] = await conn.query('SELECT * FROM user_sus WHERE id_usersus=?', [idUserSus]);
     await conn.end();
     return row;
 }

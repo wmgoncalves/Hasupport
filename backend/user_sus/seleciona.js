@@ -1,6 +1,6 @@
 function selecionarUserSus(userSus){
-    let cartSus = userSus.value;
+    let idUserSus = userSus.value;
     // console.log(cartSus);
-    localStorage.setItem('cart_sus', cartSus);
+    localStorage.setItem('idUserSus', idUserSus);
     window.location = "../pages/menu1.html";
 }
