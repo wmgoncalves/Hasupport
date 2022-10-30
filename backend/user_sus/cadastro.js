@@ -22,11 +22,11 @@ async function cadastrar(){
             retornoCadUserSucess.innerHTML = 'Usuário(a) cadastrado(a) com sucesso.';
             //window.alert('Usuário(a) cadastrado(a) com sucesso.');
             let last = await lastUserSus();
-            console.log(last[0].lastId);
+            // console.log(last[0].lastId);
             localStorage.setItem('idUserSus', last[0].lastId);
             setTimeout(function(){
-                window.location = "./menu1.html";
-            }, 3000);
+                window.location = "../pages/menu1.html";
+            }, 2000);
         }
         else
             retornoCadUserSucess.innerHTML = 'ERRO!\nNão foi possível cadastrar o(a) Usuário(a)!!';
