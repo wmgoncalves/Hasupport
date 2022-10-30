@@ -135,8 +135,9 @@ function calcularEstratificacaoParte2() {
 
 	let pontos = 0;
 	let idade = localStorage.getItem('userCadIdade')
+	let colesterol = document.querySelector('#etapa2-colest-total').value;
 	let fumante = document.querySelector('#etapa2-fumante')
-	let pas2 = document.querySelector('#etapa2-pa-sistol')
+	let pas2 = document.querySelector('#etapa2-pa-sistol').value;
 	let tratada = document.querySelector('#etapa2-tratada')
 	let retorno_calculo_estratificacao = document.querySelector('#retorno-calculo-estrat3')
 	let perc_risco = "..."
@@ -305,16 +306,16 @@ function calcularEstratificacaoParte2() {
 	console.log(pontos, idade);
 
 	if (perc_risco < 10) {
-		retorno_calculo_estratificacao = 'BAIXO RISCO'
+		retorno_calculo_estratificacao.innerHTML = 'BAIXO RISCO'
 		localStorage.setItem('clas_estrat', 'BAIXO RISCO')
 	}
 
 	else if (perc_risco < 20) {
-		retorno_calculo_estratificacao = 'RISCO MODERADO'
+		retorno_calculo_estratificacao.innerHTML = 'RISCO MODERADO'
 		localStorage.setItem('clas_estrat', 'RISCO MODERADO')
 	}
 	else {
-		retorno_calculo_estratificacao = 'ALTO RISCO'
+		retorno_calculo_estratificacao.innerHTML = 'ALTO RISCO'
 		localStorage.setItem('clas_estrat', 'ALTO RISCO')
 	}
 }
