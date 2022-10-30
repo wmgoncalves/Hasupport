@@ -12,8 +12,8 @@
 
 }
 .fundo-cadastro{
-    height: 100%;
     width: 70%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,10 +105,23 @@
 }
 
 /*Formatação dos dados de retorno*/
-.fundo-cadastro .result{
+.fundo-cadastro #result{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
+    
+}
+.fundo-cadastro #result .equipe{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .9rem;
+    color: black;
+    margin: 1px 0 !important;
+    background-color: rgb(201, 201, 201);
+    
+}
+.fundo-cadastro #result .equipe:hover{
+    background-color: rgb(168, 168, 168);
     
 }
 

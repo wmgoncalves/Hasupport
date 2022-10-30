@@ -6,15 +6,16 @@
 
 }
 body{
+    height: 100vh;
+    margin: 0;
     background-color: rgb(236, 236, 236);
-    height: 100vh;   
     
 }
 .fundo1{
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
     
 }
 
@@ -65,7 +66,7 @@ body{
     padding: 1.5rem 0 1rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     
@@ -310,11 +311,12 @@ body{
 /*Formatação das paginas só com texto*/
 .text-style-pure{
     padding: 5rem 3rem;
+    height: 100%;
 
 }
 .text-style-pure p{
     text-align: justify;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
 
@@ -412,7 +414,9 @@ body{
 .form-style-hemograma{
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 70%;
+    
     
 }
 .form-style-hemograma h5{
@@ -463,6 +467,7 @@ body{
     background-color: #558a55;
 
 }
+
 /*Formatação navegação rodapé*/
 .navegacao-footer{
     display: flex;
@@ -480,10 +485,17 @@ body{
 }
 /*Formatação pagina relatorio*/
 .fundo-botao-print{
-    background-color: red;
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
     
+}.fundo-botao-print button{
+    width: 50%;
+    font-size: 1.2rem;
+    padding: 1.5rem 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
