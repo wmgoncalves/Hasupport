@@ -138,6 +138,7 @@ function calcularEstratificacaoParte2() {
 	let fumante = document.querySelector('#etapa2-fumante')
 	let pas2 = document.querySelector('#etapa2-pa-sistol')
 	let tratada = document.querySelector('#etapa2-tratada')
+	let retorno_calculo_estratificacao = document.querySelector('#retorno-calculo-estrat3')
 	let perc_risco = "..."
 	if ((localStorage.getItem('userCadSexo')) === 'Masculino') {
 		if ((idade > 20) && (idade <= 34)) { pontos += -9 }
@@ -205,20 +206,20 @@ function calcularEstratificacaoParte2() {
 			if (tratada.checked == true) { pontos += 3 }
 			else { pontos += 2 }
 		}
-		if (pontos < 0) { perc_risco = '<1' }
-		else if (pontos <= 4) { perc_risco = '1' }
-		else if (pontos <= 6) { perc_risco = '2' }
-		else if (pontos == 7) { perc_risco = '3' }
-		else if (pontos == 8) { perc_risco = '4' }
-		else if (pontos == 9) { perc_risco = '5' }
-		else if (pontos == 10) { perc_risco = '6' }
-		else if (pontos == 11) { perc_risco = '8' }
-		else if (pontos == 12) { perc_risco = '10' }
-		else if (pontos == 13) { perc_risco = '12' }
-		else if (pontos == 14) { perc_risco = '16' }
-		else if (pontos == 15) { perc_risco = '20' }
-		else if (pontos == 16) { perc_risco = '25' }
-		else if (pontos >= 17) { perc_risco = '>30' }
+		if (pontos < 0) { perc_risco = 0 }
+		else if (pontos <= 4) { perc_risco = 1 }
+		else if (pontos <= 6) { perc_risco = 2 }
+		else if (pontos == 7) { perc_risco = 3 }
+		else if (pontos == 8) { perc_risco = 4 }
+		else if (pontos == 9) { perc_risco = 5 }
+		else if (pontos == 10) { perc_risco = 6 }
+		else if (pontos == 11) { perc_risco = 8 }
+		else if (pontos == 12) { perc_risco = 10 }
+		else if (pontos == 13) { perc_risco = 12 }
+		else if (pontos == 14) { perc_risco = 16 }
+		else if (pontos == 15) { perc_risco = 20 }
+		else if (pontos == 16) { perc_risco = 25 }
+		else if (pontos >= 17) { perc_risco = 30 }
 
 	} else {
 		if ((idade >= 20) && (idade <= 34)) { pontos += -7 }
@@ -286,24 +287,36 @@ function calcularEstratificacaoParte2() {
 			if (tratada.checked == true) { pontos += 6 }
 			else { pontos += 4 }
 		}
-		if (pontos < 9) { perc_risco = '<1' }
-		else if (pontos <= 12) { perc_risco = '1' }
-		else if (pontos <= 14) { perc_risco = '2' }
-		else if (pontos == 15) { perc_risco = '3' }
-		else if (pontos == 16) { perc_risco = '4' }
-		else if (pontos == 17) { perc_risco = '5' }
-		else if (pontos == 18) { perc_risco = '6' }
-		else if (pontos == 19) { perc_risco = '8' }
-		else if (pontos == 20) { perc_risco = '11' }
-		else if (pontos == 21) { perc_risco = '14' }
-		else if (pontos == 22) { perc_risco = '17' }
-		else if (pontos == 23) { perc_risco = '22' }
-		else if (pontos == 24) { perc_risco = '27' }
-		else if (pontos >= 25) { perc_risco = '>30' }
+		if (pontos < 9) { perc_risco = 0 }
+		else if (pontos <= 12) { perc_risco = 1 }
+		else if (pontos <= 14) { perc_risco = 2 }
+		else if (pontos == 15) { perc_risco = 3 }
+		else if (pontos == 16) { perc_risco = 4 }
+		else if (pontos == 17) { perc_risco = 5 }
+		else if (pontos == 18) { perc_risco = 6 }
+		else if (pontos == 19) { perc_risco = 8 }
+		else if (pontos == 20) { perc_risco = 11 }
+		else if (pontos == 21) { perc_risco = 14 }
+		else if (pontos == 22) { perc_risco = 17 }
+		else if (pontos == 23) { perc_risco = 22 }
+		else if (pontos == 24) { perc_risco = 27 }
+		else if (pontos >= 25) { perc_risco = 30 }
 	}
 	console.log(pontos, idade);
 
+	if (perc_risco < 10) {
+		retorno_calculo_estratificacao = 'BAIXO RISCO'
+		localStorage.setItem('clas_estrat', 'BAIXO RISCO')
+	}
 
+	else if (perc_risco < 20) {
+		retorno_calculo_estratificacao = 'RISCO MODERADO'
+		localStorage.setItem('clas_estrat', 'RISCO MODERADO')
+	}
+	else {
+		retorno_calculo_estratificacao = 'ALTO RISCO'
+		localStorage.setItem('clas_estrat', 'ALTO RISCO')
+	}
 }
 btnPasPad.addEventListener("click", calcular_pas_pad);
 btnCirAbd.addEventListener("click", classif_circ_abdominal);
