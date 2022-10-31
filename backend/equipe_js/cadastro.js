@@ -20,6 +20,7 @@ async function cadastrar(){
     } else {
         let result = await insertEquipe(login, senha, membros);
         if(result > 0){
+            localStorage.setItem('id_equipe', rows[0].id);
             retornoCadEquipe.innerHTML = "Equipe cadastrada com sucesso.";
             retornoCadEquipe.style.color = 'green';
             window.location = "./adm_area.html";
