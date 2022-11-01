@@ -1,6 +1,6 @@
 const btnFinalizaConsulta = document.querySelector('#btn-finaliza-consulta');
 const retornoFinalizaCosulta = document.querySelector('#retorno-finaliza-cosulta');
-let saveUser = localStorage.getItem('ehAdmin');
+const saveUser = localStorage.getItem('ehAdmin');
 const idEquipe = localStorage.getItem('id_equipe');
 const idUserSus = localStorage.getItem('idUserSus');
 
