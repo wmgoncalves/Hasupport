@@ -13,7 +13,8 @@ function createWindow () {
       worldSafeExecuteJavaScript: true,
       enableRemoteModule: false,
       preload: path.join(__dirname, 'preload.js')
-    }
+    },
+    icon: __dirname+'./assets/enf2.png',
   })
   
   //Comentar linha abaixo pra aparecer menu na janela do software
