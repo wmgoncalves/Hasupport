@@ -100,6 +100,10 @@ body{
     padding: .2rem .5rem;
 
 }
+.disable-btn-protocol{
+    display: none;
+    
+}
 
 /*Formatação para os textos escondidos*/
 .text-none-style, .text-none-tec-proped{

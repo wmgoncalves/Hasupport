@@ -25,7 +25,13 @@ async function cadastrar(){
             // console.log(last[0].lastId);
             localStorage.setItem('idUserSus', last[0].lastId);
             setTimeout(function(){
-                window.location = "../pages/menu1.html";
+                if(localStorage.getItem('ConfigNivelUser') == 'experiente'){
+                    window.location = "../pages/menu1.html";
+
+                }else{
+                    window.location = "../pages/pageGuiaEntre.html";
+                    
+                }
             }, 2000);
         }
         else
