@@ -96,6 +96,10 @@ body{
     background-color: #80cc80d4; 
 
 }
+.icon-expand{
+    padding: .2rem .5rem;
+
+}
 
 /*Formatação para os textos escondidos*/
 .text-none-style, .text-none-tec-proped{

@@ -12,7 +12,7 @@ function carrega4(){
     const el = document.querySelector('.text-none-rastreamento');
     if(el.style.display === 'block'){
         el.style.display = 'none';
-        btn4.textContent = 'RASTREAMENTO DA HIPERTENSÃO ARTERIAL';        
+        btn4.innerHTML = 'RASTREAMENTO DA HIPERTENSÃO ARTERIAL<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span>';        
         
     } else {
         el.style.display = 'block';
@@ -23,7 +23,7 @@ function carrega5(){
     const el = document.querySelector('.text-none-antropom');
     if(el.style.display === 'block'){
         el.style.display = 'none';
-        btn5.textContent = 'DADOS ANTROPOMÉTRICOS';        
+        btn5.innerHTML = 'DADOS ANTROPOMÉTRICOS<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span>';        
         
     } else {
         el.style.display = 'block';
@@ -34,7 +34,7 @@ function carrega6(){
     const el = document.querySelector('.text-none-imc');
     if(el.style.display === 'block'){
         el.style.display = 'none';
-        btn6.textContent = 'ÍNDICE DE MASSA CORPORAL (IMC)';       
+        btn6.innerHTML = 'ÍNDICE DE MASSA CORPORAL (IMC)<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span>';       
         
     } else {
         el.style.display = 'block';
@@ -45,7 +45,7 @@ function carrega7(){
     const el = document.querySelector('.text-none-circ-abdom');
     if(el.style.display === 'block'){
         el.style.display = 'none';
-        btn7.textContent = 'CIRCUNFERÊNCIA ABDOMINAL';        
+        btn7.innerHTML = 'CIRCUNFERÊNCIA ABDOMINAL<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span>';
         
     } else {
         el.style.display = 'block';
@@ -56,7 +56,7 @@ function carrega8(){
     const el = document.querySelector('.text-none-cint-quadr');
     if(el.style.display === 'block'){
         el.style.display = 'none';
-        btn8.textContent = 'RELAÇÃO CINTURA-QUADRIL';        
+        btn8.innerHTML = 'RELAÇÃO CINTURA-QUADRIL<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span>';
         
     } else {
         el.style.display = 'block';
@@ -67,7 +67,7 @@ function carrega9(){
     const el = document.querySelector('.text-none-torn-braq');
     if(el.style.display === 'block'){
         el.style.display = 'none';
-        btn9.textContent = 'ÍNDICE TORNOZELO-BRAQUIAL';        
+        btn9.innerHTML = 'ÍNDICE TORNOZELO-BRAQUIAL<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span>';        
         
     } else {
         el.style.display = 'block';
@@ -81,7 +81,7 @@ function carrega10(){
     const el = document.querySelector('.text-none-estrat-risco');
     if(el.style.display === 'block'){
         el.style.display = 'none';
-        btn10.textContent = 'ESTRATIFICAÇÃO DO RISCO CARDIOVASCULAR';        
+        btn10.innerHTML = 'ESTRATIFICAÇÃO DO RISCO CARDIOVASCULAR<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span>';        
         
     } else {
         el.style.display = 'block';
