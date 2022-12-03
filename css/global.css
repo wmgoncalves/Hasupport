@@ -100,7 +100,12 @@ body{
     padding: .2rem .5rem;
 
 }
-.disable-btn-protocol{
+.flag-risco img{
+    width: 3%;
+    margin: 2px 5px;
+
+}
+.disable-btn-protocol, .disable-btn-left{
     display: none;
     
 }
