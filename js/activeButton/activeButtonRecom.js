@@ -6,7 +6,7 @@ function carrega1(){
     const el = document.querySelector('.text-none-aspectos');
     if(el.style.display === 'block'){
         el.style.display = 'none';
-        btn1.textContent = 'ASPECTOS A SEREM AVALIADOS';        
+        btn1.innerHTML = 'ASPECTOS A SEREM AVALIADOS<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span>';        
     
     } else {
         el.style.display = 'block';
@@ -17,7 +17,7 @@ function carrega2(){
     const el = document.querySelector('.text-none-proped');
     if(el.style.display === 'block'){
         el.style.display = 'none';
-        btn2.textContent = 'TÉCNICAS PROPEDÊUTICAS';        
+        btn2.innerHTML = 'TÉCNICAS PROPEDÊUTICAS<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span>';        
     
     } else {
         el.style.display = 'block';
@@ -28,7 +28,7 @@ function carrega3(){
     const el = document.querySelector('.text-none-sinais');
     if(el.style.display === 'block'){
         el.style.display = 'none';
-        btn3.textContent = 'SINAIS VITAIS';        
+        btn3.innerHTML = 'SINAIS VITAIS<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span>';        
     
     } else {
         el.style.display = 'block';

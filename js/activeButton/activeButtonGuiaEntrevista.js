@@ -5,7 +5,7 @@ function carrega1(){
     const el = document.querySelector('.text-none-obj-entrevista');
     if(el.style.display === 'block'){
         el.style.display = 'none';
-        btn1.textContent = 'OBJETIVOS PARA ENTREVISTA';        
+        btn1.innerHTML = 'OBJETIVOS PARA ENTREVISTA<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span>';              
     
     } else {
         el.style.display = 'block';
@@ -16,7 +16,7 @@ function carrega2(){
     const el = document.querySelector('.text-none-quest-import');
     if(el.style.display === 'block'){
         el.style.display = 'none';
-        btn2.textContent = 'QUESTIONAMENTOS IMPORTANTES';        
+        btn2.innerHTML = 'QUESTIONAMENTOS IMPORTANTES<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span>';        
     
     } else {
         el.style.display = 'block';

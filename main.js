@@ -18,7 +18,7 @@ function createWindow () {
   })
   
   //Comentar linha abaixo pra aparecer menu na janela do software
-  mainWindow.setMenuBarVisibility(false);
+  //mainWindow.setMenuBarVisibility(false);
 
   // and load the index.html of the app.
   mainWindow.loadFile('./pages/cadastro.html')

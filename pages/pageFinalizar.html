@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/cadastro.css">
+  <link rel="stylesheet" href="../css/displayNone.css">
+  <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.css">
+
+  <title>HAsupport</title>
+</head>
+<body>
+  <div class="fundo-cadastro-global">
+    <div class="menu">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div>
+              <ul class="navbar-nav">
+                <!--
+                <li class="nav-item">
+                  <a class="nav-link" href="./pagePrintRelatorio.html">
+                    <img class="icons-menu" src="../assets/icons/print_icon.svg">
+                  </a>
+                </li>
+              -->
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="./adm_area.html">
+                    <img class="icons-menu" src="../assets/icons/home_icon.svg">
+                  </a>
+                </li>
+            </div>
+            <div>
+              <h4>MENU EQUIPE</h4>
+            </div>
+            <div>
+              <li class="nav-item">
+                <a class="nav-link btn-logout" href="./cadastro.html">
+                  <img class="icons-menu" src="../assets/icons/logout_icon.svg">
+                </a>
+              </li>
+            </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="fundo-cadastro">
+      <div class="form">
+        <a class="botao-padrao">
+          <button id="btn-finaliza-consulta">FINALIZAR CONSULTA</button>
+        </a>
+      </div>
+      <p id="retorno-finaliza-cosulta">...</p>
+    </div>
+  </div>
+  <script src="../js/finalizaConsulta.js"></script>
+  <script src="../js/logoutSistema.js"></script>
+  <script src="../js/bootstrap-js/bootstrap.js"></script>
+</body>
+
+</html>
