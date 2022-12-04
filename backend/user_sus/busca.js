@@ -1,4 +1,5 @@
 import { searchUserSus } from "../connection/userSus_db.js";
+import { searchAltoRisco } from "../connection/consulta_db.js";
 
 const btnBusca = document.querySelector("#buscar");
 const idEquipe = localStorage.getItem('id_equipe');
@@ -25,11 +26,19 @@ async function buscar(){
 
         if(rows.length > 0){
             for(let i=0; i<rows.length; i++){
-                result.innerHTML += `<button class="equipe" onclick="selecionarUserSus(this)" value="${rows[i].id_usersus}">
+                if(await searchAltoRisco(rows[i].id_usersus) === 'ALTO RISCO'){
+                    result.innerHTML += `<button class="equipe" onclick="selecionarUserSus(this)" value="${rows[i].id_usersus}">
                     <span class="flag-risco"><img src="../assets/icons/flag_icon.png"></span>
                     Cartão SUS: ${rows[i].cart_sus}<br> 
                     Nome: ${rows[i].nome} / 
                     CPF: ${rows[i].cpf}</button><br>`;
+                }
+                else {
+                    result.innerHTML += `<button class="equipe" onclick="selecionarUserSus(this)" value="${rows[i].id_usersus}">
+                    Cartão SUS: ${rows[i].cart_sus}<br> 
+                    Nome: ${rows[i].nome} / 
+                    CPF: ${rows[i].cpf}</button><br>`;
+                }
             }
         } else {
             retornoBuscaUser.innerHTML = 'Nenhum usuário(a) do SUS encontrado(a)!!!';
