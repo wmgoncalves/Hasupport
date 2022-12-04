@@ -3,6 +3,7 @@ const retornoFinalizaCosulta = document.querySelector('#retorno-finaliza-cosulta
 const saveUser = localStorage.getItem('ehAdmin');
 const idEquipe = localStorage.getItem('id_equipe');
 const idUserSus = localStorage.getItem('idUserSus');
+const nivelUser = localStorage.getItem('ConfigNivelUser');
 
 function finalizaConsulta(){
     retornoFinalizaCosulta.innerHTML = 'Salvando dados. Aguarde...';
@@ -23,9 +24,11 @@ function finalizaConsulta(){
         localStorage.setItem('ehAdmin', saveUser);
         localStorage.setItem('id_equipe', idEquipe);
         localStorage.setItem('idUserSus', idUserSus);
+        localStorage.setItem('ConfigNivelUser', nivelUser);
         console.log('--> ', localStorage.getItem('ehAdmin'));
         console.log('Id Equipe: ', localStorage.getItem('id_equipe'));
         console.log('Id User Sus: ', localStorage.getItem('idUserSus'));
+        console.log('Nivel user: ', localStorage.getItem('ConfigNivelUser'));
         
     }, 5000);  
 }
