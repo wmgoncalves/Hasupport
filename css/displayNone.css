@@ -36,3 +36,11 @@
     display: none;
     
 }
+
+.disable-btn-protocol,
+.disable-btn-left,
+.disable-btn-busca,
+.disable-btn-consulta{
+    display: none;
+    
+}

@@ -105,10 +105,6 @@ body{
     margin: 2px 5px;
 
 }
-.disable-btn-protocol, .disable-btn-left{
-    display: none;
-    
-}
 
 /*Formatação para os textos escondidos*/
 .text-none-style, .text-none-tec-proped{
