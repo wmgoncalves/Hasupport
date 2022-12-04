@@ -38,9 +38,13 @@
 }
 
 .disable-btn-protocol,
-.disable-btn-left,
 .disable-btn-busca,
 .disable-btn-consulta{
     display: none;
+    
+}
+
+.disable-btn-left{
+    display: none !important;
     
 }

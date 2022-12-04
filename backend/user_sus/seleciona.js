@@ -5,8 +5,11 @@ function selecionarUserSus(userSus){
     if(localStorage.getItem('ConfigNivelUser') == 'experiente'){
         window.location = "../pages/menu1.html";
 
-    }else{
+    }else if(localStorage.getItem('ConfigNivelUser') == 'iniciante'){
         window.location = "../pages/pageGuiaEntre.html";
         
+    }else{
+        window.location = "../pages/pageGuiaEntre.html";
+
     }
 }

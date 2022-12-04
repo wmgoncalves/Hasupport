@@ -105,6 +105,30 @@ body{
     margin: 2px 5px;
 
 }
+.btn-ajuda{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.btn-ajuda #btn-ajuda{
+    background-color: transparent;
+    width: 5rem;
+    padding: .5rem;
+    border-radius: 10px;
+    border: 1px solid rgb(190, 190, 190);
+    box-shadow: 2px 2px 2px rgb(160, 160, 160);
+    font-size: .9rem;
+
+}
+.btn-ajuda #btn-ajuda:hover{
+    background-color: #80cc80d4;
+    box-shadow: 4px 4px 4px rgb(160, 160, 160);
+
+}
+#retorno-ajuda-user{
+    padding: 1rem 0rem;
+}
 
 /*Formatação para os textos escondidos*/
 .text-none-style, .text-none-tec-proped{
@@ -496,16 +520,25 @@ body{
 .fundo-botao-print{
     display: flex;
     height: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: center;
     
 }
-.fundo-botao-print div{
-    width: 60%;
+.fundo-botao-print div{    
+    height: 100%;
+    width: 50%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.fundo-botao-print .col-consultas{
+    border-right: 2px solid rgb(160, 160, 160);
+
+}
+.fundo-botao-print .col-consultas{
+    border-left: 2px solid rgb(160, 160, 160);
 
 }
 .fundo-botao-print button{
@@ -534,5 +567,13 @@ body{
     background-color: rgb(225, 225, 225);
     padding: 7px;
     border: 1px solid black;
+    
+}
+
+/*Formatação pagina direitos*/
+.pageDireitos{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     
 }

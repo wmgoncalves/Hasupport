@@ -129,8 +129,24 @@
 .fundo-cadastro-global .footer{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+.fundo-cadastro-global .footer h4{
+    color: rgb(70, 70, 70);
+    font-size: 1rem;
+    padding: 5px 10px; 
+    
+}
+.fundo-cadastro-global .footer a{
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+
+}
+.fundo-cadastro-global .footer a:hover{
+    color: #80cc80;
 
 }
 .fundo-cadastro-global .footer img{

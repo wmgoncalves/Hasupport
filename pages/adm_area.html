@@ -12,6 +12,7 @@
 
   <title>HAsupport</title>
 </head>
+
 <body>
   <div class="fundo-cadastro-global">
     <div class="menu">
@@ -23,10 +24,10 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <div>
-              <ul class="navbar-nav">
+              <ul class="navbar-nav disable-btn-left">
                 <li class="nav-item">
-                  <a class="nav-link" href="./pagePrintRelatorio.html">
-                    <img class="icons-menu" src="../assets/icons/print_icon.svg">
+                  <a class="nav-link" href="./adm_area.html">
+                    <img class="icons-menu" src="../assets/icons/arrow_back_icon.svg">
                   </a>
                 </li>
                 <li class="nav-item">
@@ -34,6 +35,7 @@
                     <img class="icons-menu" src="../assets/icons/home_icon.svg">
                   </a>
                 </li>
+              </ul>
             </div>
             <div>
               <h4>MENU EQUIPE</h4>
@@ -45,7 +47,6 @@
                 </a>
               </li>
             </div>
-            </ul>
           </div>
         </div>
       </nav>
@@ -66,7 +67,7 @@
           </a>
         </div>
         <a href="./busca_user.html" class="disable-btn-busca">
-          <button id="alterar">BUSCAR USUARIO</button>
+          <button id="alterar">BUSCAR USUÁRIO(A)</button>
         </a>
         <a href="./cad_usuario.html" class="disable-btn-consulta">
           <button id="alterar">NOVA CONSULTA</button>
@@ -74,20 +75,28 @@
         <a href="./menu1.html" class="disable-btn-protocol">
           <button id="alterar">PROTOCOLO DE ATENDIMENTO</button>
         </a>
+        <a href="./pagePrintRelatorio.html" class="disable-btn-relatorio">
+          <button>RELATÓRIOS</button>
+        </a>
         <a class="nivel-user-ini">
-          <button id="btn-nivel-user-inic">USUARIO INICIANTE</button>
+          <button id="btn-nivel-user-inic">USUÁRIO(A) INICIANTE</button>
         </a>
         <a class="nivel-user-exper">
-          <button id="btn-nivel-user-exper">USUARIO EXPERIENTE</button>
+          <button id="btn-nivel-user-exper">USUÁRIO(A) EXPERIENTE</button>
         </a>
       </div>
+      <a class="btn-ajuda">
+        <button id="btn-ajuda"><img src="../assets/icons/info.svg"><span>Ajuda</span></button>
+      </a>
       <p id="retorno-config-nivel-user"></p>
+      <p id="retorno-ajuda-user"></p>
     </div>
   </div>
   <script src="../js/enableAdmin.js"></script>
   <script src="../js/logoutSistema.js"></script>
   <script src="../js/verificaNivelUser.js"></script>
   <script src="../js/configNivelUser.js"></script>
+  <script src="../js/ajudaUser.js"></script>
   <script src="../js/bootstrap-js/bootstrap.js"></script>
 </body>
 
