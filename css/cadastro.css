@@ -89,19 +89,62 @@
     
 }
 .fundo-cadastro button{
-    margin: 10px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px 0px;
     width: 90%;
     border: none;
     background-color: #80cc80;
     box-shadow: 1px 1px 2px rgb(83, 83, 83);
-    padding: 20px 0px;
-    font-size: 1.1rem;
+    padding: 1.1rem 0px;
+    font-size: 1rem;
     font-weight: 700;
 
 }
 .fundo-cadastro button:hover{
-    background-color: #80cc80d4; 
+    background-color: #80cc80d4;
+    box-shadow: 1px 2px 3px rgb(48, 48, 48);
 
+}
+.fundo-cadastro .form #enabled-case-admin{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    
+}
+.fundo-cadastro .form #enabled-case-admin button{
+    font-size: .9rem !important;
+    width: 45% !important;
+    
+}
+.btn-ajuda{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.btn-ajuda #btn-ajuda{
+    background-color: transparent;
+    width: 35%;
+    padding: .3rem;
+    border-radius: 10px;
+    border: 1px solid rgb(190, 190, 190);
+    box-shadow: 2px 2px 2px rgb(160, 160, 160);
+    font-size: .9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.btn-ajuda #btn-ajuda:hover{
+    background-color: #80cc80d4;
+    box-shadow: 4px 4px 4px rgb(160, 160, 160);
+
+}
+#retorno-ajuda-user{
+    padding: 1rem 0rem;
 }
 
 /*Formatação dos dados de retorno*/
@@ -133,6 +176,15 @@
     align-items: flex-end;
 
 }
+.fundo-cadastro-global .footer .footer-logos{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.fundo-cadastro-global .footer .footer-logos :nth-child(1){
+    width: 40%;
+    
+}
 .fundo-cadastro-global .footer h4{
     color: rgb(70, 70, 70);
     font-size: 1rem;
@@ -150,8 +202,8 @@
 
 }
 .fundo-cadastro-global .footer img{
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     margin: 5px;
 
 }

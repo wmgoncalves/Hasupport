@@ -95,6 +95,7 @@ body{
 .botao-padrao button:hover{
     background-color: #80cc80d4; 
 
+
 }
 .icon-expand{
     padding: .2rem .5rem;
@@ -104,30 +105,6 @@ body{
     width: 3%;
     margin: 2px 5px;
 
-}
-.btn-ajuda{
-    width: 90%;
-    display: flex;
-    justify-content: flex-end;
-    
-}
-.btn-ajuda #btn-ajuda{
-    background-color: transparent;
-    width: 5rem;
-    padding: .5rem;
-    border-radius: 10px;
-    border: 1px solid rgb(190, 190, 190);
-    box-shadow: 2px 2px 2px rgb(160, 160, 160);
-    font-size: .9rem;
-
-}
-.btn-ajuda #btn-ajuda:hover{
-    background-color: #80cc80d4;
-    box-shadow: 4px 4px 4px rgb(160, 160, 160);
-
-}
-#retorno-ajuda-user{
-    padding: 1rem 0rem;
 }
 
 /*Formatação para os textos escondidos*/
@@ -513,7 +490,16 @@ body{
     
 }
 .navegacao-footer .botao-padrao button{
-    padding: 1.5rem 0;
+    background-color: transparent;
+    box-shadow: 2px 2px 2px rgb(160, 160, 160);
+    border: 2px solid rgb(122, 122, 122);
+    padding: 1rem 0;
+    font-size: 1.3rem;
+
+}
+.navegacao-footer .botao-padrao button:hover{
+    background-color: #80cc80d4;
+    box-shadow: 4px 4px 4px rgb(160, 160, 160);
 
 }
 /*Formatação pagina relatorio*/
