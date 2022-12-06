@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../css/bootstrap-css/bootstrap.css">
+  <link rel="stylesheet" href="../../../css/global.css">
+  <link rel="stylesheet" href="../../../css/necessidades.css">
+  <title>HAsupport</title>
+</head>
+<body>
+  <div class="fundo1">
+    <div class="menu">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> 
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../../pagesNecessidades/pageNecessBiolog.html">
+                    <img class="icons-menu" src="../../../assets/icons/arrow_back_icon.svg">
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="../../menu1.html">
+                    <img class="icons-menu" src="../../../assets/icons/home_icon.svg">
+                  </a>
+                </li>
+            </div>
+            <div>
+              <h4>SONO E REPOUSO</h4>
+            </div>
+            <div>
+              <li class="nav-item">
+                <a class="nav-link btn-logout" href="../../cadastro.html">
+                  <img class="icons-menu" src="../../../assets/icons/logout_icon.svg">
+                </a>
+              </li>
+            </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div>
+      <div class="fundo-botao">
+        <h3>SONO E REPOUSO</h3>
+        <div class="form-necessidades">
+          <form class="form-style" onsubmit="return false">
+            <div>
+              <p>Diagnósticos/Resultados de enfermagem</p>
+            </div>
+            <div class="style-checkbox">
+                <input id="sr-apn" type="checkbox" name="Apneia">
+                <label for="sr-apn">Apneia</label>
+            </div>
+            <div class="style-checkbox">
+                <input id="sr-sono-adeq" type="checkbox" name="Sono adequado">
+                <label for="sr-sa">Capacidade para preparar alimentos saudáveis</label>
+            </div>
+            <div class="style-checkbox">
+                <input id="sr-sono-preju" type="checkbox" name="Sono prejudicado">
+                <label for="sr-sono-preju">Sono prejudicado</label>
+            </div>
+             <div>
+              <p>Intervenções de Enfermagem</p>
+            </div>
+            <div class="style-checkbox">
+                <input id="sr-disc-med" type="checkbox" name="Discutir com o(a) usuário(a) com hipertensão arterial e familiar sobre medidas de conforto">
+                <label for="sr-disc-med">Discutir com o(a) usuário(a) com hipertensão arterial e familiar sobre medidas de
+                    conforto</label>
+            </div>
+            <div class="style-checkbox">
+                <input id="sr-enc-rel" type="checkbox" name="Encorajar ao relaxamento">
+                <label for="sr-enc-rel">Encorajar ao relaxamento</label>
+            </div>
+            <div class="style-checkbox">
+                <input id="sr-ens-tec" type="checkbox" name="Ensinar técnicas de relaxamento">
+                <label for="sr-ens-tec">Ensinar técnicas de relaxamento</label>
+            </div>
+            <div class="style-checkbox">
+                <input id="sr-est-al" type="checkbox" name="Estimular atividade que promova um estado de alerta adequado durante o dia">
+                <label for="sr-est-al">Estimular atividade que promova um estado de alerta adequado durante o dia</label>
+            </div>
+            <div class="style-checkbox">
+                <input id="sr-inf-serv" type="checkbox" name="Informar sobre os serviços de terapia comunitária da Unidade de Saúde">
+                <label for="sr-inf-serv">Informar sobre os serviços de terapia comunitária da Unidade de Saúde</label>
+            </div>
+            <div class="style-checkbox">
+                <input id="sr-or-rui" type="checkbox" name="Orientar sobre o ambiente livre de ruídos">
+                <label for="sr-or-rui">Orientar sobre o ambiente livre de ruídos</label>
+            </div>
+            <div class="style-checkbox">
+                <input id="sr-or-rel-mus" type="checkbox" name="Orientar sobre técnicas de relaxamento muscular">
+                <label for="sr-or-rel-mus">Orientar sobre técnicas de relaxamento muscular</label>
+            </div>
+            <div class="style-checkbox">
+                <input id="sr-or-pra-fis" type="checkbox" name="Orientar quanto à prática da atividade física">
+                <label for="sr-or-pra-fis">Orientar quanto à prática da atividade física</label>
+            </div>
+            <div class="style-checkbox">
+                <input id="sr-imp-desc" type="checkbox" name="Reforçar a importância de um descanso satisfatório para a recuperação da saúde">
+                <label for="sr-imp-desc">Reforçar a importância de um descanso satisfatório para a recuperação da saúde</label>
+            </div>
+            <div>
+              <p id="retorno-nutricao"></p>
+            </div>
+            <div>
+              <button type="submit" id="btn-sonoerepouso-salvar">Salvar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+  <script src="../../../js/saveStorageNhb/sonorepouso.js"></script>
+  <script src="../../../js/logoutSistema.js"></script>
+  <script src="../../../js/bootstrap-js/bootstrap.js"></script>
+</body>
+</html>
