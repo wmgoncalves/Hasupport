@@ -51,16 +51,58 @@
     </div>
     <div class="fundo-botao fundo-botao-print">
       <div class="col-consultas">
-        <h2>Consultas</h2>
-        <a class="botao-padrao">
-          <button id="btn-print-ult-adic">ULTIMO CADASTRO</button>
-        </a>
+        <div>
+          <h2>Consultas</h2>
+        </div>
+        <div>
+          <select class="form-select form-select-consulta">
+            <option selected>Selecione uma opção</option>
+            <option value="1">Usuários(as) com maior risco</option>
+            <option value="2">Ultimos usuários(as) cadastrados</option>
+            <option value="3">###</option>
+          </select>
+        </div>
+        <div>
+          <a class="botao-padrao">
+            <button id="btn-print-ult-adic">VERIFICAR</button>
+          </a>
+        </div>
+        <div class="retorno-select-1">
+          <!-- colocar aqui o retorno da escolha!! -->
+          <!-- tabela temporaria!! -->
+          <table>
+            <tr>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Fone</th>
+              <th>Risco</th>
+            </tr>
+            <tr>
+              <td>Eduardo</td>
+              <td>45</td>
+              <td>99965256</td>
+              <td>Alto Risco</td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div class="col-relatorios">
-        <h2>Relatórios (PDF)</h2>
-        <a class="botao-padrao">
-          <button id="btn-print-maior-risco">MAIOR RISCO</button>
-        </a>
+        <div>
+          <h2>Relatórios (PDF)</h2>
+        </div>
+        <div>
+          <select class="form-select form-select-pdf">
+            <option selected>Selecione uma opção</option>
+            <option value="1">Usuários(as) com maior risco</option>
+            <option value="2">Ultimos usuários(as) cadastrados</option>
+            <option value="3">###</option>
+          </select>
+        </div>
+        <div>
+          <a class="botao-padrao">
+            <button id="btn-print-maior-risco">BAIXAR</button>
+          </a>
+        </div>
       </div>
     </div>
   </div>
