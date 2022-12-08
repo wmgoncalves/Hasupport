@@ -65,6 +65,8 @@ function retornaSexoIdade(){
     etapa2RetornoIdade.innerHTML = localStorage.getItem('userCadIdade');
     etapa2RetornoSexo.innerHTML = localStorage.getItem('userCadSexo');
 
+    console.log(localStorage.getItem('userCadSexo'), localStorage.getItem('userCadIdade'));
+
 }
 retornaSexoIdade();
 
