@@ -12,22 +12,22 @@ function save(){
     }
 }
 
-function test(){
-    let tot = localStorage.getItem('qtd-oxi');
-    for(let i=0; i<tot; i++){
-        let name = `oxi-${i}`;
-        let check = localStorage.getItem(name);
-        console.log(check);
-    }
-}
+// function test(){
+//     let tot = localStorage.getItem('qtd-oxi');
+//     for(let i=0; i<tot; i++){
+//         let name = `oxi-${i}`;
+//         let check = localStorage.getItem(name);
+//         console.log(check);
+//     }
+// }
 
 function insertOxigenacao(){
     let el = document.querySelector('#retorno-oxigenacao');
     console.log("Salvando...");
     save();
     
-    console.log("Testando...");
-    test();
+    // console.log("Testando...");
+    // test();
     
     el.innerHTML = "Salvo com sucesso";
     setTimeout(function(){
