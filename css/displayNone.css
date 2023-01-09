@@ -37,13 +37,14 @@
     
 }
 
+/*
 .disable-btn-protocol,
 .disable-btn-busca,
 .disable-btn-consulta{
     display: none;
     
 }
-
+*/
 .disable-btn-left{
     display: none !important;
     
