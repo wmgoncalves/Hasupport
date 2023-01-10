@@ -1,18 +1,18 @@
-const btnSalvar = document.querySelector('#btn-nutricao-salvar');
+const btnSalvar = document.querySelector('#btn-sentidos-salvar');
 
 function save(){
     let checks = document.querySelectorAll("div > input");
-    localStorage.setItem('qtd-nut', checks.length);
+    localStorage.setItem('qtd-sen', checks.length);
     for(let i=0; i<checks.length; i++){
         if(checks[i].checked == true){
-            let name = `nut-${i}`;
+            let name = `sen-${i}`;
             localStorage.setItem(name, checks[i].name);
         }
     }
 }
 
 function insertChecks(){
-    let el = document.querySelector('#retorno-nutricao');
+    let el = document.querySelector('#retorno-sentidos');
     console.log("Salvando...");
     save();
     el.innerHTML = "Salvo com sucesso";
