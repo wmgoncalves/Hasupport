@@ -25,16 +25,8 @@ async function cadastrar(){
             // console.log(last[0].lastId);
             localStorage.setItem('idUserSus', last[0].lastId);
             setTimeout(function(){
-                if(localStorage.getItem('ConfigNivelUser') == 'experiente'){
-                    window.location = "../pages/menu1.html";
+                window.location = "../pages/menu2.html";
 
-                }else if(localStorage.getItem('ConfigNivelUser') == 'iniciante'){
-                    window.location = "../pages/pageGuiaEntre.html";
-                    
-                }else{
-                    window.location = "../pages/pageGuiaEntre.html";
-
-                }
             }, 2000);
         }
         else

@@ -208,13 +208,14 @@
 
 }
 /*Formatação para o menu global*/
+/*
 .menu{
     width: 100%;
     background-color: #a5d6a7;
     box-shadow: 0px 5px 5px rgb(133, 133, 133);
 
 }
-.navbar-collapse{
+.menu .navbar-collapse div{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -238,3 +239,4 @@
     font-weight: 500;
 
 }
+*/

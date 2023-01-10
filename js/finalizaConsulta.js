@@ -30,7 +30,10 @@ function finalizaConsulta(){
         console.log('Id User Sus: ', localStorage.getItem('idUserSus'));
         console.log('Nivel user: ', localStorage.getItem('ConfigNivelUser'));
         
-    }, 5000);  
+        window.location = "../pages/adm_area.html";
+        
+    }, 5000);
+
 }
 
 btnFinalizaConsulta.addEventListener("click", finalizaConsulta);

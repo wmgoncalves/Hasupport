@@ -15,3 +15,19 @@ export async function searchAltoRisco(idUserSus){
         return row[0].clas_estrat;
     }
 }
+
+//BUSCA TODOS ALTO RISCO
+export async function searchAllAltoRisco(){
+    const conn = await connect();
+    let [rows] = await conn.query(`
+        SELECT cart_sus, cpf, nome, sexo, data_nasc FROM user_sus u
+        JOIN consulta c ON u.id_usersus = c.fk_id_usersus
+        WHERE c.clas_estrat LIKE "ALTO RISCO"
+        AND c.data_cons = (
+            SELECT MAX(data_cons) FROM consulta
+            WHERE fk_id_usersus = u.id_usersus
+        )`
+    );
+    await conn.end();
+    return rows;
+}

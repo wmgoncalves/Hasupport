@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +10,46 @@
   <link rel="stylesheet" href="../../../css/necessidades.css">
   <title>HAsupport</title>
 </head>
+
 <body>
-  <div class="fundo1">
-    <div class="menu">
+  <div class="fundo1"><div class="menu">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../../adm_area.html">
+                  <img class="icons-menu" src="../../../assets/icons/home_icon.svg">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../../menu1.html">
+                  <img class="icons-menu" src="../../../assets/icons/book_icon.svg">
+                </a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../../menu2.html">
+                <img class="icons-menu" src="../../../assets/icons/stethoscope_icon.svg">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-logout" href="../../cadastro.html">
+                <img class="icons-menu" src="../../../assets/icons/logout_icon.svg">
+              </a>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+    <div class="sub-menu-necess">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -22,25 +60,20 @@
             <div>
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="../../pagesNecessidades/pageNecessBiolog.html">
-                    <img class="icons-menu" src="../../../assets/icons/arrow_back_icon.svg">
+                  <a class="nav-link" href="../pageNecessBiolog.html">
+                    <img class="icons-menu" src="../../../assets/icons/monitor_icon.svg">
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="../../menu1.html">
-                    <img class="icons-menu" src="../../../assets/icons/home_icon.svg">
+                  <a class="nav-link" aria-current="page" href="../pageNecessSocia.html">
+                    <img class="icons-menu" src="../../../assets/icons/group_icon.svg">
                   </a>
                 </li>
-            </div>
-            <div>
-              <h4>OXIGENAÇÃO</h4>
-            </div>
-            <div>
-              <li class="nav-item">
-                <a class="nav-link btn-logout" href="../../cadastro.html">
-                  <img class="icons-menu" src="../../../assets/icons/logout_icon.svg">
-                </a>
-              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../pageNecessEspir.html">
+                    <img class="icons-menu" src="../../../assets/icons/psychology_icon.svg">
+                  </a>
+                </li>
             </div>
             </ul>
           </div>
@@ -56,73 +89,83 @@
               <p>Diagnósticos/Resultados de enfermagem</p>
             </div>
             <div class="style-checkbox">
-                <input id="ox-resp-adeq" type="checkbox" name="Padrão respiratório adequado">
-                <label for="ox-resp-adeq">Padrão respiratório adequado</label>
+              <input id="ox-resp-adeq" type="checkbox" name="Padrão respiratório adequado">
+              <label for="ox-resp-adeq">Padrão respiratório adequado</label>
             </div>
             <div class="style-checkbox">
-                <input id="ox-resp-prej" type="checkbox" name="Padrão respiratório prejudicado">
-                <label for="ox-resp-prej">Padrão respiratório prejudicado</label>
+              <input id="ox-resp-prej" type="checkbox" name="Padrão respiratório prejudicado">
+              <label for="ox-resp-prej">Padrão respiratório prejudicado</label>
             </div>
             <div>
               <p>Intervenções de Enfermagem</p>
             </div>
             <div class="style-checkbox">
-                <input id="ox-agen-retor" type="checkbox" name="Agendar retorno do(a) usuário(a) com hipertensão arterial à Unidade de Saúde, conforme avaliação e necessidade">
-                <label for="ox-agen-retor">Agendar retorno do(a) usuário(a) com hipertensão arterial à Unidade de Saúde, conforme avaliação e necessidade</label>
+              <input id="ox-agen-retor" type="checkbox"
+                name="Agendar retorno do(a) usuário(a) com hipertensão arterial à Unidade de Saúde, conforme avaliação e necessidade">
+              <label for="ox-agen-retor">Agendar retorno do(a) usuário(a) com hipertensão arterial à Unidade de Saúde,
+                conforme avaliação e necessidade</label>
             </div>
             <div class="style-checkbox">
-                <input id="ox-encam-cons" type="checkbox" name="Encaminhar para consulta médica, se exame físico alterado">
-                <label for="ox-encam-cons">Encaminhar para consulta médica, se exame físico alterado</label>
+              <input id="ox-encam-cons" type="checkbox"
+                name="Encaminhar para consulta médica, se exame físico alterado">
+              <label for="ox-encam-cons">Encaminhar para consulta médica, se exame físico alterado</label>
             </div>
             <div class="style-checkbox">
-                <input id="ox-ensin-tecn" type="checkbox" name="Ensinar técnica de respiração lenta (10 respirações a cada minuto, durante 15 minutos,
+              <input id="ox-ensin-tecn" type="checkbox" name="Ensinar técnica de respiração lenta (10 respirações a cada minuto, durante 15 minutos,
                 uma vez ao dia)">
-                <label for="ox-ensin-tecn">Ensinar técnica de respiração lenta (10 respirações a cada minuto, durante 15 minutos,
-                  uma vez ao dia)</label>
+              <label for="ox-ensin-tecn">Ensinar técnica de respiração lenta (10 respirações a cada minuto, durante 15
+                minutos,
+                uma vez ao dia)</label>
             </div>
             <div class="style-checkbox">
-                <input id="ox-parar-fumar" type="checkbox" name="Incentivar a parar de fumar">
-                <label for="ox-parar-fumar">Incentivar a parar de fumar</label>
+              <input id="ox-parar-fumar" type="checkbox" name="Incentivar a parar de fumar">
+              <label for="ox-parar-fumar">Incentivar a parar de fumar</label>
             </div>
             <div class="style-checkbox">
-                <input id="ox-instr-encor" type="checkbox" name="Instruir e encorajar sobre oexercício respiratório (diafragmático) e a tosse eficaz">
-                <label for="ox-instr-encor">Instruir e encorajar sobre oexercício respiratório (diafragmático) e a tosse eficaz</label>
+              <input id="ox-instr-encor" type="checkbox"
+                name="Instruir e encorajar sobre oexercício respiratório (diafragmático) e a tosse eficaz">
+              <label for="ox-instr-encor">Instruir e encorajar sobre oexercício respiratório (diafragmático) e a tosse
+                eficaz</label>
             </div>
             <div class="style-checkbox">
-                <input id="ox-inves-doenc" type="checkbox" name="Investigar sobre doenças respiratórias">
-                <label for="ox-inves-doenc">Investigar sobre doenças respiratórias</label>
+              <input id="ox-inves-doenc" type="checkbox" name="Investigar sobre doenças respiratórias">
+              <label for="ox-inves-doenc">Investigar sobre doenças respiratórias</label>
             </div>
             <div class="style-checkbox">
-                <input id="ox-orien-habit" type="checkbox" name="Orientar a manter os hábitos de respiração">
-                <label for="ox-orien-habit">Orientar a manter os hábitos de respiração</label>
+              <input id="ox-orien-habit" type="checkbox" name="Orientar a manter os hábitos de respiração">
+              <label for="ox-orien-habit">Orientar a manter os hábitos de respiração</label>
             </div>
             <div class="style-checkbox">
-                <input id="ox-orien-tabaco" type="checkbox" name="Orientar as complicações do tabaco para o aparelho respiratório">
-                <label for="ox-orien-tabaco">Orientar as complicações do tabaco para o aparelho respiratório</label>
+              <input id="ox-orien-tabaco" type="checkbox"
+                name="Orientar as complicações do tabaco para o aparelho respiratório">
+              <label for="ox-orien-tabaco">Orientar as complicações do tabaco para o aparelho respiratório</label>
             </div>
             <div class="style-checkbox">
-            <input id="ox-orien-respir" type="checkbox" name="Orientar como respirar durante as atividades (inspirar pelo nariz e expirar pela
+              <input id="ox-orien-respir" type="checkbox" name="Orientar como respirar durante as atividades (inspirar pelo nariz e expirar pela
             boca)">
-                <label for="ox-orien-respir">Orientar como respirar durante as atividades (inspirar pelo nariz e expirar pela
-                  boca)</label>
+              <label for="ox-orien-respir">Orientar como respirar durante as atividades (inspirar pelo nariz e expirar
+                pela
+                boca)</label>
             </div>
             <div class="style-checkbox">
-            <input id="ox-pesq-alter" type="checkbox" name="Pesquisar sobre alterações na respiração durante a consulta de enfermagem">
-                <label for="ox-pesq-alter">Pesquisar sobre alterações na respiração durante a consulta de enfermagem</label>
+              <input id="ox-pesq-alter" type="checkbox"
+                name="Pesquisar sobre alterações na respiração durante a consulta de enfermagem">
+              <label for="ox-pesq-alter">Pesquisar sobre alterações na respiração durante a consulta de
+                enfermagem</label>
             </div>
             <div class="style-checkbox">
-            <input id="ox-real-exam" type="checkbox" name="Realizar exame do aparelho respiratório no(a) usuário(a) com
+              <input id="ox-real-exam" type="checkbox" name="Realizar exame do aparelho respiratório no(a) usuário(a) com
             hipertensão">
-                <label for="ox-real-exam">Realizar exame do aparelho respiratório no(a) usuário(a) com
-                  hipertensão</label>
+              <label for="ox-real-exam">Realizar exame do aparelho respiratório no(a) usuário(a) com
+                hipertensão</label>
             </div>
             <div class="style-checkbox">
-            <input id="ox-refor-ensin" type="checkbox" name="Reforçar o ensino de exercícios de respiração profunda">
-                <label for="ox-refor-ensin">Reforçar o ensino de exercícios de respiração profunda</label>
+              <input id="ox-refor-ensin" type="checkbox" name="Reforçar o ensino de exercícios de respiração profunda">
+              <label for="ox-refor-ensin">Reforçar o ensino de exercícios de respiração profunda</label>
             </div>
             <div class="style-checkbox">
-            <input id="ox-verif-vitais" type="checkbox" name="Verificar e registrar sinais vitais">
-                <label for="ox-verif-vitais">Verificar e registrar sinais vitais</label>
+              <input id="ox-verif-vitais" type="checkbox" name="Verificar e registrar sinais vitais">
+              <label for="ox-verif-vitais">Verificar e registrar sinais vitais</label>
             </div>
             <div>
               <p id="retorno-oxigenacao"></p>
@@ -133,9 +176,11 @@
           </form>
         </div>
       </div>
-  </div>
-  <script src="../../../js/saveStorageNhb/oxigenacao.js"></script>
-  <script src="../../../js/logoutSistema.js"></script>
-  <script src="../../../js/bootstrap-js/bootstrap.js"></script>
+    </div>
+    <script src="../../../js/saveStorageNhb/oxigenacao.js"></script>
+    <script src="../../../js/logoutSistema.js"></script>
+    <script src="../../../js/verificaNivelUserFooter.js"></script>
+    <script src="../../../js/bootstrap-js/bootstrap.js"></script>
 </body>
+
 </html>

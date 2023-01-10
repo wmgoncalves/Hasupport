@@ -14,7 +14,7 @@ body{
 .fundo1{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 100%;
     
 }
@@ -22,29 +22,25 @@ body{
 /*Formatação para o menu global*/
 .menu{
     background-color: #a5d6a7;
-    box-shadow: 0px 5px 5px rgb(133, 133, 133);
+    box-shadow: 0px 2px 2px rgb(180, 180, 180);
+    border-bottom: 1px solid rgb(138, 138, 138);
+    width: 100%;
 
 }
-.navbar-collapse{
+.menu .navbar-collapse div{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 50px;
-
+    
 }
 .menu .navbar-nav{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
     width: 100%;
+    padding: 0px 10px;
 
 }
 .menu .nav-item{
-    padding: 0px 5px;
-    margin: 1px 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 5px;
+    margin: 0px 5px;
 
 }
 .menu .nav-item::marker{
@@ -57,7 +53,40 @@ body{
 
 }
 .menu .icons-menu{
-    width: 2rem;
+    width: 3rem;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+.menu .icons-menu:hover{
+    background-color: #80cc80c4;
+
+}
+
+/*Formatção sub menu*/
+.sub-menu-necess{
+    background-color: #a5d6a7;
+    box-shadow: 0px 5px 5px rgb(180, 180, 180);
+    border-top: 1px solid rgb(78, 78, 78);
+
+}
+.sub-menu-necess .navbar-collapse div{
+    width: 100%;
+
+}
+.sub-menu-necess .navbar-nav{
+    width: 100%;
+    justify-content: space-evenly;
+    
+}
+.sub-menu-necess .icons-menu{
+    width: 3.1rem;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+.sub-menu-necess .icons-menu:hover{
+    background-color: #80cc80d4;
 
 }
 
@@ -511,8 +540,7 @@ body{
     justify-content: center;
     
 }
-.fundo-botao-print div{    
-    height: 100%;
+.fundo-botao-print div{
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -527,6 +555,24 @@ body{
     border-left: 2px solid rgb(160, 160, 160);
 
 }
+.fundo-botao-print .col-consultas div{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 0;
+
+}
+.fundo-botao-print .col-relatorios div{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 0;
+
+}
 .fundo-botao-print button{
     width: 100%;
     font-size: 1.1rem;
@@ -534,25 +580,41 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
-.fundo-botao-print #return-busca{
-    width: 95%;
-    
+.fundo-botao-print .form-select{
+    height: 4rem;
+
 }
-.fundo-botao-print #return-busca table{
+.fundo-botao-print .form-select option{
+    color: black;
+    background-color: rgb(230, 230, 230);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .9rem;
+    font-weight: 500;
+
+}
+.fundo-botao-print .retorno-select-1 table{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: .8rem;
-
+    width: 100%;
+    box-shadow: 3px 3px 4px rgb(113, 113, 113);
+    
 }
-#return-busca th{
-    background-color: rgb(190, 190, 190);
-    padding: 7px;
-    border: 1px solid black;
-
+.retorno-select-1 th{
+    background-color: rgb(117, 117, 117);
+    color: black;
+    padding: 10px 0;
+    font-weight: 600;
+    border: none;
+    text-align: center;
+    
 }
-#return-busca td{
-    background-color: rgb(225, 225, 225);
-    padding: 7px;
-    border: 1px solid black;
+.retorno-select-1 td{
+    background-color: rgb(180, 180, 180);
+    color: black;
+    padding: 10px 0;
+    font-weight: 500;
+    border: none;
+    text-align: center;
     
 }
 

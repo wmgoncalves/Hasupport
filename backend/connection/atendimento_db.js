@@ -2,6 +2,60 @@ import { connect } from "./db_connect.js";
 
 const btnFinaliza = document.querySelector("#btn-finaliza-consulta");
 
+function ajustaIndicadores(){
+    let baixo_risco = localStorage.getItem('brIdade') != null ? localStorage.getItem('brIdade') : '';
+    // localStorage.setItem('brSexMasc', brSexMasc);
+    // localStorage.setItem('brTabag', brTabag);
+    // localStorage.setItem('brHipert', brHipert);
+    // localStorage.setItem('brObs', brObs);
+    // localStorage.setItem('brSedent', brSedent);
+    // localStorage.setItem('brHistoFam', brHistoFam);
+    // localStorage.setItem('brHistoDoenca', brHistoDoenca);
+    // localStorage.setItem('brManifest', brManifest);
+    // localStorage.setItem('brDiagnDislip', brDiagnDislip);
+    // localStorage.setItem('brDiagnPolic', brDiagnPolic);
+
+    // localStorage.setItem('arAcidVasc', arAcidVasc);
+    // localStorage.setItem('arInfartAgud', arInfartAgud);
+    // localStorage.setItem('arLesPerif', arLesPerif);
+    // localStorage.setItem('arAtaqIsqu', arAtaqIsqu);
+    // localStorage.setItem('arHiperVentr', arHiperVentr);
+    // localStorage.setItem('arNefrop', arNefrop);
+    // localStorage.setItem('arRetin', arRetin);
+    // localStorage.setItem('arAneur', arAneur);
+    // localStorage.setItem('arEsten', arEsten);
+    // localStorage.setItem('arDiabet', arDiabet);
+    // localStorage.setItem('arDoenVasc', arDoenVasc);
+    // localStorage.setItem('arInsuf', arInsuf);
+    // localStorage.setItem('arAngina', arAngina);
+    // localStorage.setItem('arDoencRenal', arDoencRenal);
+
+    return ind;
+}
+
+function ajustaListPsicobio(){
+    let lista = "NECESSIDADES PSICOBIOLÓGICAS:\n";
+
+    //OXIGENAÇÃO
+    let oxigenacao = '';
+    let tot = localStorage.getItem('qtd-oxi');
+    for(let i=0; i<tot; i++){
+        let name = `oxi-${i}`;
+        let check = localStorage.getItem(name);
+        // console.log(check);
+        if(check != null)
+            oxigenacao += check + ".\n";
+    }
+    if(oxigenacao != ''){
+        lista += "- Oxigenação:\n" + oxigenacao;
+    }
+
+    //NUTRIÇÃO
+    
+    // console.log(lista);
+    return lista;
+}
+
 export async function saveConsulta(){
     let date = new Date();
     let cur_date = date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
@@ -17,9 +71,13 @@ export async function saveConsulta(){
     let clas_abdo = localStorage.getItem('clas_abdo');
     let clas_cint_quad = localStorage.getItem('clas_cint_quad');
     let clas_torn_braq = localStorage.getItem('clas_torn_braq');
+    //INDICADORES
     let indicadores = null; //localStorage.getItem('');
+    //Indicadores de risco baixo/intermediário
+    //Indicadores de alto risco
+
     let clas_estrat = localStorage.getItem('clas_estrat');
-    let list_psicobio = null; //localStorage.getItem('');
+    let list_psicobio = ajustaListPsicobio();
     let list_psicosoc = null; //localStorage.getItem('');
     let list_psicoesp = null; //localStorage.getItem('');
 
@@ -44,6 +102,7 @@ export async function saveConsulta(){
     let hemogTgo = localStorage.getItem('hemogTgo');
     let hemogTgp = localStorage.getItem('hemogTgp');
 
+    // console.log(ajustaIndicadores());
     const conn = await connect();
     let [results] = await conn.query(
         'INSERT INTO consulta (data_cons, fk_id_usersus, pas, clas_ha, imc, clas_imc, clas_abdo, clas_cint_quad, clas_torn_brac, indicadores, clas_estrat, list_psicobio, list_psicosoc, list_psicoesp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',

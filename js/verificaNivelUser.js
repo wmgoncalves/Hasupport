@@ -7,35 +7,47 @@ function disableConfigNiveis(){
     const btnLeft = document.querySelector('.disable-btn-left');
     const btnRelatorio = document.querySelector('.disable-btn-relatorio');
     
-    if((localStorage.getItem('ConfigNivelUser') == 'experiente') || (localStorage.getItem('ehAdmin') == 'ehAdmin')){
-        btnBusca.style.display = 'block';
-        btnConsulta.style.display = 'block';
+    if(localStorage.getItem('ehAdmin') == 'ehAdmin'){
+        btnBusca.style.display = 'none';
+        btnConsulta.style.display = 'none';
         btnProtocol.style.display = 'block';
-        btnRelatorio.style.display = 'block';
+        btnRelatorio.style.display = 'none';
         nivelUserIni.style.display = 'none';
         nivelUserExper.style.display = 'none';
         btnLeft.style.cssText = 'display: flex !important';
-        console.log('User experiente');
-
-    }else if(localStorage.getItem('ConfigNivelUser') == 'iniciante'){
-        btnBusca.style.display = 'block';
-        btnConsulta.style.display = 'block';
-        btnRelatorio.style.display = 'block';
-        nivelUserIni.style.display = 'none';
-        nivelUserExper.style.display = 'none';
-        btnLeft.style.cssText = 'display: none !important';
-        console.log('User iniciante');
+        console.log('User experiente/ admin');
 
     }else{
-        btnBusca.style.display = 'none';
-        btnConsulta.style.display = 'none';
-        btnProtocol.style.display = 'none';
-        btnRelatorio.style.display = 'none';
-        nivelUserIni.style.display = 'block';
-        nivelUserExper.style.display = 'block';
-        btnLeft.style.cssText = 'display: none !important';
-        console.log('User não informado');
-
+        if(localStorage.getItem('ConfigNivelUser') == 'experiente'){
+            btnBusca.style.display = 'block';
+            btnConsulta.style.display = 'block';
+            btnProtocol.style.display = 'block';
+            btnRelatorio.style.display = 'block';
+            nivelUserIni.style.display = 'none';
+            nivelUserExper.style.display = 'none';
+            btnLeft.style.cssText = 'display: flex !important';
+            console.log('User experiente');
+    
+        }else if(localStorage.getItem('ConfigNivelUser') == 'iniciante'){
+            btnBusca.style.display = 'block';
+            btnConsulta.style.display = 'block';
+            btnRelatorio.style.display = 'block';
+            nivelUserIni.style.display = 'none';
+            nivelUserExper.style.display = 'none';
+            btnLeft.style.cssText = 'display: none !important';
+            console.log('User iniciante');
+    
+        }else{
+            btnBusca.style.display = 'none';
+            btnConsulta.style.display = 'none';
+            btnProtocol.style.display = 'none';
+            btnRelatorio.style.display = 'none';
+            nivelUserIni.style.display = 'block';
+            nivelUserExper.style.display = 'block';
+            btnLeft.style.cssText = 'display: none !important';
+            console.log('User não informado');
+    
+        }
     }
 }
 disableConfigNiveis();
