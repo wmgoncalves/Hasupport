@@ -2,7 +2,7 @@ import { connect } from "./db_connect.js";
 
 const btnFinaliza = document.querySelector("#btn-finaliza-consulta");
 
-function ajustaIndicadores(){
+function ajustaIndicadores() {
     let indicadores = '';
 
     let baixoRisco = [];
@@ -19,13 +19,13 @@ function ajustaIndicadores(){
     baixoRisco[10] = localStorage.getItem('brDiagnPolic');
 
     let listBaixo = '';
-    for(i=0; i<baixoRisco.length; i++){
-        if(baixoRisco[i] != null){
+    for (i = 0; i < baixoRisco.length; i++) {
+        if (baixoRisco[i] != null) {
             listBaixo += baixoRisco[i] + "\n";
         }
     }
 
-    if(listBaixo != ''){
+    if (listBaixo != '') {
         indicadores = "- Baixo Risco:\n" + listBaixo;
     }
 
@@ -46,146 +46,146 @@ function ajustaIndicadores(){
     altoRisco[13] = localStorage.getItem('arDoencRenal');
 
     let listAlto = '';
-    for(i=0; i<altoRisco.length; i++){
-        if(altoRisco[i] != null){
+    for (i = 0; i < altoRisco.length; i++) {
+        if (altoRisco[i] != null) {
             listAlto += altoRisco[i] + "\n";
         }
     }
 
-    if(listAlto != ''){
+    if (listAlto != '') {
         indicadores = "- Alto Risco:\n" + listAlto;
     }
 
-    if(indicadores != ''){
+    if (indicadores != '') {
         indicadores = "INDICADORES:\n" + indicadores;
     }
 
     return indicadores;
 }
 
-function generalList(nome){
+function generalList(nome) {
     let lista = '';
     let tot = localStorage.getItem(`qtd-${nome}`);
-    for(let i=0; i<tot; i++){
+    for (let i = 0; i < tot; i++) {
         let item = `${nome}-${i}`;
         let check = localStorage.getItem(item);
         // console.log(check);
-        if(check != null)
+        if (check != null)
             lista += check + ".\n";
     }
     return lista;
 }
 
-function ajustaListPsicobio(){
+function ajustaListPsicobio() {
     let lista_final = '';
 
     //OXIGENAÇÃO
     let oxi = generalList('oxi');
-    if(oxi != ''){
+    if (oxi != '') {
         lista_final += "- Oxigenação:\n" + oxi + "\n";
     }
 
     //NUTRIÇÃO
     let nut = generalList('nut');
-    if(nut != ''){
+    if (nut != '') {
         lista_final += "- Nutrição:\n" + nut + "\n";
     }
 
     //SONO E REPOUSO
     let son = generalList('son');
-    if(son != ''){
+    if (son != '') {
         lista_final += "- Sono e Repouso:\n" + son + "\n";
     }
 
     //ATIVIDADE FÍSICA
     let fis = generalList('fis');
-    if(fis != ''){
+    if (fis != '') {
         lista_final += "- Atividade Física:\n" + fis + "\n";
     }
 
     //REG. VASCULAR
     let vas = generalList('vas');
-    if(vas != ''){
+    if (vas != '') {
         lista_final += "- Regulação Vascular:\n" + vas + "\n";
     }
 
     //REG. HORMONAL
     let hor = generalList('hor');
-    if(hor != ''){
+    if (hor != '') {
         lista_final += "- Regulação Hormonal:\n" + hor + "\n";
     }
 
     //REG. NEUROLÓGICA
     let neu = generalList('neu');
-    if(neu != ''){
+    if (neu != '') {
         lista_final += "- Regulação Neurológica:\n" + neu + "\n";
     }
 
     //ÓRGÃOS DO SENTIDO
     let sen = generalList('sen');
-    if(sen != ''){
+    if (sen != '') {
         lista_final += "- Órgãos do Sentido:\n" + sen + "\n";
     }
 
     //TERAPÊUTICA
     let ter = generalList('ter');
-    if(ter != ''){
+    if (ter != '') {
         lista_final += "- Terapêutica:\n" + ter + "\n";
     }
 
-    if(lista_final != ''){
+    if (lista_final != '') {
         lista_final = "NECESSIDADES PSICOBIOLÓGICAS:\n" + lista_final;
     }
 
     console.log(lista_final);
-    //return lista_final;
+    return lista_final;
 }
 
-function ajustaListPsicossoc(){
+function ajustaListPsicossoc() {
     let lista_final = '';
 
     //AMOR E ACEITAÇÃO
     let amo = generalList('amo');
-    if(amo != ''){
+    if (amo != '') {
         lista_final += "- Amor e Aceitação:\n" + amo + "\n";
     }
 
     //LIBERDADE E PARTICIPAÇÃO
     let lib = generalList('lib');
-    if(lib != ''){
+    if (lib != '') {
         lista_final += "- Liberdade e Aceitação:\n" + lib + "\n";
     }
 
     //EDUCAÇÃO PARA SAÚDE E APRENDIZAGEM
     let edu = generalList('edu');
-    if(edu != ''){
+    if (edu != '') {
         lista_final += "- Educação para Saúde e Aprendizagem:\n" + edu + "\n";
     }
 
-    if(lista_final != ''){
+    if (lista_final != '') {
         lista_final = "NECESSIDADES PSICOSSOCIAIS:\n" + lista_final;
     }
 
     console.log(lista_final);
-    // return lista_final;
+    return lista_final;
 }
 
-function ajustaListPsicoesp(){
+function ajustaListPsicoesp() {
     let lista_final = '';
 
     //RELIGIOSIDADE E ESPIRITUALIDADE
     let reg = generalList('reg');
-    if(reg != ''){
-        lista_final = "NECESSIDADES PSICOESPIRITUAIS:\n- Religiosidade e Espiritualidade:\n" + reg + "\n"; 
+    if (reg != '') {
+        lista_final = "NECESSIDADES PSICOESPIRITUAIS:\n- Religiosidade e Espiritualidade:\n" + reg + "\n";
     }
 
     console.log(lista_final);
-    // return lista_final;
+    return lista_final;
 }
 
-export async function saveConsulta(){
+export async function saveConsulta() {
     let date = new Date();
-    let cur_date = date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+    let cur_date = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
 
     let idUserSus = localStorage.getItem('idUserSus');
     let pas = localStorage.getItem('pas');
@@ -218,7 +218,7 @@ export async function saveConsulta(){
     let hemogCreat = localStorage.getItem('hemogCreat');
     let hemogPotass = localStorage.getItem('hemogPotass');
     let hemogEqu = localStorage.getItem('hemogEqu');
-    let hemogMicroa =  localStorage.getItem('hemogMicroa');
+    let hemogMicroa = localStorage.getItem('hemogMicroa');
     let hemogAlbum = localStorage.getItem('hemogAlbum');
     let hemogAcid = localStorage.getItem('hemogAcid');
     let hemogUreia = localStorage.getItem('hemogUreia');
@@ -230,16 +230,16 @@ export async function saveConsulta(){
     let [results] = await conn.query(
         'INSERT INTO consulta (data_cons, fk_id_usersus, pas, clas_ha, imc, clas_imc, clas_abdo, clas_cint_quad, clas_torn_brac, indicadores, clas_estrat, list_psicobio, list_psicosoc, list_psicoesp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
         [cur_date, idUserSus, pas, clas_ha, imc, clas_imc, clas_abdo, clas_cint_quad, clas_torn_braq, indicadores, clas_estrat, list_psicobio, list_psicosoc, list_psicoesp],
-        function(err){
-            if(err) throw err;
+        function (err) {
+            if (err) throw err;
         }
     );
 
     let [results2] = await conn.query(
         'INSERT INTO hemograma (fk_id_usersus, fk_data_cons, hemacias, hemoglobina, hematoclito, leucocitos, linfocitos, plaquetas, glicemia_jejum, colesterol_total, hdl, triglicerideos, hemoglobina_glicada, creatina, potassio_plasmatico, equ, microalbumina_urina, albumina, acido_urico, ureia, tgo, tgp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-        [idUserSus, cur_date, hemogHemac, hemogHemogl, hemogHemat, hemogHeuc, hemogHinf, hemogHlaq, hemogHlic, hemogColes, hemogHdl, hemogTrig, hemogHemogGlic, hemogCreat, hemogPotass, hemogEqu,hemogMicroa, hemogAlbum, hemogAcid, hemogUreia, hemogTgo, hemogTgp],
-        function(err){
-            if(err) throw err;
+        [idUserSus, cur_date, hemogHemac, hemogHemogl, hemogHemat, hemogHeuc, hemogHinf, hemogHlaq, hemogHlic, hemogColes, hemogHdl, hemogTrig, hemogHemogGlic, hemogCreat, hemogPotass, hemogEqu, hemogMicroa, hemogAlbum, hemogAcid, hemogUreia, hemogTgo, hemogTgp],
+        function (err) {
+            if (err) throw err;
         }
     );
     conn.end();
