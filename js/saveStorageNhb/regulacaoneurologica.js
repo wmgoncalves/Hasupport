@@ -1,18 +1,18 @@
-const btnSalvar = document.querySelector('#btn-nutricao-salvar');
+const btnSalvar = document.querySelector('#btn-regulacaoneurologica-salvar');
 
 function save(){
     let checks = document.querySelectorAll("div > input");
-    localStorage.setItem('qtd-nut', checks.length);
+    localStorage.setItem('qtd-neu', checks.length);
     for(let i=0; i<checks.length; i++){
         if(checks[i].checked == true){
-            let name = `nut-${i}`;
+            let name = `neu-${i}`;
             localStorage.setItem(name, checks[i].name);
         }
     }
 }
 
 function insertChecks(){
-    let el = document.querySelector('#retorno-nutricao');
+    let el = document.querySelector('#retorno-regulacaoneurologica');
     console.log("Salvando...");
     save();
     el.innerHTML = "Salvo com sucesso";

@@ -1,8 +1,7 @@
-const btnOxigenacaoSalvar = document.querySelector('#btn-oxigenacao-salvar');
+const btnSalvar = document.querySelector('#btn-oxigenacao-salvar');
 
 function save(){
     let checks = document.querySelectorAll("div > input");
-
     localStorage.setItem('qtd-oxi', checks.length);
     for(let i=0; i<checks.length; i++){
         if(checks[i].checked == true){
@@ -12,27 +11,14 @@ function save(){
     }
 }
 
-// function test(){
-//     let tot = localStorage.getItem('qtd-oxi');
-//     for(let i=0; i<tot; i++){
-//         let name = `oxi-${i}`;
-//         let check = localStorage.getItem(name);
-//         console.log(check);
-//     }
-// }
-
-function insertOxigenacao(){
+function insertChecks(){
     let el = document.querySelector('#retorno-oxigenacao');
     console.log("Salvando...");
     save();
-    
-    // console.log("Testando...");
-    // test();
-    
     el.innerHTML = "Salvo com sucesso";
     setTimeout(function(){
-
+        //window.location = 'http://localhost:5500/pages/pageDiagnosEnf.html';
     }, 2000);
 }
 
-btnOxigenacaoSalvar.addEventListener("click", insertOxigenacao);
+btnSalvar.addEventListener("click", insertChecks);

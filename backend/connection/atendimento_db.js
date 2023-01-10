@@ -3,65 +3,189 @@ import { connect } from "./db_connect.js";
 const btnFinaliza = document.querySelector("#btn-finaliza-consulta");
 
 function ajustaIndicadores(){
-    let baixo_risco = localStorage.getItem('brIdade') != null ? localStorage.getItem('brIdade') : '';
-    // localStorage.setItem('brSexMasc', brSexMasc);
-    // localStorage.setItem('brTabag', brTabag);
-    // localStorage.setItem('brHipert', brHipert);
-    // localStorage.setItem('brObs', brObs);
-    // localStorage.setItem('brSedent', brSedent);
-    // localStorage.setItem('brHistoFam', brHistoFam);
-    // localStorage.setItem('brHistoDoenca', brHistoDoenca);
-    // localStorage.setItem('brManifest', brManifest);
-    // localStorage.setItem('brDiagnDislip', brDiagnDislip);
-    // localStorage.setItem('brDiagnPolic', brDiagnPolic);
+    let indicadores = '';
 
-    // localStorage.setItem('arAcidVasc', arAcidVasc);
-    // localStorage.setItem('arInfartAgud', arInfartAgud);
-    // localStorage.setItem('arLesPerif', arLesPerif);
-    // localStorage.setItem('arAtaqIsqu', arAtaqIsqu);
-    // localStorage.setItem('arHiperVentr', arHiperVentr);
-    // localStorage.setItem('arNefrop', arNefrop);
-    // localStorage.setItem('arRetin', arRetin);
-    // localStorage.setItem('arAneur', arAneur);
-    // localStorage.setItem('arEsten', arEsten);
-    // localStorage.setItem('arDiabet', arDiabet);
-    // localStorage.setItem('arDoenVasc', arDoenVasc);
-    // localStorage.setItem('arInsuf', arInsuf);
-    // localStorage.setItem('arAngina', arAngina);
-    // localStorage.setItem('arDoencRenal', arDoencRenal);
+    let baixoRisco = [];
+    baixoRisco[0] = localStorage.getItem('brIdade');
+    baixoRisco[1] = localStorage.getItem('brSexMasc');
+    baixoRisco[2] = localStorage.getItem('brTabag');
+    baixoRisco[3] = localStorage.getItem('brHipert');
+    baixoRisco[4] = localStorage.getItem('brObs');
+    baixoRisco[5] = localStorage.getItem('brSedent');
+    baixoRisco[6] = localStorage.getItem('brHistoFam');
+    baixoRisco[7] = localStorage.getItem('brHistoDoenca');
+    baixoRisco[8] = localStorage.getItem('brManifest');
+    baixoRisco[9] = localStorage.getItem('brDiagnDislip');
+    baixoRisco[10] = localStorage.getItem('brDiagnPolic');
 
-    return ind;
+    let listBaixo = '';
+    for(i=0; i<baixoRisco.length; i++){
+        if(baixoRisco[i] != null){
+            listBaixo += baixoRisco[i] + "\n";
+        }
+    }
+
+    if(listBaixo != ''){
+        indicadores = "- Baixo Risco:\n" + listBaixo;
+    }
+
+    let altoRisco = [];
+    altoRisco[0] = localStorage.getItem('arAcidVasc');
+    altoRisco[1] = localStorage.getItem('arInfartAgud');
+    altoRisco[2] = localStorage.getItem('arLesPerif');
+    altoRisco[3] = localStorage.getItem('arAtaqIsqu');
+    altoRisco[4] = localStorage.getItem('arHiperVentr');
+    altoRisco[5] = localStorage.getItem('arNefrop');
+    altoRisco[6] = localStorage.getItem('arRetin');
+    altoRisco[7] = localStorage.getItem('arAneur');
+    altoRisco[8] = localStorage.getItem('arEsten');
+    altoRisco[9] = localStorage.getItem('arDiabet');
+    altoRisco[10] = localStorage.getItem('arDoenVasc');
+    altoRisco[11] = localStorage.getItem('arInsuf');
+    altoRisco[12] = localStorage.getItem('arAngina');
+    altoRisco[13] = localStorage.getItem('arDoencRenal');
+
+    let listAlto = '';
+    for(i=0; i<altoRisco.length; i++){
+        if(altoRisco[i] != null){
+            listAlto += altoRisco[i] + "\n";
+        }
+    }
+
+    if(listAlto != ''){
+        indicadores = "- Alto Risco:\n" + listAlto;
+    }
+
+    if(indicadores != ''){
+        indicadores = "INDICADORES:\n" + indicadores;
+    }
+
+    return indicadores;
+}
+
+function generalList(nome){
+    let lista = '';
+    let tot = localStorage.getItem(`qtd-${nome}`);
+    for(let i=0; i<tot; i++){
+        let item = `${nome}-${i}`;
+        let check = localStorage.getItem(item);
+        // console.log(check);
+        if(check != null)
+            lista += check + ".\n";
+    }
+    return lista;
 }
 
 function ajustaListPsicobio(){
-    let lista = "NECESSIDADES PSICOBIOLÓGICAS:\n";
+    let lista_final = '';
 
     //OXIGENAÇÃO
-    let oxigenacao = '';
-    let tot = localStorage.getItem('qtd-oxi');
-    for(let i=0; i<tot; i++){
-        let name = `oxi-${i}`;
-        let check = localStorage.getItem(name);
-        // console.log(check);
-        if(check != null)
-            oxigenacao += check + ".\n";
-    }
-    if(oxigenacao != ''){
-        lista += "- Oxigenação:\n" + oxigenacao;
+    let oxi = generalList('oxi');
+    if(oxi != ''){
+        lista_final += "- Oxigenação:\n" + oxi + "\n";
     }
 
     //NUTRIÇÃO
-    
-    // console.log(lista);
-    return lista;
+    let nut = generalList('nut');
+    if(nut != ''){
+        lista_final += "- Nutrição:\n" + nut + "\n";
+    }
+
+    //SONO E REPOUSO
+    let son = generalList('son');
+    if(son != ''){
+        lista_final += "- Sono e Repouso:\n" + son + "\n";
+    }
+
+    //ATIVIDADE FÍSICA
+    let fis = generalList('fis');
+    if(fis != ''){
+        lista_final += "- Atividade Física:\n" + fis + "\n";
+    }
+
+    //REG. VASCULAR
+    let vas = generalList('vas');
+    if(vas != ''){
+        lista_final += "- Regulação Vascular:\n" + vas + "\n";
+    }
+
+    //REG. HORMONAL
+    let hor = generalList('hor');
+    if(hor != ''){
+        lista_final += "- Regulação Hormonal:\n" + hor + "\n";
+    }
+
+    //REG. NEUROLÓGICA
+    let neu = generalList('neu');
+    if(neu != ''){
+        lista_final += "- Regulação Neurológica:\n" + neu + "\n";
+    }
+
+    //ÓRGÃOS DO SENTIDO
+    let sen = generalList('sen');
+    if(sen != ''){
+        lista_final += "- Órgãos do Sentido:\n" + sen + "\n";
+    }
+
+    //TERAPÊUTICA
+    let ter = generalList('ter');
+    if(ter != ''){
+        lista_final += "- Terapêutica:\n" + ter + "\n";
+    }
+
+    if(lista_final != ''){
+        lista_final = "NECESSIDADES PSICOBIOLÓGICAS:\n" + lista_final;
+    }
+
+    console.log(lista_final);
+    //return lista_final;
+}
+
+function ajustaListPsicossoc(){
+    let lista_final = '';
+
+    //AMOR E ACEITAÇÃO
+    let amo = generalList('amo');
+    if(amo != ''){
+        lista_final += "- Amor e Aceitação:\n" + amo + "\n";
+    }
+
+    //LIBERDADE E PARTICIPAÇÃO
+    let lib = generalList('lib');
+    if(lib != ''){
+        lista_final += "- Liberdade e Aceitação:\n" + lib + "\n";
+    }
+
+    //EDUCAÇÃO PARA SAÚDE E APRENDIZAGEM
+    let edu = generalList('edu');
+    if(edu != ''){
+        lista_final += "- Educação para Saúde e Aprendizagem:\n" + edu + "\n";
+    }
+
+    if(lista_final != ''){
+        lista_final = "NECESSIDADES PSICOSSOCIAIS:\n" + lista_final;
+    }
+
+    console.log(lista_final);
+    // return lista_final;
+}
+
+function ajustaListPsicoesp(){
+    let lista_final = '';
+
+    //RELIGIOSIDADE E ESPIRITUALIDADE
+    let reg = generalList('reg');
+    if(reg != ''){
+        lista_final = "NECESSIDADES PSICOESPIRITUAIS:\n- Religiosidade e Espiritualidade:\n" + reg + "\n"; 
+    }
+
+    console.log(lista_final);
+    // return lista_final;
 }
 
 export async function saveConsulta(){
     let date = new Date();
     let cur_date = date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
-    // Data informada se novo cadastro/ tbm pode ser retorno do banco
-    // let cur_date = localStorage.getItem('userCadData');
-    // console.log(cur_date);
 
     let idUserSus = localStorage.getItem('idUserSus');
     let pas = localStorage.getItem('pas');
@@ -71,15 +195,14 @@ export async function saveConsulta(){
     let clas_abdo = localStorage.getItem('clas_abdo');
     let clas_cint_quad = localStorage.getItem('clas_cint_quad');
     let clas_torn_braq = localStorage.getItem('clas_torn_braq');
+
     //INDICADORES
-    let indicadores = null; //localStorage.getItem('');
-    //Indicadores de risco baixo/intermediário
-    //Indicadores de alto risco
+    let indicadores = ajustaIndicadores();
 
     let clas_estrat = localStorage.getItem('clas_estrat');
     let list_psicobio = ajustaListPsicobio();
-    let list_psicosoc = null; //localStorage.getItem('');
-    let list_psicoesp = null; //localStorage.getItem('');
+    let list_psicosoc = ajustaListPsicossoc();
+    let list_psicoesp = ajustaListPsicoesp();
 
     let hemogHemac = localStorage.getItem('hemogHemac');
     let hemogHemogl = localStorage.getItem('hemogHemogl');
