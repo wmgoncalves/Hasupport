@@ -1,6 +1,6 @@
 .form-necessidades{
-    width: 100%;
-    padding: 0px 10px;
+    width: 80%;
+    padding: 10px;
 
 }
 .form-necessidades p{
@@ -8,6 +8,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     padding: 20px 0px 0px 0px;
+    
 }
 .form-necessidades .style-checkbox{
     display: flex;
