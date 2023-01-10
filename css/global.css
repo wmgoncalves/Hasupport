@@ -564,6 +564,28 @@ body{
     padding: 1rem 0;
 
 }
+.fundo-botao-print .col-consultas form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+}
+.fundo-botao-print .col-consultas form input{
+    border: none;
+    width: 100%;
+    height: 4rem;
+    padding: 5px;
+    border: 1px solid rgb(195, 195, 195);
+    border-radius: 5px;
+
+}
+.fundo-botao-print .col-consultas form input::placeholder{
+    color: rgb(118, 118, 118);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
 .fundo-botao-print .col-relatorios div{
     width: 95%;
     display: flex;
@@ -596,11 +618,12 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: .8rem;
     width: 100%;
+    border-radius: 10px;
     box-shadow: 3px 3px 4px rgb(113, 113, 113);
     
 }
 .retorno-select-1 th{
-    background-color: rgb(117, 117, 117);
+    background-color: rgb(220, 220, 220);
     color: black;
     padding: 10px 0;
     font-weight: 600;
@@ -609,7 +632,7 @@ body{
     
 }
 .retorno-select-1 td{
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(229, 229, 229);
     color: black;
     padding: 10px 0;
     font-weight: 500;
