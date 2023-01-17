@@ -1,3 +1,4 @@
+import Vue from 'vue';
 const btnLastCadast = document.querySelector("#btn-print-maior-risco");
 const btnBusca = document.querySelector("#btn-print-ult-adic");
 
@@ -15,14 +16,53 @@ async function chooseSearch() {
         window.location = "./relatorioTodosUsers.html";
     }
 }
-async function buscaTodos() {
-    let user = document.querySelector("#input-nome").value;
-    let rows = await searchUserSus(user, idEquipe);
+import React, { useState } from 'react';
+import { searchUserSus } from './api';
 
-    //user -> todas as consultas
+function App() {
+    const [searchString, setSearchString] = useState('');
+    const [users, setUsers] = useState([]);
 
-    //botao (consulta 1)
-    //botao (consulta 2)
+    async function handleSubmit(e) {
+        e.preventDefault();
+        const rows = await searchUserSus(searchString, idEquipe);
+        setUsers(rows);
+    }
+
+    return (
+        <div>
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    placeholder="Search for users..."
+                    value={searchString}
+                    onChange={e => setSearchString(e.target.value)}
+                />
+                <button type="submit">Search</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {users.map(user => (
+                        <tr key={user.id}>
+                            <td>{user.nome}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+}
+
+export default App;
+
+//botao (consulta 1)
+//botao (consulta 2)
+result.innerHTML = table;
 }
 btnLastCadast.addEventListener("click", chooseSearch);
 btnBusca.addEventListener("click", buscaTodos);
