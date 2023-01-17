@@ -620,12 +620,12 @@ body{
     width: 100%;
     border-radius: 10px;
     box-shadow: 3px 3px 4px rgb(113, 113, 113);
-
+    
 }
 .retorno-select-1 th{
     background-color: rgb(220, 220, 220);
     color: black;
-    padding: 10px 20px;
+    padding: 10px 0;
     font-weight: 600;
     border: none;
     text-align: center;
@@ -646,5 +646,10 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    
+}
+/*fomatação botao pagina relatorios*/
+.botao-relatorio{
+    padding-top: 20px;
     
 }
