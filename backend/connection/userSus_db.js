@@ -1,22 +1,22 @@
 import { connect } from "./db_connect.js";
 
 //CADASTRO
-export async function userSusExists(cartSus, cpf){
+export async function userSusExists(cartSus, cpf) {
     const conn = await connect();
     let [rows] = await conn.query('SELECT * FROM user_sus WHERE cart_sus=? OR cpf=?', [cartSus, cpf]);
     await conn.end();
     return rows;
 }
 
-export async function lastUserSus(){
+export async function lastUsersSus() {
     const conn = await connect();
-    let [rows] = await conn.query('SELECT MAX(id_usersus) AS lastId FROM user_sus');
+    let [rows] = await conn.query('SELECT * FROM user_sus ORDER BY id_usersus DESC');
     await conn.end();
     return rows;
 }
 
 //ALTERAR
-export async function loadUserSus(idUserSus){
+export async function loadUserSus(idUserSus) {
     const conn = await connect();
     let [row] = await conn.query('SELECT * FROM user_sus WHERE id_usersus=?', [idUserSus]);
     await conn.end();
@@ -24,7 +24,7 @@ export async function loadUserSus(idUserSus){
 }
 
 //BUSCAR
-export async function searchUserSus(user, idEquipe){
+export async function searchUserSus(user, idEquipe) {
     const conn = await connect();
     user = '%' + user + '%';
     let [rows] = await conn.query(
@@ -34,13 +34,13 @@ export async function searchUserSus(user, idEquipe){
     return rows;
 }
 
-export async function insertUserSus(cartSus, cpf, nome, dataNasc, sexo, idEquipe){
+export async function insertUserSus(cartSus, cpf, nome, dataNasc, sexo, idEquipe) {
     const conn = await connect();
     let [results] = await conn.query(
         'INSERT INTO user_sus (cart_sus, cpf, nome, data_nasc, sexo, fk_id_equipe) VALUES (?, ?, ?, ?, ?, ?)',
         [cartSus, cpf, nome, dataNasc, sexo, idEquipe],
-        function(err){
-            if(err) throw err;
+        function (err) {
+            if (err) throw err;
         }
     );
     conn.end();

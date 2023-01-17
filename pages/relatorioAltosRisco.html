@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.css">
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/displayNone.css">
+  <link rel="stylesheet" href="../css/relatorio.css">
   <title>HAsupport</title>
 </head>
 
-<body onload="printAutoRisco()">
+<body>
   <div class="fundo1">
     <div class="menu">
       <nav class="navbar navbar-expand-lg">
@@ -49,27 +50,30 @@
         </div>
       </nav>
     </div>
-    <div class="retorno-select-1">
-      <!-- colocar aqui o retorno da escolha!! -->
-      <!-- tabela temporaria!! -->
-      <table>
-        <tr>
-          <th>Cartão do SUS</th>
-          <th>CPF</th>
-          <th>Nome</th>
-          <th>Idade</th>
-          <th>Risco</th>
-        </tr>
-        <tr>
-          <th>111222233334444</th>
-          <th>11122233344</th>
-          <th>TestBot</th>
-          <th>01</th>
-          <th>Baixo Risco</th>
-        </tr>
-      </table>
+    <div class="body-relatorio">
+      <div class="titulo-pdf">
+        <h2>Usuários do SUS com ALTO RISCO</h2>
+      </div>
+      <div class="retorno-select-2">
+        <!-- colocar aqui o retorno da escolha!! -->
+        <!-- tabela temporaria!! -->
+        <table>
+          <tr>
+            <th>Cartão do SUS</th>
+            <th>CPF</th>
+            <th>Nome</th>
+            <th>Idade</th>
+          </tr>
+          <tr>
+            <td>111222233334444</td>
+            <td>11122233344</td>
+            <td>TestBot</td>
+            <td>01</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
-  <script type="module" src="../backend/relatorios.js"></script>
+  <script type="module" src="../backend/relatorio/relAltoRisco.js"></script>
 
 </body>

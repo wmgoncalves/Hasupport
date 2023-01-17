@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.css">
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/displayNone.css">
+  <link rel="stylesheet" href="../css/relatorio.css">
   <title>HAsupport</title>
 </head>
 
@@ -49,57 +50,30 @@
         </div>
       </nav>
     </div>
-    <div class="fundo-botao fundo-botao-print">
-      <div class="col-consultas">
-        <div>
-          <h2>Buscas</h2>
-        </div>
-        <form>
-          <div>
-            <input class="busca-usuarios" name="busca" required="required" type="text" placeholder="Nome do usuário" />
-          </div>
-          <div>
-            <a class="botao-padrao">
-              <button id="btn-print-ult-adic">BUSCAR</button>
-            </a>
-          </div>
-        </form>
-        <div class="retorno-select-1">
-          <!-- colocar aqui o retorno da escolha!! -->
-          <!-- tabela temporaria!! -->
-          <table>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Fone</th>
-              <th>Risco</th>
-              <th>Data</th>
-            </tr>
-          </table>
-        </div>
+    <div class="body-relatorio">
+      <div class="titulo-pdf">
+        <h2>Usuários do SUS com ALTO RISCO</h2>
       </div>
-      <div class="col-relatorios">
-        <div>
-          <h2>Relatórios (PDF)</h2>
-        </div>
-        <div>
-          <select class="form-select form-select-pdf">
-            <option selected>Selecione uma opção</option>
-            <option value="1">Usuários(as) com maior risco</option>
-            <option value="2">Ultimos usuários(as) cadastrados</option>
-          </select>
-        </div>
-        <div>
-          <a href="./relatorio.html" class="botao-padrao">
-            <button id="btn-print-maior-risco">BAIXAR</button>
-          </a>
-        </div>
+      <div class="retorno-select-2">
+        <!-- colocar aqui o retorno da escolha!! -->
+        <!-- tabela temporaria!! -->
+        <table>
+          <tr>
+            <th>Cartão do SUS</th>
+            <th>CPF</th>
+            <th>Nome</th>
+            <th>Idade</th>
+          </tr>
+          <tr>
+            <td>111222233334444</td>
+            <td>11122233344</td>
+            <td>TestBot</td>
+            <td>01</td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
-  <script type="module" src="../backend/relatorio/relatorios.js"></script>
-  <script src="../js/logoutSistema.js"></script>
-  <script src="../js/bootstrap-js/bootstrap.js"></script>
-</body>
+  <script type="module" src="../backend/relatorio/relTodosUsers.js"></script>
 
-</html>
+</body>

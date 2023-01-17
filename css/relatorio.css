@@ -1,7 +1,38 @@
-.retorno-select-1{
-    align-content: center;
+.body-relatorio{
+    border: solid;
+    padding: 20px;
+    width: auto;
+    margin: 20px auto 0px auto;
 }
 
-.retorno-select-1 table tr th{
-    width: max-content;
+.titulo-pdf h2{
+    margin: 0px 0px 15px 0px;
+    text-align: center;
+    font-style: bold;
+}
+
+.retorno-select-2 table{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px rgb(113, 113, 113);
+    margin: auto;
+}
+
+.retorno-select-2 th{
+    background-color: rgb(169, 169, 169);
+    color: black;
+    padding: 10px 30px;
+    border: none;
+    text-align: center;
+    
+}
+.retorno-select-2 td{
+    background-color: rgb(229, 229, 229);
+    color: black;
+    padding: 10px 30px;
+    border: none;
+    text-align: center;
+    
 }

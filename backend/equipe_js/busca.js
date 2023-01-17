@@ -5,16 +5,16 @@ const retornoBuscaEquipe = document.querySelector('#retorno-busca-equipe');
 
 const isEmpty = str => !str.trim().length;
 
-async function buscar(){
+async function buscar() {
     let login = document.querySelector("#login").value;
     let result = document.querySelector("#result");
 
     result.innerHTML = "";
 
-    if(isEmpty(login)){
+    if (isEmpty(login)) {
         retornoBuscaEquipe.innerHTML = "ERRO -> Nenhum valor inserido na busca!";
         retornoBuscaEquipe.style.color = 'red';
-        setTimeout(function(){
+        setTimeout(function () {
             retornoBuscaEquipe.innerHTML = "";
         }, 5000);
     }
@@ -22,14 +22,14 @@ async function buscar(){
         let rows = await searchEquipes(login);
         // console.log(rows.length);
 
-        if(rows.length > 0){
-            for(let i=0; i<rows.length; i++){
+        if (rows.length > 0) {
+            for (let i = 0; i < rows.length; i++) {
                 result.innerHTML += `<button class="equipe" onclick="selecionarEquipe(this)" value="${rows[i].id}">Login: ${rows[i].login} / Membros: ${rows[i].membros}</button><br>`;
             }
         } else {
             retornoBuscaEquipe.innerHTML = "Não foi encontrada nenhuma equipe com este login!!";
             retornoBuscaEquipe.style.color = 'green';
-            setTimeout(function(){
+            setTimeout(function () {
                 retornoBuscaEquipe.innerHTML = "";
             }, 3000);
         }

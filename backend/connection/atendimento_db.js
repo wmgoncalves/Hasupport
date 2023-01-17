@@ -19,7 +19,7 @@ function ajustaIndicadores() {
     baixoRisco[10] = localStorage.getItem('brDiagnPolic');
 
     let listBaixo = '';
-    for (i = 0; i < baixoRisco.length; i++) {
+    for (let i = 0; i < baixoRisco.length; i++) {
         if (baixoRisco[i] != null) {
             listBaixo += baixoRisco[i] + "\n";
         }
@@ -46,7 +46,7 @@ function ajustaIndicadores() {
     altoRisco[13] = localStorage.getItem('arDoencRenal');
 
     let listAlto = '';
-    for (i = 0; i < altoRisco.length; i++) {
+    for (let i = 0; i < altoRisco.length; i++) {
         if (altoRisco[i] != null) {
             listAlto += altoRisco[i] + "\n";
         }
