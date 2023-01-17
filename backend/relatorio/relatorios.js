@@ -1,4 +1,3 @@
-import Vue from 'vue';
 const btnLastCadast = document.querySelector("#btn-print-maior-risco");
 const btnBusca = document.querySelector("#btn-print-ult-adic");
 
@@ -16,54 +15,29 @@ async function chooseSearch() {
         window.location = "./relatorioTodosUsers.html";
     }
 }
-import React, { useState } from 'react';
-import { searchUserSus } from './api';
+async function buscaTodos() {
+    let user = document.querySelector(".busca-usuarios").value;
+    let rows = await searchUserSus(user, idEquipe);
+    let dataAtual = parseInt(new Date().toLocaleString().substring(6, 10));
+    for (let i = 0; i < rows.length; i++) {
+        dataInformada = parseInt((localStorage.getItem('user_sus')).toLocaleString().substring(0, 4));
 
-function App() {
-    const [searchString, setSearchString] = useState('');
-    const [users, setUsers] = useState([]);
-
-    async function handleSubmit(e) {
-        e.preventDefault();
-        const rows = await searchUserSus(searchString, idEquipe);
-        setUsers(rows);
+        table += `
+            <tr>
+            <td> ${rows[i].nome} </td>
+            <td> ${dataAtual - dataInformada} </td>
+            <td> ${rows[i].sexo} </td>
+            </tr>
+        `;
     }
 
-    return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Search for users..."
-                    value={searchString}
-                    onChange={e => setSearchString(e.target.value)}
-                />
-                <button type="submit">Search</button>
-            </form>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {users.map(user => (
-                        <tr key={user.id}>
-                            <td>{user.nome}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
-    );
+    table += `
+        </table>
+    `;
+    //botao (consulta 1)
+    //botao (consulta 2)
+
 }
-
-export default App;
-
-//botao (consulta 1)
-//botao (consulta 2)
-result.innerHTML = table;
-
 btnLastCadast.addEventListener("click", chooseSearch);
 btnBusca.addEventListener("click", buscaTodos);
 
