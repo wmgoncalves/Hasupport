@@ -11,7 +11,7 @@
   <title>HAsupport</title>
 </head>
 
-<body>
+<body onload="printAutoRisco()">
   <div class="fundo1">
     <div class="menu">
       <nav class="navbar navbar-expand-lg">
@@ -49,57 +49,27 @@
         </div>
       </nav>
     </div>
-    <div class="fundo-botao fundo-botao-print">
-      <div class="col-consultas">
-        <div>
-          <h2>Buscas</h2>
-        </div>
-        <form>
-          <div>
-            <input class="busca-usuarios" name="busca" required="required" type="text" placeholder="Nome do usuário" />
-          </div>
-          <div>
-            <a class="botao-padrao">
-              <button id="btn-print-ult-adic">BUSCAR</button>
-            </a>
-          </div>
-        </form>
-        <div class="retorno-select-1">
-          <!-- colocar aqui o retorno da escolha!! -->
-          <!-- tabela temporaria!! -->
-          <table>
-            <tr>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>Fone</th>
-              <th>Risco</th>
-              <th>Data</th>
-            </tr>
-          </table>
-        </div>
-      </div>
-      <div class="col-relatorios">
-        <div>
-          <h2>Relatórios (PDF)</h2>
-        </div>
-        <div>
-          <select class="form-select form-select-pdf">
-            <option selected>Selecione uma opção</option>
-            <option value="1">Usuários(as) com maior risco</option>
-            <option value="2">Ultimos usuários(as) cadastrados</option>
-          </select>
-        </div>
-        <div>
-          <a href="./relatorio.html" class="botao-padrao">
-            <button id="btn-print-maior-risco">BAIXAR</button>
-          </a>
-        </div>
-      </div>
+    <div class="retorno-select-1">
+      <!-- colocar aqui o retorno da escolha!! -->
+      <!-- tabela temporaria!! -->
+      <table>
+        <tr>
+          <th>Cartão do SUS</th>
+          <th>CPF</th>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Risco</th>
+        </tr>
+        <tr>
+          <th>111222233334444</th>
+          <th>11122233344</th>
+          <th>TestBot</th>
+          <th>01</th>
+          <th>Baixo Risco</th>
+        </tr>
+      </table>
     </div>
   </div>
   <script type="module" src="../backend/relatorios.js"></script>
-  <script src="../js/logoutSistema.js"></script>
-  <script src="../js/bootstrap-js/bootstrap.js"></script>
-</body>
 
-</html>
+</body>
