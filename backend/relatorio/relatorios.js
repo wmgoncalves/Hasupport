@@ -1,18 +1,18 @@
-const btnLastCadast = document.querySelector("#btn-print-ult-adic");
-const btnBusca = document.querySelector("#btn-busca");
+const btnLastCadast = document.querySelector("#btn-print-maior-risco");
+const btnBusca = document.querySelector("#btn-print-ult-adic");
 
 async function chooseSearch() {
-    let option = document.querySelector("#select-consultas").value;
+    let option = document.querySelector(".form-select-pdf").value;
 
-    // console.log(option);
+    console.log(option);
 
     if (option == 1) {
-        // console.log("Todos usuários do SUS com Alto Risco.");
-        window.location.href = "../../pages/";
+        console.log("Todos usuários do SUS com Alto Risco.");
+        window.location = "./relatorioAltoRisco.html";
     }
     else if (option == 2) {
-        // console.log("Último usuário do SUS cadastrado.");
-        window.location.href = "../../pages/relatorioTodosUsers.html";
+        console.log("Último usuário do SUS cadastrado.");
+        //window.location = "./relatorioTodosUsers.html";
     }
 }
 async function buscaTodos() {
