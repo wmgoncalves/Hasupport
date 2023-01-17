@@ -63,7 +63,7 @@ export default App;
 //botao (consulta 1)
 //botao (consulta 2)
 result.innerHTML = table;
-}
+
 btnLastCadast.addEventListener("click", chooseSearch);
 btnBusca.addEventListener("click", buscaTodos);
 
