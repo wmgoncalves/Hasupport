@@ -12,7 +12,7 @@ async function chooseSearch() {
     }
     else if (option == 2) {
         console.log("Último usuário do SUS cadastrado.");
-        //window.location = "./relatorioTodosUsers.html";
+        window.location = "./relatorioTodosUsers.html";
     }
 }
 async function buscaTodos() {
