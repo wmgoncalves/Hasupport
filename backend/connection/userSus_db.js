@@ -8,12 +8,13 @@ export async function userSusExists(cartSus, cpf) {
     return rows;
 }
 
-export async function lastUsersSus() {
+export async function lastUserSus() {
     const conn = await connect();
-    let [rows] = await conn.query('SELECT * FROM user_sus ORDER BY id_usersus DESC');
+    let [rows] = await conn.query('SELECT MAX(id_usersus) AS lastId FROM user_sus');
     await conn.end();
     return rows;
 }
+
 
 //ALTERAR
 export async function loadUserSus(idUserSus) {
