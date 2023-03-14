@@ -13,22 +13,22 @@ function calcular_pas_pad() {
 
 	let ha = 'Valor indeterminado';
 
-	if (180 <= pas || 110 <= pad) {
+	if (pas >= 180 || pad >= 110) {
 		ha = 'HA estágio 3';
 	}
-	else if (160 <= pas < 180 || pad <= pad < 110) {
+	else if (pas >= 160 || pad >= 100) {
 		ha = 'HA estágio 2';
 	}
-	else if (140 <= pas < 160 || 90 <= pad < 100) {
+	else if (pas >= 140 || pad >= 90) {
 		ha = 'HA estágio 1';
 	}
-	else if (130 <= pas < 140 || 85 <= pad < 90) {
+	else if (pas >= 130 || pad >= 85) {
 		ha = 'Pré-hipertensão';
 	}
-	else if (120 <= pas < 130 || 80 <= pad < 85) {
+	else if (pas >= 120 || pad >= 80) {
 		ha = 'PA normal';
 	}
-	else { //pas < 120 and pad < 80
+	else { //pas < 120 AND pad < 80
 		ha = 'PA ótima'
 	}
 

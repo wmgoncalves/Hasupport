@@ -7,16 +7,16 @@ const retornoBuscaUser = document.querySelector('#retorno-busca-user');
 
 const isEmpty = str => !str.trim().length;
 
-async function buscar(){
-    let user_sus = document.querySelector("#user_sus").value;
+async function buscar() {
+    let user_sus = document.querySelector("#user_sus").value.trim();
     let result = document.querySelector("#result");
 
     result.innerHTML = "";
 
-    if(isEmpty(user_sus)){
+    if (isEmpty(user_sus)) {
         retornoBuscaUser.innerHTML = "ERRO -> Nenhum valor inserido na busca!";
         retornoBuscaUser.style.color = 'red';
-        setTimeout(function(){
+        setTimeout(function () {
             retornoBuscaUser.innerHTML = "";
         }, 5000);
     }
@@ -24,9 +24,9 @@ async function buscar(){
         let rows = await searchUserSus(user_sus, idEquipe);
         // console.log(rows);
 
-        if(rows.length > 0){
-            for(let i=0; i<rows.length; i++){
-                if(await searchAltoRisco(rows[i].id_usersus) === 'ALTO RISCO'){
+        if (rows.length > 0) {
+            for (let i = 0; i < rows.length; i++) {
+                if (await searchAltoRisco(rows[i].id_usersus) === 'ALTO RISCO') {
                     result.innerHTML += `<button class="equipe" onclick="selecionarUserSus(this)" value="${rows[i].id_usersus}">
                     <span class="flag-risco"><img src="../assets/icons/flag_icon.png"></span>
                     Cartão SUS: ${rows[i].cart_sus}<br> 
@@ -43,7 +43,7 @@ async function buscar(){
         } else {
             retornoBuscaUser.innerHTML = 'Nenhum usuário(a) do SUS encontrado(a)!!!';
             retornoBuscaUser.style.color = 'green';
-            setTimeout(function(){
+            setTimeout(function () {
                 retornoBuscaUser.innerHTML = "";
             }, 3000);
         }

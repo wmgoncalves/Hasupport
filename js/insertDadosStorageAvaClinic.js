@@ -10,61 +10,62 @@ const btnEstrat2Calcular = document.querySelector('#btn-estrat2-calcular');
 const etapa2PaSistol = document.querySelector('#etapa2-pa-sistol');
 const tornBraqPasBra = document.querySelector('#torn-braq-pas-bra');
 
-function insertPasPad(){
+function insertPasPad() {
     let pad = document.querySelector('#pad').value;
     let pas = document.querySelector('#pas').value;
-    
+
     localStorage.setItem('pad', pad);
     localStorage.setItem('pas', pas);
 
     etapa2PaSistol.value = localStorage.getItem('pas');
     tornBraqPasBra.value = localStorage.getItem('pas');
     console.log('Sucesso Pas-Pad:', pas, pad);
-    
+
 }
-function insertImc(){
+function insertImc() {
     let peso = document.querySelector('#imc-peso').value;
     let altura = document.querySelector('#imc-altura').value;
-    
+
+    peso.mask("#0.00", { reverse: false });
     localStorage.setItem('peso', peso);
     localStorage.setItem('altura', altura);
-    
+
     console.log('Sucesso Peso-Altura:', peso, altura);
     calculaImc(peso, altura);
-    
+
 }
-function insertCircAbdom(){
+function insertCircAbdom() {
     let circAbdomCm = document.querySelector('#circ-abdom-cm').value;
-    
+
     localStorage.setItem('circAbdomCm', circAbdomCm);
-    
+
     console.log('Sucesso Circunferencia Abdominal:', circAbdomCm);
-    
+
 }
-function insertCintQuadr(){
+function insertCintQuadr() {
     let cintQuadrAbdomCm = document.querySelector('#cint-quadr-abdom-cm').value;
     let cintQuadrQuadrCm = document.querySelector('#cint-quadr-quadr-cm').value;
-    
+
     localStorage.setItem('cintQuadrAbdomCm', cintQuadrAbdomCm);
     localStorage.setItem('cintQuadrQuadrCm', cintQuadrQuadrCm);
-    
+
     console.log('Sucesso Cintura-Quadril:', cintQuadrAbdomCm, cintQuadrQuadrCm);
-    
+
 }
-function insertTornBraq(){
+function insertTornBraq() {
     let tornBraqPasTorn = document.querySelector('#torn-braq-pas-torn').value;
     let tornBraqPasBra = document.querySelector('#torn-braq-pas-bra').value;
-    
+
     localStorage.setItem('tornBraqPasTorn', tornBraqPasTorn);
     localStorage.setItem('pas', tornBraqPasBra);
 
     etapa2PaSistol.value = localStorage.getItem('pas');
     pas.value = localStorage.getItem('pas');
-    
+
     console.log('Sucesso Tornozelo-Braquial:', tornBraqPasTorn, tornBraqPasBra);
-    
+
 }
-function insertEstratificacao(){
+function insertEstratificacao() {
     /*Variaveis Risco Baixo*/
     let brIdade = document.querySelector('#br-idade');
     let brSexMasc = document.querySelector('#br-sex-masc');
@@ -77,7 +78,7 @@ function insertEstratificacao(){
     let brManifest = document.querySelector('#br-manifest');
     let brDiagnDislip = document.querySelector('#br-diagn-dislip');
     let brDiagnPolic = document.querySelector('#br-diagn-polic');
-    
+
     /*Variaveis Risco Alto */
     let arAcidVasc = document.querySelector('#ar-acid-vasc');
     let arInfartAgud = document.querySelector('#ar-infart-agud');
@@ -97,198 +98,198 @@ function insertEstratificacao(){
     /*Variavel da etapa 2*/
     let checkFumante = document.querySelector('#etapa2-fumante');
     checkFumante.checked = false;
-    
+
     let contBaixoRisco = 0;
     let contAltoRisco = 0;
 
     /*Condição Risco Baixo*/
-    if(brIdade.checked == true){
+    if (brIdade.checked == true) {
         brIdade = document.querySelector('#br-idade').name;
         contBaixoRisco++;
-    }else{
+    } else {
         brIdade = "vazio"
     }
 
-    if(brSexMasc.checked == true){
+    if (brSexMasc.checked == true) {
         brSexMasc = document.querySelector('#br-sex-masc').name;
         contBaixoRisco++;
-    }else{
+    } else {
         brSexMasc = "vazio"
     }
 
-    if(brTabag.checked == true){
+    if (brTabag.checked == true) {
         brTabag = document.querySelector('#br-tabag').name;
         checkFumante.checked = true;
         contBaixoRisco++;
-    }else{
+    } else {
         brTabag = "vazio"
     }
 
-    if(brHipert.checked == true){
+    if (brHipert.checked == true) {
         brHipert = document.querySelector('#br-hipert').name;
-        contBaixoRisco++;    
-    }else{
+        contBaixoRisco++;
+    } else {
         brHipert = "vazio"
     }
 
-    if(brObs.checked == true){
+    if (brObs.checked == true) {
         brObs = document.querySelector('#br-obs').name;
-        contBaixoRisco++;    
-    }else{
+        contBaixoRisco++;
+    } else {
         brObs = "vazio"
     }
 
-    if(brSedent.checked == true){
+    if (brSedent.checked == true) {
         brSedent = document.querySelector('#br-sedent').name;
-        contBaixoRisco++;    
-    }else{
+        contBaixoRisco++;
+    } else {
         brSedent = "vazio"
     }
 
-    if(brHistoFam.checked == true){
+    if (brHistoFam.checked == true) {
         brHistoFam = document.querySelector('#br-histo-fam').name;
         contBaixoRisco++;
-    }else{
+    } else {
         brHistoFam = "vazio"
     }
 
-    if(brHistoDoenca.checked == true){
+    if (brHistoDoenca.checked == true) {
         brHistoDoenca = document.querySelector('#br-histo-doenca').name;
         contBaixoRisco++;
-    }else{
+    } else {
         brHistoDoenca = "vazio"
     }
 
-    if(brManifest.checked == true){
+    if (brManifest.checked == true) {
         brManifest = document.querySelector('#br-manifest').name;
-        contBaixoRisco++;    
-    }else{
+        contBaixoRisco++;
+    } else {
         brManifest = "vazio"
     }
 
-    if(brDiagnDislip.checked == true){
+    if (brDiagnDislip.checked == true) {
         brDiagnDislip = document.querySelector('#br-diagn-dislip').name;
-        contBaixoRisco++;    
-    }else{
+        contBaixoRisco++;
+    } else {
         brDiagnDislip = "vazio"
     }
 
-    if(brDiagnPolic.checked == true){
+    if (brDiagnPolic.checked == true) {
         brDiagnPolic = document.querySelector('#br-diagn-polic').name;
         contBaixoRisco++;
-    }else{
+    } else {
         brDiagnPolic = "vazio"
     }
 
     /*Condição Risco Alto*/
-    if(arAcidVasc.checked == true){
+    if (arAcidVasc.checked == true) {
         arAcidVasc = document.querySelector('#ar-acid-vasc').name;
         contAltoRisco++;
-    }else{
+    } else {
         arAcidVasc = "vazio"
     }
 
-    if(arInfartAgud.checked == true){
+    if (arInfartAgud.checked == true) {
         arInfartAgud = document.querySelector('#ar-infart-agud').name;
         contAltoRisco++;
-    }else{
+    } else {
         arInfartAgud = "vazio"
     }
 
-    if(arLesPerif.checked == true){
+    if (arLesPerif.checked == true) {
         arLesPerif = document.querySelector('#ar-les-perif').name;
         contAltoRisco++;
-    }else{
+    } else {
         arLesPerif = "vazio"
     }
-    
-    if(arAtaqIsqu.checked == true){
+
+    if (arAtaqIsqu.checked == true) {
         arAtaqIsqu = document.querySelector('#ar-ataq-isqu').name;
         contAltoRisco++;
-    }else{
+    } else {
         arAtaqIsqu = "vazio"
     }
 
-    if(arHiperVentr.checked == true){
+    if (arHiperVentr.checked == true) {
         arHiperVentr = document.querySelector('#ar-hiper-ventr').name;
         contAltoRisco++;
-    }else{
+    } else {
         arHiperVentr = "vazio"
     }
 
-    if(arNefrop.checked == true){
+    if (arNefrop.checked == true) {
         arNefrop = document.querySelector('#ar-nefrop').name;
         contAltoRisco++;
-    }else{
+    } else {
         arNefrop = "vazio"
     }
 
-    if(arRetin.checked == true){
+    if (arRetin.checked == true) {
         arRetin = document.querySelector('#ar-retin').name;
         contAltoRisco++;
-    }else{
+    } else {
         arRetin = "vazio"
     }
 
-    if(arAneur.checked == true){
+    if (arAneur.checked == true) {
         arAneur = document.querySelector('#ar-aneur').name;
         contAltoRisco++;
-    }else{
+    } else {
         arAneur = "vazio"
     }
 
-    if(arEsten.checked == true){
+    if (arEsten.checked == true) {
         arEsten = document.querySelector('#ar-esten').name;
         contAltoRisco++;
-    }else{
+    } else {
         arEsten = "vazio"
     }
 
-    if(arDiabet.checked == true){
+    if (arDiabet.checked == true) {
         arDiabet = document.querySelector('#ar-diabet').name;
         contAltoRisco++;
-    }else{
+    } else {
         arDiabet = "vazio"
     }
 
-    if(arDoenVasc.checked == true){
+    if (arDoenVasc.checked == true) {
         arDoenVasc = document.querySelector('#ar-doen-vasc').name;
         contAltoRisco++;
-    }else{
+    } else {
         arDoenVasc = "vazio"
     }
 
-    if(arInsuf.checked == true){
+    if (arInsuf.checked == true) {
         arInsuf = document.querySelector('#ar-insuf').name;
         contAltoRisco++;
-    }else{
+    } else {
         arInsuf = "vazio"
     }
 
-    if(arAngina.checked == true){
+    if (arAngina.checked == true) {
         arAngina = document.querySelector('#ar-angina').name;
         contAltoRisco++;
-    }else{
+    } else {
         arAngina = "vazio"
     }
 
-    if(arDoencRenal.checked == true){
+    if (arDoencRenal.checked == true) {
         arDoencRenal = document.querySelector('#ar-doenc-renal').name;
         contAltoRisco++;
-    }else{
+    } else {
         arDoencRenal = "vazio"
     }
 
-    
-    console.log('Sucesso Estratificação Baixo:', brIdade, brSexMasc, brTabag, brHipert, brObs,
-         brSedent, brHistoFam, brHistoDoenca, brManifest,
-         brDiagnDislip, brDiagnPolic);
 
-    console.log('Sucesso Estratificação Alto:', arAcidVasc,arInfartAgud, arLesPerif,
+    console.log('Sucesso Estratificação Baixo:', brIdade, brSexMasc, brTabag, brHipert, brObs,
+        brSedent, brHistoFam, brHistoDoenca, brManifest,
+        brDiagnDislip, brDiagnPolic);
+
+    console.log('Sucesso Estratificação Alto:', arAcidVasc, arInfartAgud, arLesPerif,
         arAtaqIsqu, arHiperVentr, arNefrop, arRetin,
         arAneur, arEsten, arDiabet, arDoenVasc, arInsuf,
         arAngina, arDoencRenal);
-    
+
     verificaRisco(contBaixoRisco, contAltoRisco);
 
     /*Salva Baixo Risco em LocalStorage */
@@ -319,27 +320,27 @@ function insertEstratificacao(){
     localStorage.setItem('arInsuf', arInsuf);
     localStorage.setItem('arAngina', arAngina);
     localStorage.setItem('arDoencRenal', arDoencRenal);
-        
+
 }
-function insertEstratificacaoEtapa2(){
+function insertEstratificacaoEtapa2() {
     let etapa2ColestTotal = document.querySelector('#etapa2-colest-total').value;
     let etapa2Fumante = document.querySelector('#etapa2-fumante');
     let etapa2Hdl = document.querySelector('#etapa2-hdl').value;
     let etapa2PaSistol = document.querySelector('#etapa2-pa-sistol').value;
     let etapa2Tratada = document.querySelector('#etapa2-tratada');
 
-    if(etapa2Fumante.checked == true){
+    if (etapa2Fumante.checked == true) {
         localStorage.setItem('brTabag', etapa2Fumante.name);
         //localStorage.setItem('etapa2Fumante', etapa2Fumante.name);
-        
-    }else{
+
+    } else {
         localStorage.setItem('brTabag', 'Não fumante');
-        
+
     }
-    if(etapa2Tratada.checked == true){
+    if (etapa2Tratada.checked == true) {
         localStorage.setItem('etapa2Tratada', etapa2Tratada.name);
-        
-    }else{
+
+    } else {
         localStorage.setItem('etapa2Tratada', 'Não tratada');
 
     }
@@ -347,7 +348,7 @@ function insertEstratificacaoEtapa2(){
     localStorage.setItem('hemogColes', etapa2ColestTotal);
     localStorage.setItem('hemogHdl', etapa2Hdl);
     localStorage.setItem('pas', etapa2PaSistol);
-    
+
     tornBraqPasBra.value = localStorage.getItem('pas');
     pas.value = localStorage.getItem('pas');
 
@@ -355,40 +356,40 @@ function insertEstratificacaoEtapa2(){
         etapa2PaSistol, localStorage.getItem('etapa2Tratada'));
 
 }
-function calculaImc(peso, altura){
+function calculaImc(peso, altura) {
     let el = document.querySelector('#retorno-calculo-imc');
-    let result = parseInt(peso)/(parseFloat(altura)*parseFloat(altura));
+    let result = parseInt(peso) / (parseFloat(altura) * parseFloat(altura));
     console.log(result);
 
     localStorage.setItem('imc', result);
 
-    if(result < 18.5){
+    if (result < 18.5) {
         localStorage.setItem('clas_imc', 'Abaixo do peso');
         el.innerHTML = 'Abaixo do peso'
-        
-    }else if((result >= 18.5) && (result < 25)){
+
+    } else if ((result >= 18.5) && (result < 25)) {
         localStorage.setItem('clas_imc', 'Peso normal');
         el.innerHTML = 'Peso normal'
 
-    }else if((result >= 25) && (result < 30)){
+    } else if ((result >= 25) && (result < 30)) {
         localStorage.setItem('clas_imc', 'Excesso de peso');
         el.innerHTML = 'Excesso de peso'
 
-    }else if((result >= 30) && (result < 35)){
+    } else if ((result >= 30) && (result < 35)) {
         localStorage.setItem('clas_imc', 'Obesidade classe I');
         el.innerHTML = 'Obesidade classe I'
 
-    }else if((result >= 35) && (result < 40)){
+    } else if ((result >= 35) && (result < 40)) {
         localStorage.setItem('clas_imc', 'Obesidade classe II');
         el.innerHTML = 'Obesidade classe II'
 
-    }else if(result >= 40){
+    } else if (result >= 40) {
         localStorage.setItem('clas_imc', 'Obesidade classe III');
         el.innerHTML = 'Obesidade classe III'
 
     }
 }
-function verificaRisco(contBaixoRisco, contAltoRisco){
+function verificaRisco(contBaixoRisco, contAltoRisco) {
     let el = document.querySelector('#retorno-calculo-estrat');
     let el2 = document.querySelector('.disable-etapa-2');
     let el3 = document.querySelector('.disable-etapa-3');
@@ -396,23 +397,23 @@ function verificaRisco(contBaixoRisco, contAltoRisco){
     el2.style.display = 'none';
     el3.style.display = 'none';
 
-    if(contAltoRisco >= 1){
+    if (contAltoRisco >= 1) {
         localStorage.setItem('clas_estrat', 'ALTO RISCO');
         el.innerHTML = 'ALTO RISCO';
         el2.style.display = 'none';
         el3.style.display = 'none';
 
-    }else{
-        if(contBaixoRisco == 1){
+    } else {
+        if (contBaixoRisco == 1) {
             localStorage.setItem('clas_estrat', 'BAIXO RISCO');
             el.innerHTML = 'BAIXO RISCO';
-    
+
         }
-        if(contBaixoRisco >= 2){
+        if (contBaixoRisco >= 2) {
             el.innerHTML = 'Risco Indefinido! Prossiga para a Etapa 2 ...'
             el2.style.display = 'flex';
             el3.style.display = 'block';
-    
+
         }
     }
 }

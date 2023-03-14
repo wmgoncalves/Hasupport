@@ -26,6 +26,7 @@
     "bootstrap": "^5.2.2",
     "bootstrap-electron": "^1.4.0",
     "electron-is-dev": "^2.0.0",
+    "jquery-mask-plugin": "^1.14.16",
     "mysql2": "^2.3.3",
     "promise-mysql": "^5.2.0"
   }
