@@ -58,6 +58,10 @@ body{
     padding: 5px;
 
 }
+.menu .text-menu{
+    text-align: center;
+    font-size: 10px;
+}
 .menu .icons-menu:hover{
     background-color: #80cc80c4;
 
