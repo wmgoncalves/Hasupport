@@ -1,5 +1,5 @@
 /*Formatação global*/
-*{
+  *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -61,7 +61,14 @@ body{
 .menu .text-menu{
     text-align: center;
     font-size: 10px;
+    
 }
+.menu .listra-menu{
+    text-align: middle;
+    font-size: 10px;
+    border-bottom: 2px solid red;
+}
+
 .menu .icons-menu:hover{
     background-color: #80cc80c4;
 
