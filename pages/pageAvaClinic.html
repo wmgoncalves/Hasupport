@@ -104,7 +104,7 @@
                             </div>
                             <form action="" class="form-style-interno" onsubmit="return false">
                                 <div>
-                                    <input id="imc-peso" type="text" placeholder="PESO(KG): 80" data-mask="#0.00">
+                                    <input id="imc-peso" type="text" placeholder="PESO(KG): 80">
                                 </div>
                                 <div>
                                     <input id="imc-altura" type="text" placeholder="ALTURA(M): 1.70">
@@ -378,7 +378,14 @@
     <script src="../js/finalizaAvaClinic.js"></script>
     <script src="../js/logoutSistema.js"></script>
     <script src="../js/bootstrap-js/bootstrap.js"></script>
-
+    <script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.mask.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#imc-peso').mask('#0.00', { reverse: true })
+            $('#imc-altura').mask('#0.00', { reverse: true })
+        });
+    </script>
 </body>
 
 </html>
