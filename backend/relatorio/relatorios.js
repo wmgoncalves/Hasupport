@@ -20,7 +20,7 @@ async function buscaTodos() {
     let rows = await searchUserSus(user, idEquipe);
     let dataAtual = parseInt(new Date().toLocaleString().substring(6, 10));
     for (let i = 0; i < rows.length; i++) {
-        dataInformada = parseInt((localStorage.getItem('user_sus')).toLocaleString().substring(0, 4));
+        dataInformada = parseInt((select).toLocaleString().substring(0, 4));
 
         table += `
             <tr>

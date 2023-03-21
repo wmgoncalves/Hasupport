@@ -26,7 +26,7 @@ function insertImc() {
     let peso = document.querySelector('#imc-peso').value;
     let altura = document.querySelector('#imc-altura').value;
 
-    peso.mask("#0.00", { reverse: false });
+
     localStorage.setItem('peso', peso);
     localStorage.setItem('altura', altura);
 

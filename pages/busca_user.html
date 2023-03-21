@@ -16,8 +16,7 @@
     <div class="menu">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -26,25 +25,29 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./adm_area.html">
                     <img class="icons-menu" src="../assets/icons/home_icon.svg">
+                    <p class="text-menu">MENU INICIAL</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="./menu1.html">
                     <img class="icons-menu" src="../assets/icons/book_icon.svg">
+                    <p class="text-menu">GUIA PE</p>
                   </a>
                 </li>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./menu2.html">
-                  <img class="icons-menu" src="../assets/icons/stethoscope_icon.svg">
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link btn-logout" href="./cadastro.html">
-                  <img class="icons-menu" src="../assets/icons/logout_icon.svg">
-                </a>
-              </li>
-            </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="./menu2.html">
+                    <img class="icons-menu" src="../assets/icons/stethoscope_icon.svg">
+                    <p class="text-menu">REALIZACAO PE</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn-logout" href="./cadastro.html">
+                    <img class="icons-menu" src="../assets/icons/logout_icon.svg">
+                    <p class="text-menu">SAIR</p>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -54,8 +57,7 @@
       <div class="form" onsubmit="return false">
         <form>
           <div>
-            <input id="user_sus" class="user_sus" name="user_sus" required="required" type="text"
-              placeholder="Cartão do SUS, CPF ou Nome" />
+            <input id="user_sus" class="user_sus" name="user_sus" required="required" type="text" placeholder="Cartão do SUS, CPF ou Nome" />
           </div>
           <div>
             <button id="buscar">BUSCAR</button>
@@ -79,5 +81,7 @@
   <script type="text/javascript" src="../backend/user_sus/seleciona.js"></script>
   <script src="../js/logoutSistema.js"></script>
   <script src="../js/bootstrap-js/bootstrap.js"></script>
+
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,13 @@
   <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.css">
   <title>HAsupport</title>
 </head>
+
 <body>
   <div class="fundo-cadastro-global">
     <div class="menu">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -24,50 +25,52 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./adm_area.html">
                     <img class="icons-menu" src="../assets/icons/home_icon.svg">
+                    <p class="text-menu">MENU INICIAL</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="./menu1.html">
                     <img class="icons-menu" src="../assets/icons/book_icon.svg">
+                    <p class="text-menu">GUIA PE</p>
                   </a>
                 </li>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./menu2.html">
-                  <img class="icons-menu" src="../assets/icons/stethoscope_icon.svg">
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link btn-logout" href="./cadastro.html">
-                  <img class="icons-menu" src="../assets/icons/logout_icon.svg">
-                </a>
-              </li>
-            </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="./menu2.html">
+                    <img class="icons-menu" src="../assets/icons/stethoscope_icon.svg">
+                    <p class="text-menu">REALIZACAO PE</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn-logout" href="./cadastro.html">
+                    <img class="icons-menu" src="../assets/icons/logout_icon.svg">
+                    <p class="text-menu">SAIR</p>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </nav>
     </div>
-  <div class="fundo-cadastro">
-    <div class="form" onsubmit="return false">
-      <form>
-        <div>
-          <input id="nome" class="nome" name="nome" required="required" type="text" placeholder="Nome"/>
-        </div>
-        <div>
-          <input id="dataNasc" class="data_nascimento" name="data_nascimento" required="required" type="date" placeholder="Data de Nascimento"/>
-        </div>
-        <div>
-          <input id="cpf" class="cpf" name="cpf" required="required" type="number" maxlength="11" placeholder="CPF"
-          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
-        </div>
-        <div>
-          <input id="cartSus" class="cartao_sus" name="cartao_sus" required="required" type="number" maxlength="15" placeholder="Cartão do Sus" 
-          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
-        </div>
-        <div>
-          <input id="agenteSus" class="agente_sus" name="agente_sus" required="required" type="text" placeholder="Agente Comunitaria(o) de Saúde" />
-        </div>
+    <div class="fundo-cadastro">
+      <div class="form" onsubmit="return false">
+        <form>
+          <div>
+            <input id="nome" class="nome" name="nome" required="required" type="text" placeholder="Nome" />
+          </div>
+          <div>
+            <input id="dataNasc" class="data_nascimento" name="data_nascimento" required="required" type="date" placeholder="Data de Nascimento" />
+          </div>
+          <div>
+            <input id="cpf" class="cpf" name="cpf" required="required" type="number" maxlength="11" placeholder="CPF" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+          </div>
+          <div>
+            <input id="cartSus" class="cartao_sus" name="cartao_sus" required="required" type="number" maxlength="15" placeholder="Cartão do Sus" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+          </div>
+          <div>
+            <input id="agenteSus" class="agente_sus" name="agente_sus" required="required" type="text" placeholder="Agente Comunitaria(o) de Saúde" />
+          </div>
           <div class="input-radio">
             <div>
               <input id="masc" name="sexo" type="radio" value="Masculino" checked>
@@ -78,18 +81,19 @@
               <label for="femi">Feminino</label>
             </div>
           </div>
-        <div>
-          <button id="cadastrar">CADASTRAR</button>
-        </div>
-        <div>
-          <p id="retorno-cad-user-sucess">...</p>
-        </div>
-      </form>
+          <div>
+            <button id="cadastrar">CADASTRAR</button>
+          </div>
+          <div>
+            <p id="retorno-cad-user-sucess">...</p>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-  <script type="module" src="../backend/user_sus/cadastro.js"></script>
-  <script type="module" src="../js/saveCadastros/cadUsuario.js"></script>
-  <script src="../js/logoutSistema.js"></script>
-  <script src="../js/bootstrap-js/bootstrap.js"></script>
+    <script type="module" src="../backend/user_sus/cadastro.js"></script>
+    <script type="module" src="../js/saveCadastros/cadUsuario.js"></script>
+    <script src="../js/logoutSistema.js"></script>
+    <script src="../js/bootstrap-js/bootstrap.js"></script>
 </body>
+
 </html>

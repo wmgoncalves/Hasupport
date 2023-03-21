@@ -43,6 +43,13 @@ body{
     margin: 0px 5px;
 
 }
+.menu .nav-item .nav-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
 .menu .nav-item::marker{
     font-size: 0rem; 
 
@@ -59,7 +66,7 @@ body{
 
 }
 .menu .text-menu{
-    text-align: center;
+    text-align:left;
     font-size: 10px;
     
 }
@@ -99,6 +106,12 @@ body{
 .sub-menu-necess .icons-menu:hover{
     background-color: #80cc80d4;
 
+}
+.sub-menu-necess .nav-item .nav-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Formatação padão para os botões globais*/
@@ -145,6 +158,10 @@ body{
     width: 3%;
     margin: 2px 5px;
 
+}
+
+.active{
+    background-color: #558a55;
 }
 
 /*Formatação para os textos escondidos*/
