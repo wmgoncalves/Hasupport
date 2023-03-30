@@ -32,6 +32,7 @@ function insertImc() {
 
     console.log('Sucesso Peso-Altura:', peso, altura);
     calculaImc(peso, altura);
+    console.log(calculaImc);
 
 }
 function insertCircAbdom() {

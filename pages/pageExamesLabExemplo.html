@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <title>HAsupport</title>
+</head>
+
+<body>
+  <div class="fundo1">
+    <div class="menu">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./adm_area.html">
+                    <img class="icons-menu" src="../assets/icons/home_icon.svg">
+                    <p class="text-menu">MENU INICIAL</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./menu1.html">
+                    <img class="icons-menu" src="../assets/icons/book_icon.svg">
+                    <p class="text-menu">GUIA PE</p>
+                  </a>
+                </li>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="./menu2.html">
+                    <img class="icons-menu" src="../assets/icons/stethoscope_icon.svg">
+                    <p class="text-menu">REALIZACAO PE</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn-logout" href="./cadastro.html">
+                    <img class="icons-menu" src="../assets/icons/logout_icon.svg">
+                    <p class="text-menu">SAIR
+
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="fundo-botao">
+      <form class="form-style form-style-hemograma" onsubmit="return false">
+        <h5>HEMOGRAMA</h5>
+        <div>
+          <label for="hemog-hemac">Hemácias</label>
+          <input id="hemog-hemac" type="number" placeholder="4.58 milhões/mm3" readonly>
+        </div>
+        <div>
+          <label for="hemog-hemogl">Hemoglobina</label>
+          <input id="hemog-hemogl" type="number" placeholder="14.2 g/dL"readonly>
+        </div>
+        <div>
+          <label for="hemog-hemat">Hematócrito</label>
+          <input id="hemog-hemat" type="number" placeholder="41,8%"readonly>
+        </div>
+        <div>
+          <label for="hemog-leuc">Leucócitos</label>
+          <input id="hemog-leuc" type="number" placeholder="8.300/mm3 (Segmentados 51,0%; Eosinófilos 3,0%; Basófilos 0,0%)"readonly>
+        </div>
+        <div>
+          <label for="hemog-linf">Linfócitos</label>
+          <input id="hemog-linf" type="number" placeholder="39,0%; Monócitos 7,0%"readonly>
+        </div>
+        <div>
+          <label for="hemog-plaq">Plaquetas</label>
+          <input id="hemog-plaq" type="number" placeholder="327.000/mm3"readonly>
+        </div>
+        <div>
+          <label for="hemog-glic">Glicemia de jejum</label>
+          <input id="hemog-glic" type="number" placeholder="89 md/dL"readonly>
+        </div>
+        <div>
+          <label for="hemog-coles">Colesterol total</label>
+          <input id="hemog-coles" type="number" placeholder="206 mg/dL"readonly>
+        </div>
+        <div>
+          <label for="hemog-hdl">HDL</label>
+          <input id="hemog-hdl" type="number" placeholder="84 mg/dL"readonly>
+        </div>
+        <div>
+          <label for="hemog-trig">Triglicerídios</label>
+          <input id="hemog-trig" type="number" placeholder="75 mg/dL"readonly>
+        </div>
+        <div>
+          <label for="hemog-hemog-glic">Hemoglobina Glicada</label>
+          <input id="hemog-hemog-glic" type="number" placeholder="5,6%"readonly>
+        </div>
+        <div>
+          <label for="hemog-creat">Creatina</label>
+          <input id="hemog-creat" type="number" placeholder="0,80 mg/dL"readonly>
+        </div>
+        <div>
+          <label for="hemog-potass">Potássio Plasmático</label>
+          <input id="hemog-potass" type="number" placeholder="4,2 mmol/L"readonly>
+        </div>
+        <div>
+          <label for="hemog-equ">EQU</label>
+          <input id="hemog-equ" type="text" placeholder="Exemplo: Proteínas - positivo"readonly>
+        </div>
+        <div>
+          <label for="hemog-microa">Microalbumina na urina</label>
+          <input id="hemog-microa" type="number" placeholder="18 mg/L"readonly>
+        </div>
+        <div>
+          <label for="hemog-album">Albumina</label>
+          <input id="hemog-album" type="number" placeholder="4.8 g/dL"readonly>
+        </div>
+        <div>
+          <label for="hemog-acid">Ácido úrico</label>
+          <input id="hemog-acid" type="number" placeholder="2.8 mg/dL"readonly>
+        </div>
+        <div>
+          <label for="hemog-ureia">Ureia</label>
+          <input id="hemog-ureia" type="number" placeholder="34 mg/dL"readonly>
+        </div>
+        <div>
+          <label for="hemog-tgo">TGO</label>
+          <input id="hemog-tgo" type="number" placeholder="20 U/L"readonly>
+        </div>
+        <div>
+          <label for="hemog-tgp">TGP</label>
+          <input id="hemog-tgp" type="number" placeholder="40 U/L"readonly>
+        </div>
+        <div>
+          <button id="btn-hemog-calcular">SALVAR HEMOGRAMA </button readonly>
+        </div>
+        <div>
+          <p id="retorno-salvo-hemograma">...</p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script type="module" src="../js/insertDadosStorageHemog.js"></script>
+  <script src="../js/retonoDados/retornoDadosHemog.js"></script>
+  <script src="../js/logoutSistema.js"></script>
+  <script src="../js/bootstrap-js/bootstrap.js"></script>
+</body>
+
+</html>

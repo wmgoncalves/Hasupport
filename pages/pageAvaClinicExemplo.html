@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/displayNone.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" crossorigin="anonymous"></script>
+    <title>HAsupport</title>
+</head>
+
+<body>
+    <div class="fundo1">
+        <div class="menu">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <div>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./adm_area.html">
+                                        <img class="icons-menu" src="../assets/icons/home_icon.svg">
+                                        <p class="text-menu"> MENU INICIAL</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="./menu1.html">
+                                        <img class="icons-menu" src="../assets/icons/book_icon.svg">
+                                        <p class="text-menu">GUIA PE</p>
+                                    </a>
+                                </li>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="./menu2.html">
+                                        <img class="icons-menu " src="../assets/icons/stethoscope_icon.svg">
+                                        <p class="text-menu">REALIZACAO PE</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn-logout" href="./cadastro.html">
+                                        <img class="icons-menu" src="../assets/icons/logout_icon.svg">
+                                        <p class="text-menu">SAIR</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="fundo-botao">
+            <a class="botao-padrao">
+                <button id="btn-rastreamento">RASTREAMENTO DA HIPERTENSÃO ARTERIAL<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span></button>
+            </a>
+            <div class="text-none-rastreamento text-none-style">
+                <div>
+                    <h4>Rastreamento da hipertensão arterial</h4>
+                    <div class="text-style-pure2">
+                        <p>O rastreamento consiste na aferição da pressão arterial de todas as pessoas acima
+                            de 18 anos no momento do contato com a Unidade de Saúde e na identificação dos fatores
+                            de risco para a doença. O acompanhamento para a aferição poderá acontecer no
+                            consultório, mediante monitorização residencial da pressão arterial (MRPA) e/ou
+                            monitorização ambulatorial da pressão arterial (MAPA).
+                            Já o diagnóstico se dará pela história clínica, estratificação de risco cardiovascular
+                            e pela avaliação dos níveis pressóricos aferidos. Em relação aos níveis pressóricos, esses
+                            precisam estar elevados e sustentados em pelo menos três medições em ocasiões
+                            diferentes de Pressão Arterial (PA) ≥ 140/90 mmHg, com intervalo mínimo de uma
+                            semana. Dessa forma, recomenda-se a verificação na Unidade pelo menos duas vezes na
+                            semana, por duas semanas e se possível, conciliar com a MRPA, sendo duas vezes
+                            ao dia durante sete dias ou três vezes ao dia durante cinco dias.</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Valores aferidos</h4>
+                    <form class="form-style" onsubmit="return false">
+                        <div>
+                            <input id="pas" type="number" placeholder="PAS: MMHG">
+                        </div>
+                        <div>
+                            <input id="pad" type="number" placeholder="PAD: MMHG">
+                        </div>
+                        <div>
+                            <button id="btn-calcular-pas-pad">CALCULAR</button>
+                        </div>
+                    </form>
+                    <p>Classificação: <span id="retorno-calculo-pas-pad">Aguardando valores...</span></p>
+                </div>
+            </div>
+            <a class="botao-padrao">
+                <button id="btn-antropom">DADOS ANTROPOMÉTRICOS<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span></button>
+            </a>
+            <div class="text-none-antropom text-none-style">
+                <div class="flex-ajuste">
+                    <a class="botao-padrao botao-padrao-interno">
+                        <button id="btn-imc">ÍNDICE DE MASSA CORPORAL (IMC)<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span></button>
+                    </a>
+                    <div class="text-none-imc text-none-style-interno">
+                        <h4>ÍNDICE DE MASSA CORPORAL (IMC)</h4>
+                        <div>
+                            <div>
+                                <p>IDADE:<span id="imc-retorno-idade">...</span>&emsp;SEXO:<span id="imc-retorno-sexo">...</span></p>
+                            </div>
+                            <form action="" class="form-style-interno" onsubmit="return false">
+                                <div>
+                                    <input id="imc-peso" type="text" placeholder="PESO(KG): 80">
+                                </div>
+                                <div>
+                                    <input id="imc-altura" type="text" placeholder="ALTURA(M): 1.70">
+                                </div>
+                                <div>
+                                    <button id="btn-imc-calcular">CALCULAR</button>
+                                </div>
+                            </form>
+                            <p>Classificação: <span id="retorno-calculo-imc">Aguardando valores...</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-ajuste">
+                    <a class="botao-padrao botao-padrao-interno">
+                        <button id="btn-circ-abdom">CIRCUNFERÊNCIA ABDOMINAL<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span></button>
+                    </a>
+                    <div class="text-none-circ-abdom text-none-style-interno">
+                        <h4>CIRCUNFERÊNCIA ABDOMINAL</h4>
+                        <div>
+                            <div>
+                                <p>SEXO:<span id="circ-abdom-retorno-sexo">...</span></p>
+                            </div>
+                            <form action="" class="form-style-interno" onsubmit="return false">
+                                <div>
+                                    <input id="circ-abdom-cm" type="number" placeholder="(CM)">
+                                </div>
+                                <div>
+                                    <button id="btn-circ-abdom-calcular">CALCULAR</button>
+                                </div>
+                            </form>
+                            <p>Classificação: <span id="retorno-calculo-circ-abdom">Aguardando valores...</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-ajuste">
+                    <a class="botao-padrao botao-padrao-interno">
+                        <button id="btn-cint-quadr">RELAÇÃO CINTURA-QUADRIL<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span></button>
+                    </a>
+                    <div class="text-none-cint-quadr text-none-style-interno">
+                        <h4>RELAÇÃO CINTURA-QUADRIL</h4>
+                        <div>
+                            <div>
+                                <p>SEXO:<span id="cint-quadr-retorno-sexo">...</span></p>
+                            </div>
+                            <form action="" class="form-style-interno" onsubmit="return false">
+                                <div>
+                                    <input id="cint-quadr-abdom-cm" type="number" placeholder="(CM) CIRCUNFÊRENCIA ABDOMINAL">
+                                </div>
+                                <div>
+                                    <input id="cint-quadr-quadr-cm" type="number" placeholder="(CM) CIRCUNFERÊNCIA DO QUADRIL">
+                                </div>
+                                <div>
+                                    <button id="btn-cint-quadr-calcular">CALCULAR</button>
+                                </div>
+                            </form>
+                            <p>Classificação: <span id="retorno-calculo-cint-quadr">Aguardando valores...</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-ajuste">
+                    <a class="botao-padrao botao-padrao-interno">
+                        <button id="btn-torn-braq">ÍNDICE TORNOZELO-BRAQUIAL<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span></button>
+                    </a>
+                    <div class="text-none-torn-braq text-none-style-interno">
+                        <h4>ÍNDICE TORNOZELO-BRAQUIAL</h4>
+                        <div>
+                            <form action="" class="form-style-interno" onsubmit="return false">
+                                <div>
+                                    <input id="torn-braq-pas-torn" type="number" placeholder="VALOR DA MAIOR PAS DO TORNOZELO">
+                                </div>
+                                <div>
+                                    <input id="torn-braq-pas-bra" type="number" placeholder="VALOR DA PAS DO BRAÇO">
+                                </div>
+                                <div>
+                                    <button id="btn-torn-braq-calcular">CALCULAR</button>
+                                </div>
+                            </form>
+                            <p>Classificação: <span id="retorno-calculo-torn-braq">Aguardando vlores...</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="botao-padrao">
+                <button id="btn-estrat-risco">ESTRATIFICAÇÃO DO RISCO CARDIOVASCULAR<span class="icon-expand"><img src="../assets/icons/expand_more.svg"></span></button>
+            </a>
+            <div class="text-none-estrat-risco text-none-style">
+                <h4>ESTRATIFICAÇÃO DO RISCO CARDIOVASCULAR</h4>
+                <div class="text-style-pure2">
+                    <p>A seguir será apresentada a Escala de Risco de Framingham (ERF), a qual foi
+                        definida para realizar a estratificação do risco cardiovascular (RCV). Após a anamnese e
+                        exame físico, serão analisados os fatores de risco presentes no quadro abaixo, que compõe
+                        a Etapa 1 da ERF, dessa forma, se o(a) usuário(a) apresentar apenas um fator de risco
+                        baixo/intermediário, não hoverá necessidade de calcular o escore, pois será
+                        considerado(a) como baixo RCV. Se apresentar ao menos um fator de alto risco, também
+                        não hoverá necessidade de calcular o escore, pois essa o(a) usuário(a) já será
+                        considerado(a) como alto RCV. Dessa forma, o cálculo só será realizado quando o(a)
+                        usuário(a) apresentar mais de um fator de risco baixo/intermediário, passando assim para
+                        a etapa 2.</p>
+                </div>
+                <div class="form-style-checkbox etapa-1">
+                    <h5>Etapa 1:</h5>
+                    <h6>Indicadores de risco baixo/intermediário</h6>
+                    <form action="" class="form-style" onsubmit="return false">
+                        <div class="style-checkbox">
+                            <input id="br-idade" type="checkbox" name="Idade > 65">
+                            <label for="br-idade">Idade > 65;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-sex-masc" type="checkbox" name="Sexo masculino">
+                            <label for="br-sex-masc">Sexo masculino;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-tabag" type="checkbox" name="Tabagismo">
+                            <label for="br-tabag">Tabagismo;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-hipert" type="checkbox" name="Hipertensão (> 140/90 mmHg) ou história de pré-eclâmpsia">
+                            <label for="br-hipert">Hipertensão (> 140/90 mmHg) ou história de pré-eclâmpsia;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-obs" type="checkbox" name="Obesidade (IMC > 30kg/m2) ou obesidade central (cintura medida na crista ilíaca: > 88 cm em mulheres; > 102 cm em homens)">
+                            <label for="br-obs">Obesidade (IMC > 30kg/m2) ou obesidade central (cintura medida na crista
+                                ilíaca: > 88 cm em mulheres; > 102 cm em homens).</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-sedent" type="checkbox" name="Sedentarismo">
+                            <label for="br-sedent">Sedentarismo;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-histo-fam" type="checkbox" name="História familiar de evento cardiovascular prematuro em familiares de 1o grau –
+                            pai, mãe, irmãos (homens < 55 anos e mulheres < 65 anos)">
+                            <label for="br-histo-fam">História familiar de evento cardiovascular prematuro em familiares
+                                de 1o grau –
+                                pai, mãe, irmãos (homens < 55 anos e mulheres < 65 anos);</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-histo-doenca" type="checkbox" name="História de doença renal na família (para risco de insuficiência renal)">
+                            <label for="br-histo-doenca">História de doença renal na família (para risco de
+                                insuficiência renal);</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-manifest" type="checkbox" name="Manifestações de aterosclerose: sopros arteriais carotídeos; diminuição ou
+                            ausência de pulsos periféricos">
+                            <label for="br-manifest">Manifestações de aterosclerose: sopros arteriais carotídeos;
+                                diminuição ou
+                                ausência de pulsos periféricos.</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-diagn-dislip" type="checkbox" name="Diagnóstico prévio de dislipidemia">
+                            <label for="br-diagn-dislip">Diagnóstico prévio de dislipidemia;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="br-diagn-polic" type="checkbox" name="Diagnóstico prévio de síndrome de ovário policístico">
+                            <label for="br-diagn-polic">Diagnóstico prévio de síndrome de ovário policístico.</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <h5>Indicadores de alto risco</h5>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-acid-vasc" type="checkbox" name="Acidente vascular encefálico (AVE) prévio">
+                            <label for="ar-acid-vasc">Acidente vascular encefálico (AVE) prévio;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-infart-agud" type="checkbox" name="Infarto agudo do miocárdio (IAM) prévio">
+                            <label for="ar-infart-agud">Infarto agudo do miocárdio (IAM) prévio;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-les-perif" type="checkbox" name="Lesão periférica – Lesão de órgão-alvo (LOA)">
+                            <label for="ar-les-perif">Lesão periférica – Lesão de órgão-alvo (LOA);</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-ataq-isqu" type="checkbox" name="Ataque isquêmico transitório (AIT)">
+                            <label for="ar-ataq-isqu">Ataque isquêmico transitório (AIT);</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-hiper-ventr" type="checkbox" name="Hipertrofia de ventrículo esquerdo (HVE)">
+                            <label for="ar-hiper-ventr">Hipertrofia de ventrículo esquerdo (HVE);</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-nefrop" type="checkbox" name="Nefropatia">
+                            <label for="ar-nefrop">Nefropatia;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-retin" type="checkbox" name="Retinopatia">
+                            <label for="ar-retin">Retinopatia;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-aneur" type="checkbox" name="Aneurisma de aorta abdominal">
+                            <label for="ar-aneur">Aneurisma de aorta abdominal;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-esten" type="checkbox" name="Estenose de carótida sintomática">
+                            <label for="ar-esten">Estenose de carótida sintomática;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-diabet" type="checkbox" name="Diabetes mellitus">
+                            <label for="ar-diabet">Diabetes mellitus;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-doen-vasc" type="checkbox" name="Doença vascular periférica">
+                            <label for="ar-doen-vasc">Doença vascular periférica;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-insuf" type="checkbox" name="Insuficiência cardíaca congestiva de etiologia isquêmica">
+                            <label for="ar-insuf">Insuficiência cardíaca congestiva de etiologia isquêmica;</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-angina" type="checkbox" name="Angina no peito">
+                            <label for="ar-angina">Angina no peito.</label>
+                        </div>
+                        <div class="style-checkbox">
+                            <input id="ar-doenc-renal" type="checkbox" name="Doença renal crônica">
+                            <label for="ar-doenc-renal">Doença renal crônica</label>
+                        </div>
+                        <div>
+                            <button type="submit" id="btn-estrat-calcular">CALCULAR</button>
+                        </div>
+                    </form>
+                    <p>Classificação: <span id="retorno-calculo-estrat">Aguardando valores...</span></p>
+                </div>
+                <div class="disable-etapa-2 etapa-2">
+                    <div class="etapa-2-form">
+                        <h5>Etapa 2:</h5>
+                        <p>IDADE:<span id="etapa2-retorno-idade">...</span>&emsp;SEXO:<span id="etapa2-retorno-sexo">...</span></p>
+                        <form action="" class="form-style-interno" onsubmit="return false">
+                            <div>
+                                <input id="etapa2-colest-total" type="number" placeholder="COLESTEROL TOTAL">
+                            </div>
+                            <div class="style-checkbox">
+                                <input id="etapa2-fumante" type="checkbox" name="Fumante">
+                                <label for="etapa2-fumante">Fumante</label>
+                            </div>
+                            <div>
+                                <input id="etapa2-hdl" type="number" placeholder="HDL(MG/D)">
+                            </div>
+                            <div>
+                                <input id="etapa2-pa-sistol" type="number" placeholder="PA SISTÓLICA">
+                            </div>
+                            <div class="style-checkbox">
+                                <input id="etapa2-tratada" type="checkbox" name="Tratada">
+                                <label for="etapa2-tratada">Tratada</label>
+                            </div>
+                            <div>
+                                <button id="btn-estrat2-calcular">CALCULAR</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="etapa-2-img">
+                        <img src="../assets/escala_framingham.jpeg" width="100%">
+                    </div>
+                </div>
+                <div class="disable-etapa-3 etapa-3">
+                    <h5>Etapa 3:</h5>
+                    <div>
+                        <p>Classificação: <span id="retorno-calculo-estrat3">Aguardando valores...</span></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a class="botao-padrao">
+                    <button id="btn-finaliza-ava-clinic">FINALIZAR AVALIAÇÃO</button>
+                </a>
+            </div>
+            <p id="retorno-finaliza-ava-clinic">...</p>
+        </div>
+    </div>
+    <script src="../js/retonoDados/retornoDadosAvaClinic.js"></script>
+    <script type="module" src="../js/insertDadosStorageAvaClinic.js"></script>
+    <script src="../js/Utils/calculos.js"></script>
+    <script type="module" src="../js/activeButton/activeButtonAva.js"></script>
+    <script src="../js/finalizaAvaClinic.js"></script>
+    <script src="../js/logoutSistema.js"></script>
+    <script src="../js/bootstrap-js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.mask.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#imc-peso').mask('#0.00', { reverse: true })
+            $('#imc-altura').mask('#0.00', { reverse: true })
+        });
+    </script>
+</body>
+
+</html>
