@@ -367,35 +367,30 @@ function calculaImc(peso, altura) {
 
     if (result < 18.5) {
         localStorage.setItem('clas_imc', 'Abaixo do peso');
-        console.log(result);
         el.innerHTML = 'Abaixo do peso'
 
     } else if ((result >= 18.5) && (result < 25)) {
         localStorage.setItem('clas_imc', 'Peso normal');
-        console.log(result);
         el.innerHTML = 'Peso normal'
 
     } else if ((result >= 25) && (result < 30)) {
         localStorage.setItem('clas_imc', 'Excesso de peso');
-        console.log(result);
         el.innerHTML = 'Excesso de peso'
 
     } else if ((result >= 30) && (result < 35)) {
         localStorage.setItem('clas_imc', 'Obesidade classe I');
-        console.log(result);
         el.innerHTML = 'Obesidade classe I'
 
     } else if ((result >= 35) && (result < 40)) {
         localStorage.setItem('clas_imc', 'Obesidade classe II');
-        console.log(result);
         el.innerHTML = 'Obesidade classe II'
 
     } else if (result >= 40) {
         localStorage.setItem('clas_imc', 'Obesidade classe III');
-        console.log(result);
         el.innerHTML = 'Obesidade classe III'
 
     }
+    const imcElement = document.querySelector('#imc');
 }
 function verificaRisco(contBaixoRisco, contAltoRisco) {
     let el = document.querySelector('#retorno-calculo-estrat');
