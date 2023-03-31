@@ -391,6 +391,7 @@ function calculaImc(peso, altura) {
 
     }
     const imcElement = document.querySelector('#imc');
+    imcElement.textContent = result.toFixed(2);
 }
 function verificaRisco(contBaixoRisco, contAltoRisco) {
     let el = document.querySelector('#retorno-calculo-estrat');
