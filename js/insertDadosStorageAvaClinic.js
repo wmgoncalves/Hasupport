@@ -368,32 +368,26 @@ function calculaImc(peso, altura) {
     if (result < 18.5) {
         localStorage.setItem('clas_imc', 'Abaixo do peso');
         el.innerHTML = 'Abaixo do peso'
-        el.innerHTML = 'Seu IMC é'+ result.toFixed(2);
 
     } else if ((result >= 18.5) && (result < 25)) {
         localStorage.setItem('clas_imc', 'Peso normal');
         el.innerHTML = 'Peso normal'
-        el.innerHTML = 'Seu IMC é'+ result.toFixed(2);
 
     } else if ((result >= 25) && (result < 30)) {
         localStorage.setItem('clas_imc', 'Excesso de peso');
         el.innerHTML = 'Excesso de peso'
-        el.innerHTML = 'Seu IMC é'+ result.toFixed(2);
 
     } else if ((result >= 30) && (result < 35)) {
         localStorage.setItem('clas_imc', 'Obesidade classe I');
         el.innerHTML = 'Obesidade classe I'
-        el.innerHTML = 'Seu IMC é'+ result.toFixed(2);
 
     } else if ((result >= 35) && (result < 40)) {
         localStorage.setItem('clas_imc', 'Obesidade classe II');
         el.innerHTML = 'Obesidade classe II'
-        el.innerHTML = 'Seu IMC é'+ result.toFixed(2);
 
     } else if (result >= 40) {
         localStorage.setItem('clas_imc', 'Obesidade classe III');
         el.innerHTML = 'Obesidade classe III'
-        el.innerHTML = 'Seu IMC é'+ result.toFixed(2);
 
     }
 }
