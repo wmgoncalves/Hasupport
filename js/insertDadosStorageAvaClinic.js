@@ -391,7 +391,7 @@ function calculaImc(peso, altura) {
 
     }
 }
-function calculaImc2(peso, altura) {
+function calculaImc(peso, altura) {
     let el = document.querySelector('#retorno-calculo-imc2');
     let result = parseInt(peso) / (parseFloat(altura) * parseFloat(altura));
     console.log(result);
