@@ -391,14 +391,11 @@ function calculaImc(peso, altura) {
 
     }
 }
-function exibeImc() {
-    let peso = document.querySelector('#imc-peso').value;
-    let altura = document.querySelector('#imc-altura').value;
+function exibeImc(peso, altura) {
+    let el = document.querySelector('#retorno-calculo-imc2');
     let result = parseInt(peso) / (parseFloat(altura) * parseFloat(altura))
-  
-    let imc = calculaImc(peso, altura);
-    let el2 = document.querySelector('#retorno-calculo-imc2');
-    el2.innerHTML = 'Seu IMC é'+ result.toFixed(2);
+    console.log(result)
+    el.innerHTML = 'Seu IMC é'+ result.toFixed(2);
   }
 function verificaRisco(contBaixoRisco, contAltoRisco) {
     let el = document.querySelector('#retorno-calculo-estrat');
