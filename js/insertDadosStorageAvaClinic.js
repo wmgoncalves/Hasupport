@@ -391,34 +391,14 @@ function calculaImc(peso, altura) {
 
     }
 }
-function calculaImc(peso, altura) {
-    let el = document.querySelector('#retorno-calculo-imc2');
-    let result = parseInt(peso) / (parseFloat(altura) * parseFloat(altura));
-    console.log(result);
-    
-
-    localStorage.setItem('imc', result);
-
-    if (result < 18.5) {
-        el.innerHTML = 'Seu IMC é ' + result.toFixed(2);
-
-    } else if ((result >= 18.5) && (result < 25)) {
-        el.innerHTML = 'Seu IMC é ' + result.toFixed(2);
-
-    } else if ((result >= 25) && (result < 30)) {
-        el.innerHTML = 'Seu IMC é ' + result.toFixed(2);
-
-    } else if ((result >= 30) && (result < 35)) {
-        el.innerHTML = 'Seu IMC é ' + result.toFixed(2);
-
-    } else if ((result >= 35) && (result < 40)) {
-        el.innerHTML = 'Seu IMC é ' + result.toFixed(2);
-
-    } else if (result >= 40) {
-        el.innerHTML = 'Seu IMC é ' + result.toFixed(2);
-
-    }
-}
+function exibeImc() {
+    let peso = document.querySelector('#imc-peso').value;
+    let altura = document.querySelector('#imc-altura').value;
+  
+    let imc = calculaImc(peso, altura);
+    let el2 = document.querySelector('#retorno-calculo-imc2');
+    el2.innerHTML = imc.toFixed(2);
+  }
 function verificaRisco(contBaixoRisco, contAltoRisco) {
     let el = document.querySelector('#retorno-calculo-estrat');
     let el2 = document.querySelector('.disable-etapa-2');
