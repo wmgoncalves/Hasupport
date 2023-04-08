@@ -80,16 +80,16 @@
                     <h4>Valores aferidos</h4>
                     <form class="form-style" onsubmit="return false">
                         <div>
-                            <input id="pas" type="number" placeholder="PAS: MMHG">
+                            <input id="pas" type="number" placeholder="PAS: MMHG" readonly>
                         </div>
                         <div>
-                            <input id="pad" type="number" placeholder="PAD: MMHG">
+                            <input id="pad" type="number" placeholder="PAD: MMHG" readonly>
                         </div>
                         <div>
-                            <button id="btn-calcular-pas-pad">CALCULAR</button>
+                            <button id="btn-calcular-pas-pad">CALCULAR</button readonly>
                         </div>
                     </form>
-                    <p>Classificação: <span id="retorno-calculo-pas-pad">Aguardando valores...</span></p>
+                    <p>Classificação: <span id="retorno-calculo-pas-pad">SOMENTE EXEMPLO</span></p>
                 </div>
             </div>
             <a class="botao-padrao">
@@ -108,16 +108,16 @@
                             </div>
                             <form action="" class="form-style-interno" onsubmit="return false">
                                 <div>
-                                    <input id="imc-peso" type="text" placeholder="PESO(KG): 80">
+                                    <input id="imc-peso" type="text" placeholder="PESO(KG): 80" readonly>
                                 </div>
                                 <div>
-                                    <input id="imc-altura" type="text" placeholder="ALTURA(M): 1.70">
+                                    <input id="imc-altura" type="text" placeholder="ALTURA(M): 1.70" readonly>
                                 </div>
                                 <div>
-                                    <button id="btn-imc-calcular">CALCULAR</button>
+                                    <button id="btn-imc-calcular">CALCULAR</button readonly>
                                 </div>
                             </form>
-                            <p>Classificação: <span id="retorno-calculo-imc">Aguardando valores...</span></p>
+                            <p>Classificação: <span id="retorno-calculo-imc">SOMENTE EXEMPLO</span></p>
                         </div>
                     </div>
                 </div>
@@ -133,13 +133,13 @@
                             </div>
                             <form action="" class="form-style-interno" onsubmit="return false">
                                 <div>
-                                    <input id="circ-abdom-cm" type="number" placeholder="(CM)">
+                                    <input id="circ-abdom-cm" type="number" placeholder="(CM)" readonly>
                                 </div>
                                 <div>
-                                    <button id="btn-circ-abdom-calcular">CALCULAR</button>
+                                    <button id="btn-circ-abdom-calcular">CALCULAR</button readonly>
                                 </div>
                             </form>
-                            <p>Classificação: <span id="retorno-calculo-circ-abdom">Aguardando valores...</span></p>
+                            <p>Classificação: <span id="retorno-calculo-circ-abdom">SOMENTE EXEMPLO</span></p>
                         </div>
                     </div>
                 </div>
@@ -155,16 +155,16 @@
                             </div>
                             <form action="" class="form-style-interno" onsubmit="return false">
                                 <div>
-                                    <input id="cint-quadr-abdom-cm" type="number" placeholder="(CM) CIRCUNFÊRENCIA ABDOMINAL">
+                                    <input id="cint-quadr-abdom-cm" type="number" placeholder="(CM) CIRCUNFÊRENCIA ABDOMINAL" readonly>
                                 </div>
                                 <div>
-                                    <input id="cint-quadr-quadr-cm" type="number" placeholder="(CM) CIRCUNFERÊNCIA DO QUADRIL">
+                                    <input id="cint-quadr-quadr-cm" type="number" placeholder="(CM) CIRCUNFERÊNCIA DO QUADRIL" readonly>
                                 </div>
                                 <div>
-                                    <button id="btn-cint-quadr-calcular">CALCULAR</button>
+                                    <button id="btn-cint-quadr-calcular">CALCULAR</button readonly>
                                 </div>
                             </form>
-                            <p>Classificação: <span id="retorno-calculo-cint-quadr">Aguardando valores...</span></p>
+                            <p>Classificação: <span id="retorno-calculo-cint-quadr">SOMENTE EXEMPLO</span></p>
                         </div>
                     </div>
                 </div>
@@ -177,16 +177,16 @@
                         <div>
                             <form action="" class="form-style-interno" onsubmit="return false">
                                 <div>
-                                    <input id="torn-braq-pas-torn" type="number" placeholder="VALOR DA MAIOR PAS DO TORNOZELO">
+                                    <input id="torn-braq-pas-torn" type="number" placeholder="VALOR DA MAIOR PAS DO TORNOZELO" readonly>
                                 </div>
                                 <div>
-                                    <input id="torn-braq-pas-bra" type="number" placeholder="VALOR DA PAS DO BRAÇO">
+                                    <input id="torn-braq-pas-bra" type="number" placeholder="VALOR DA PAS DO BRAÇO" readonly>
                                 </div>
                                 <div>
-                                    <button id="btn-torn-braq-calcular">CALCULAR</button>
+                                    <button id="btn-torn-braq-calcular">CALCULAR</button readonly>
                                 </div>
                             </form>
-                            <p>Classificação: <span id="retorno-calculo-torn-braq">Aguardando vlores...</span></p>
+                            <p>Classificação: <span id="retorno-calculo-torn-braq">SOMENTE EXEMPLO</span></p>
                         </div>
                     </div>
                 </div>
@@ -212,122 +212,122 @@
                     <h5>Etapa 1:</h5>
                     <h6>Indicadores de risco baixo/intermediário</h6>
                     <form action="" class="form-style" onsubmit="return false">
-                        <div class="style-checkbox">
-                            <input id="br-idade" type="checkbox" name="Idade > 65">
-                            <label for="br-idade">Idade > 65;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="br-idade" type="#" name="Idade > 65" readonly>
+                            <label for="br-idade">Idade > 65;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="br-sex-masc" type="checkbox" name="Sexo masculino">
-                            <label for="br-sex-masc">Sexo masculino;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="br-sex-masc" type="#" name="Sexo masculino" readonly>
+                            <label for="br-sex-masc">Sexo masculino;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="br-tabag" type="checkbox" name="Tabagismo">
-                            <label for="br-tabag">Tabagismo;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="br-tabag" type="#" name="Tabagismo" readonly>
+                            <label for="br-tabag">Tabagismo;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="br-hipert" type="checkbox" name="Hipertensão (> 140/90 mmHg) ou história de pré-eclâmpsia">
-                            <label for="br-hipert">Hipertensão (> 140/90 mmHg) ou história de pré-eclâmpsia;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="br-hipert" type="#" name="Hipertensão (> 140/90 mmHg) ou história de pré-eclâmpsia" readonly>
+                            <label for="br-hipert">Hipertensão (> 140/90 mmHg) ou história de pré-eclâmpsia;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="br-obs" type="checkbox" name="Obesidade (IMC > 30kg/m2) ou obesidade central (cintura medida na crista ilíaca: > 88 cm em mulheres; > 102 cm em homens)">
+                        <div class="style-checkbox" readonly>
+                            <input id="br-obs" type="#" name="Obesidade (IMC > 30kg/m2) ou obesidade central (cintura medida na crista ilíaca: > 88 cm em mulheres; > 102 cm em homens)" readonly>
                             <label for="br-obs">Obesidade (IMC > 30kg/m2) ou obesidade central (cintura medida na crista
-                                ilíaca: > 88 cm em mulheres; > 102 cm em homens).</label>
+                                ilíaca: > 88 cm em mulheres; > 102 cm em homens).</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="br-sedent" type="checkbox" name="Sedentarismo">
-                            <label for="br-sedent">Sedentarismo;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="br-sedent" type="#" name="Sedentarismo" readonly>
+                            <label for="br-sedent">Sedentarismo;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="br-histo-fam" type="checkbox" name="História familiar de evento cardiovascular prematuro em familiares de 1o grau –
-                            pai, mãe, irmãos (homens < 55 anos e mulheres < 65 anos)">
+                        <div class="style-checkbox" readonly>
+                            <input id="br-histo-fam" type="#" name="História familiar de evento cardiovascular prematuro em familiares de 1o grau –
+                            pai, mãe, irmãos (homens < 55 anos e mulheres < 65 anos)" readonly>
                             <label for="br-histo-fam">História familiar de evento cardiovascular prematuro em familiares
                                 de 1o grau –
-                                pai, mãe, irmãos (homens < 55 anos e mulheres < 65 anos);</label>
+                                pai, mãe, irmãos (homens < 55 anos e mulheres < 65 anos);</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="br-histo-doenca" type="checkbox" name="História de doença renal na família (para risco de insuficiência renal)">
-                            <label for="br-histo-doenca">História de doença renal na família (para risco de
-                                insuficiência renal);</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="br-histo-doenca" type="#" name="História de doença renal na família (para risco de insuficiência renal)">
+                            <label for="br-histo-doenca" readonly>História de doença renal na família (para risco de
+                                insuficiência renal);</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="br-manifest" type="checkbox" name="Manifestações de aterosclerose: sopros arteriais carotídeos; diminuição ou
-                            ausência de pulsos periféricos">
+                        <div class="style-checkbox" readonly>
+                            <input id="br-manifest" type="#" name="Manifestações de aterosclerose: sopros arteriais carotídeos; diminuição ou
+                            ausência de pulsos periféricos" readonly>
                             <label for="br-manifest">Manifestações de aterosclerose: sopros arteriais carotídeos;
                                 diminuição ou
-                                ausência de pulsos periféricos.</label>
+                                ausência de pulsos periféricos.</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="br-diagn-dislip" type="checkbox" name="Diagnóstico prévio de dislipidemia">
-                            <label for="br-diagn-dislip">Diagnóstico prévio de dislipidemia;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="br-diagn-dislip" type="#" name="Diagnóstico prévio de dislipidemia" readonly>
+                            <label for="br-diagn-dislip">Diagnóstico prévio de dislipidemia;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="br-diagn-polic" type="checkbox" name="Diagnóstico prévio de síndrome de ovário policístico">
-                            <label for="br-diagn-polic">Diagnóstico prévio de síndrome de ovário policístico.</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="br-diagn-polic" type="#" name="Diagnóstico prévio de síndrome de ovário policístico" readonly>
+                            <label for="br-diagn-polic">Diagnóstico prévio de síndrome de ovário policístico.</label readonly>
                         </div>
                         <div class="style-checkbox">
                             <h5>Indicadores de alto risco</h5>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-acid-vasc" type="checkbox" name="Acidente vascular encefálico (AVE) prévio">
-                            <label for="ar-acid-vasc">Acidente vascular encefálico (AVE) prévio;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-acid-vasc" type="#" name="Acidente vascular encefálico (AVE) prévio" readonly>
+                            <label for="ar-acid-vasc">Acidente vascular encefálico (AVE) prévio;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-infart-agud" type="checkbox" name="Infarto agudo do miocárdio (IAM) prévio">
-                            <label for="ar-infart-agud">Infarto agudo do miocárdio (IAM) prévio;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-infart-agud" type="#" name="Infarto agudo do miocárdio (IAM) prévio" readonly>
+                            <label for="ar-infart-agud">Infarto agudo do miocárdio (IAM) prévio;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-les-perif" type="checkbox" name="Lesão periférica – Lesão de órgão-alvo (LOA)">
-                            <label for="ar-les-perif">Lesão periférica – Lesão de órgão-alvo (LOA);</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-les-perif" type="#" name="Lesão periférica – Lesão de órgão-alvo (LOA)" readonly>
+                            <label for="ar-les-perif">Lesão periférica – Lesão de órgão-alvo (LOA);</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-ataq-isqu" type="checkbox" name="Ataque isquêmico transitório (AIT)">
-                            <label for="ar-ataq-isqu">Ataque isquêmico transitório (AIT);</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-ataq-isqu" type="#" name="Ataque isquêmico transitório (AIT)" readonly>
+                            <label for="ar-ataq-isqu">Ataque isquêmico transitório (AIT);</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-hiper-ventr" type="checkbox" name="Hipertrofia de ventrículo esquerdo (HVE)">
-                            <label for="ar-hiper-ventr">Hipertrofia de ventrículo esquerdo (HVE);</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-hiper-ventr" type="#" name="Hipertrofia de ventrículo esquerdo (HVE)" readonly>
+                            <label for="ar-hiper-ventr">Hipertrofia de ventrículo esquerdo (HVE);</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-nefrop" type="checkbox" name="Nefropatia">
-                            <label for="ar-nefrop">Nefropatia;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-nefrop" type="#" name="Nefropatia" readonly>
+                            <label for="ar-nefrop">Nefropatia;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-retin" type="checkbox" name="Retinopatia">
-                            <label for="ar-retin">Retinopatia;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-retin" type="#" name="Retinopatia" readonly>
+                            <label for="ar-retin">Retinopatia;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-aneur" type="checkbox" name="Aneurisma de aorta abdominal">
-                            <label for="ar-aneur">Aneurisma de aorta abdominal;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-aneur" type="#" name="Aneurisma de aorta abdominal" readonly>
+                            <label for="ar-aneur">Aneurisma de aorta abdominal;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-esten" type="checkbox" name="Estenose de carótida sintomática">
-                            <label for="ar-esten">Estenose de carótida sintomática;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-esten" type="#" name="Estenose de carótida sintomática" readonly>
+                            <label for="ar-esten">Estenose de carótida sintomática;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-diabet" type="checkbox" name="Diabetes mellitus">
-                            <label for="ar-diabet">Diabetes mellitus;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-diabet" type="#" name="Diabetes mellitus" readonly>
+                            <label for="ar-diabet">Diabetes mellitus;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-doen-vasc" type="checkbox" name="Doença vascular periférica">
-                            <label for="ar-doen-vasc">Doença vascular periférica;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-doen-vasc" type="#" name="Doença vascular periférica" readonly>
+                            <label for="ar-doen-vasc">Doença vascular periférica;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-insuf" type="checkbox" name="Insuficiência cardíaca congestiva de etiologia isquêmica">
-                            <label for="ar-insuf">Insuficiência cardíaca congestiva de etiologia isquêmica;</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-insuf" type="#" name="Insuficiência cardíaca congestiva de etiologia isquêmica" readonly>
+                            <label for="ar-insuf">Insuficiência cardíaca congestiva de etiologia isquêmica;</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-angina" type="checkbox" name="Angina no peito">
-                            <label for="ar-angina">Angina no peito.</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-angina" type="#" name="Angina no peito" readonly>
+                            <label for="ar-angina">Angina no peito.</label readonly>
                         </div>
-                        <div class="style-checkbox">
-                            <input id="ar-doenc-renal" type="checkbox" name="Doença renal crônica">
-                            <label for="ar-doenc-renal">Doença renal crônica</label>
+                        <div class="style-checkbox" readonly>
+                            <input id="ar-doenc-renal" type="#" name="Doença renal crônica" readonly>
+                            <label for="ar-doenc-renal">Doença renal crônica</label readonly>
                         </div>
                         <div>
-                            <button type="submit" id="btn-estrat-calcular">CALCULAR</button>
+                            <button type="submit" id="#">CALCULAR</button readonly>
                         </div>
                     </form>
-                    <p>Classificação: <span id="retorno-calculo-estrat">Aguardando valores...</span></p>
+                    <p>Classificação: <span id="#">SOMENTE EXEMPLO.</span></p readonly>
                 </div>
                 <div class="disable-etapa-2 etapa-2">
                     <div class="etapa-2-form">
@@ -338,21 +338,21 @@
                                 <input id="etapa2-colest-total" type="number" placeholder="COLESTEROL TOTAL">
                             </div>
                             <div class="style-checkbox">
-                                <input id="etapa2-fumante" type="checkbox" name="Fumante">
-                                <label for="etapa2-fumante">Fumante</label>
+                                <input id="etapa2-fumante" type="#" name="Fumante">
+                                <label for="etapa2-fumante">Fumante</label readonly>
                             </div>
                             <div>
-                                <input id="etapa2-hdl" type="number" placeholder="HDL(MG/D)">
+                                <input id="etapa2-hdl" type="number" placeholder="HDL(MG/D)" readonly>
                             </div>
                             <div>
-                                <input id="etapa2-pa-sistol" type="number" placeholder="PA SISTÓLICA">
+                                <input id="etapa2-pa-sistol" type="number" placeholder="PA SISTÓLICA" readonly>
                             </div>
                             <div class="style-checkbox">
-                                <input id="etapa2-tratada" type="checkbox" name="Tratada">
+                                <input id="etapa2-tratada" type="#" name="Tratada" readonly>
                                 <label for="etapa2-tratada">Tratada</label>
                             </div>
                             <div>
-                                <button id="btn-estrat2-calcular">CALCULAR</button>
+                                <button id="btn-estrat2-calcular">CALCULAR</button readonly>
                             </div>
                         </form>
                     </div>
@@ -363,25 +363,25 @@
                 <div class="disable-etapa-3 etapa-3">
                     <h5>Etapa 3:</h5>
                     <div>
-                        <p>Classificação: <span id="retorno-calculo-estrat3">Aguardando valores...</span></p>
+                        <p>Classificação: <span id="#">SOMENTE EXEMPLO</span></p readonly>
                     </div>
                 </div>
             </div>
             <div>
                 <a class="botao-padrao">
-                    <button id="btn-finaliza-ava-clinic">FINALIZAR AVALIAÇÃO</button>
+                    <button id="#">FINALIZAR AVALIAÇÃO</button readonly>
                 </a>
             </div>
-            <p id="retorno-finaliza-ava-clinic">...</p>
+            <p id="retorno-finaliza-ava-clinic">...</p readonly>
         </div>
     </div>
-    <script src="../js/retonoDados/retornoDadosAvaClinic.js"></script>
-    <script type="module" src="../js/insertDadosStorageAvaClinic.js"></script>
-    <script src="../js/Utils/calculos.js"></script>
-    <script type="module" src="../js/activeButton/activeButtonAva.js"></script>
-    <script src="../js/finalizaAvaClinic.js"></script>
+    <script src="../js/retonoDados/retornoDadosAvaClinic.js" readonly></script>
+    <script type="module" src="../js/insertDadosStorageAvaClinic.js" readonly></script>
+    <script src="../js/Utils/calculos.js" readonly></script>
+    <script type="module" src="../js/activeButton/activeButtonAva.js" readonly></script>
+    <script src="../js/finalizaAvaClinic.js" readonly></script>
     <script src="../js/logoutSistema.js"></script>
-    <script src="../js/bootstrap-js/bootstrap.js"></script>
+    <script src="../js/bootstrap-js/bootstrap.js">  readonly</script>
     <script type="text/javascript" src="../js/jquery-3.6.4.min.js"></script>
     <script type="text/javascript" src="../js/jquery.mask.js"></script>
     <script type="text/javascript">
