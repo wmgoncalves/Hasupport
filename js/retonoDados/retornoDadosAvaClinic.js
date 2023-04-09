@@ -12,50 +12,51 @@ let etapa2Hdl = document.querySelector('#etapa2-hdl');
 let checkMasc = document.querySelector('#br-sex-masc');
 let checkIdade = document.querySelector('#br-idade');
 
-function retornaValoresHemograma(){
+
+function retornaValoresHemograma() {
     etapa2ColestTotal.value = localStorage.getItem('hemogColes');
     etapa2Hdl.value = localStorage.getItem('hemogHdl');
-    
+
 }
 retornaValoresHemograma();
 
 /*Funcão para marcar checkeds, ateriormente informados*/
-function verificaCheckeds(){
+function verificaCheckeds() {
     let dataAtual = parseInt(new Date().toLocaleString().substring(6, 10));
     let dataInformada = 0;
-    if((localStorage.getItem('userCadData')) == null){
+    if ((localStorage.getItem('userCadData')) == null) {
         dataInformada = '';
         /*Salva idade em localstorage*/
         localStorage.setItem('userCadIdade', dataInformada);
-        
-    }else{
+
+    } else {
         dataInformada = parseInt((localStorage.getItem('userCadData')).toLocaleString().substring(0, 4));
         /*Salva idade em localstorage*/
-        localStorage.setItem('userCadIdade', (dataAtual-dataInformada));
-    
+        localStorage.setItem('userCadIdade', (dataAtual - dataInformada));
+
     }
-    
-    console.log('Data hj: ', dataAtual, dataInformada, (dataAtual-dataInformada));
-    
-    if(localStorage.getItem('userCadSexo') === 'Masculino'){
+
+    console.log('Data hj: ', dataAtual, dataInformada, (dataAtual - dataInformada));
+
+    if (localStorage.getItem('userCadSexo') === 'Masculino') {
         checkMasc.checked = true;
-        
-    }else if(localStorage.getItem('userCadSexo') === 'Feminino'){
+
+    } else if (localStorage.getItem('userCadSexo') === 'Feminino') {
         checkMasc.checked = false;
-        
+
     }
-    if((dataAtual-dataInformada) > 65){
+    if ((dataAtual - dataInformada) > 65) {
         checkIdade.checked = true;
-        
-    }else{
+
+    } else {
         checkIdade.checked = false;
-        
+
     }
-    
+
 }
 verificaCheckeds();
 
-function retornaSexoIdade(){
+function retornaSexoIdade() {
     imcRetornoIdade.innerHTML = localStorage.getItem('userCadIdade');
     imcRetornoSexo.innerHTML = localStorage.getItem('userCadSexo');
 
@@ -71,10 +72,10 @@ function retornaSexoIdade(){
 retornaSexoIdade();
 
 /*Função que preenche input anteriormente informados*/
-function retornaDadosInputs(){
+function retornaDadosInputs() {
     let pas = document.querySelector('#pas');
     let pad = document.querySelector('#pad');
-    
+
     let peso = document.querySelector('#imc-peso');
     let altura = document.querySelector('#imc-altura');
 
@@ -91,17 +92,17 @@ function retornaDadosInputs(){
     let etapa2Hdl = document.querySelector('#etapa2-hdl');
     let etapa2PaSistol = document.querySelector('#etapa2-pa-sistol');
     let etapa2Tratada = document.querySelector('#etapa2-tratada');
- 
+
     pas.value = localStorage.getItem('pas');
     pad.value = localStorage.getItem('pad');
-    
+
     peso.value = localStorage.getItem('peso');
     altura.value = localStorage.getItem('altura');
 
     circAbdomCm.value = localStorage.getItem('circAbdomCm');
 
     cintQuadrAbdomCm.value = localStorage.getItem('cintQuadrAbdomCm');
-    cintQuadrQuadrCm.value =  localStorage.getItem('cintQuadrQuadrCm');
+    cintQuadrQuadrCm.value = localStorage.getItem('cintQuadrQuadrCm');
 
     tornBraqPasTorn.value = localStorage.getItem('tornBraqPasTorn');
     tornBraqPasBra.value = localStorage.getItem('pas');
@@ -110,20 +111,20 @@ function retornaDadosInputs(){
     etapa2Hdl.value = localStorage.getItem('hemogHdl');
     etapa2PaSistol.value = localStorage.getItem('pas');
 
-    if((localStorage.getItem('etapa2Tratada') == null) || (localStorage.getItem('etapa2Tratada') == 'Não tratada')){
+    if ((localStorage.getItem('etapa2Tratada') == null) || (localStorage.getItem('etapa2Tratada') == 'Não tratada')) {
         console.log('false', localStorage.getItem('etapa2Tratada'));
         etapa2Tratada.checked = false;
-        
-    }else{
+
+    } else {
         console.log('true', localStorage.getItem('etapa2Tratada'));
         etapa2Tratada.checked = true;
 
     }
-    if((localStorage.getItem('brTabag') == null) || (localStorage.getItem('brTabag') == 'Não fumante')){
+    if ((localStorage.getItem('brTabag') == null) || (localStorage.getItem('brTabag') == 'Não fumante')) {
         console.log('false', localStorage.getItem('brTabag'));
         etapa2Fumante.checked = false;
-        
-    }else{
+
+    } else {
         console.log('true', localStorage.getItem('brTabag'));
         etapa2Fumante.checked = true;
 
@@ -133,7 +134,7 @@ function retornaDadosInputs(){
 retornaDadosInputs();
 
 /*Função que preenche input anteriormente informados*/
-function retornaDadosCheckbox(){
+function retornaDadosCheckbox() {
     /*Variaveis Risco Baixo*/
     let brIdade = document.querySelector('#br-idade');
     let brSexMasc = document.querySelector('#br-sex-masc');
@@ -146,7 +147,7 @@ function retornaDadosCheckbox(){
     let brManifest = document.querySelector('#br-manifest');
     let brDiagnDislip = document.querySelector('#br-diagn-dislip');
     let brDiagnPolic = document.querySelector('#br-diagn-polic');
-    
+
     /*Variaveis Risco Alto */
     let arAcidVasc = document.querySelector('#ar-acid-vasc');
     let arInfartAgud = document.querySelector('#ar-infart-agud');
@@ -162,7 +163,7 @@ function retornaDadosCheckbox(){
     let arInsuf = document.querySelector('#ar-insuf');
     let arAngina = document.querySelector('#ar-angina');
     let arDoencRenal = document.querySelector('#ar-doenc-renal');
- 
+
     /*Salva Baixo Risco em LocalStorage *//*
     localStorage.setItem('arDoenVasc', arDoenVasc);
     localStorage.setItem('arInsuf', arInsuf);
@@ -170,164 +171,164 @@ function retornaDadosCheckbox(){
     localStorage.setItem('arDoencRenal', arDoencRenal);
     */
 
-    if((localStorage.getItem('brTabag') == null) || (localStorage.getItem('brTabag') == 'Não fumante')){
+    if ((localStorage.getItem('brTabag') == null) || (localStorage.getItem('brTabag') == 'Não fumante')) {
         brTabag.checked = false;
-        
-    }else{
+
+    } else {
         brTabag.checked = true;
 
     }
-    if((localStorage.getItem('brHipert') == null) || (localStorage.getItem('brHipert') == 'vazio')){
+    if ((localStorage.getItem('brHipert') == null) || (localStorage.getItem('brHipert') == 'vazio')) {
         brHipert.checked = false;
-        
-    }else{
+
+    } else {
         brHipert.checked = true;
 
     }
-    if((localStorage.getItem('brObs') == null) || (localStorage.getItem('brObs') == 'vazio')){
+    if ((localStorage.getItem('brObs') == null) || (localStorage.getItem('brObs') == 'vazio')) {
         brObs.checked = false;
-        
-    }else{
+
+    } else {
         brObs.checked = true;
 
     }
-    if((localStorage.getItem('brSedent') == null) || (localStorage.getItem('brSedent') == 'vazio')){
+    if ((localStorage.getItem('brSedent') == null) || (localStorage.getItem('brSedent') == 'vazio')) {
         brSedent.checked = false;
-        
-    }else{
+
+    } else {
         brSedent.checked = true;
 
     }
-    if((localStorage.getItem('brHistoFam') == null) || (localStorage.getItem('brHistoFam') == 'vazio')){
+    if ((localStorage.getItem('brHistoFam') == null) || (localStorage.getItem('brHistoFam') == 'vazio')) {
         brHistoFam.checked = false;
-        
-    }else{
+
+    } else {
         brHistoFam.checked = true;
 
     }
-    if((localStorage.getItem('brHistoDoenca') == null) || (localStorage.getItem('brHistoDoenca') == 'vazio')){
+    if ((localStorage.getItem('brHistoDoenca') == null) || (localStorage.getItem('brHistoDoenca') == 'vazio')) {
         brHistoDoenca.checked = false;
-        
-    }else{
+
+    } else {
         brHistoDoenca.checked = true;
 
     }
-    if((localStorage.getItem('brManifest') == null) || (localStorage.getItem('brManifest') == 'vazio')){
+    if ((localStorage.getItem('brManifest') == null) || (localStorage.getItem('brManifest') == 'vazio')) {
         brManifest.checked = false;
-        
-    }else{
+
+    } else {
         brManifest.checked = true;
 
     }
-    if((localStorage.getItem('brDiagnDislip') == null) || (localStorage.getItem('brDiagnDislip') == 'vazio')){
+    if ((localStorage.getItem('brDiagnDislip') == null) || (localStorage.getItem('brDiagnDislip') == 'vazio')) {
         brDiagnDislip.checked = false;
-        
-    }else{
+
+    } else {
         brDiagnDislip.checked = true;
 
     }
-    if((localStorage.getItem('brDiagnPolic') == null) || (localStorage.getItem('brDiagnPolic') == 'vazio')){
+    if ((localStorage.getItem('brDiagnPolic') == null) || (localStorage.getItem('brDiagnPolic') == 'vazio')) {
         brDiagnPolic.checked = false;
-        
-    }else{
+
+    } else {
         brDiagnPolic.checked = true;
 
     }
-    if((localStorage.getItem('arAcidVasc') == null) || (localStorage.getItem('arAcidVasc') == 'vazio')){
+    if ((localStorage.getItem('arAcidVasc') == null) || (localStorage.getItem('arAcidVasc') == 'vazio')) {
         arAcidVasc.checked = false;
-        
-    }else{
+
+    } else {
         arAcidVasc.checked = true;
 
     }
-    if((localStorage.getItem('arInfartAgud') == null) || (localStorage.getItem('arInfartAgud') == 'vazio')){
+    if ((localStorage.getItem('arInfartAgud') == null) || (localStorage.getItem('arInfartAgud') == 'vazio')) {
         arInfartAgud.checked = false;
-        
-    }else{
+
+    } else {
         arInfartAgud.checked = true;
 
     }
-    if((localStorage.getItem('arLesPerif') == null) || (localStorage.getItem('arLesPerif') == 'vazio')){
+    if ((localStorage.getItem('arLesPerif') == null) || (localStorage.getItem('arLesPerif') == 'vazio')) {
         arLesPerif.checked = false;
-        
-    }else{
+
+    } else {
         arLesPerif.checked = true;
 
     }
-    if((localStorage.getItem('arAtaqIsqu') == null) || (localStorage.getItem('arAtaqIsqu') == 'vazio')){
+    if ((localStorage.getItem('arAtaqIsqu') == null) || (localStorage.getItem('arAtaqIsqu') == 'vazio')) {
         arAtaqIsqu.checked = false;
-        
-    }else{
+
+    } else {
         arAtaqIsqu.checked = true;
 
     }
-    if((localStorage.getItem('arHiperVentr') == null) || (localStorage.getItem('arHiperVentr') == 'vazio')){
+    if ((localStorage.getItem('arHiperVentr') == null) || (localStorage.getItem('arHiperVentr') == 'vazio')) {
         arHiperVentr.checked = false;
-        
-    }else{
+
+    } else {
         arHiperVentr.checked = true;
 
     }
-    if((localStorage.getItem('arNefrop') == null) || (localStorage.getItem('arNefrop') == 'vazio')){
+    if ((localStorage.getItem('arNefrop') == null) || (localStorage.getItem('arNefrop') == 'vazio')) {
         arNefrop.checked = false;
-        
-    }else{
+
+    } else {
         arNefrop.checked = true;
 
     }
-    if((localStorage.getItem('arRetin') == null) || (localStorage.getItem('arRetin') == 'vazio')){
+    if ((localStorage.getItem('arRetin') == null) || (localStorage.getItem('arRetin') == 'vazio')) {
         arRetin.checked = false;
-        
-    }else{
+
+    } else {
         arRetin.checked = true;
 
     }
-    if((localStorage.getItem('arAneur') == null) || (localStorage.getItem('arAneur') == 'vazio')){
+    if ((localStorage.getItem('arAneur') == null) || (localStorage.getItem('arAneur') == 'vazio')) {
         arAneur.checked = false;
-        
-    }else{
+
+    } else {
         arAneur.checked = true;
 
     }
-    if((localStorage.getItem('arEsten') == null) || (localStorage.getItem('arEsten') == 'vazio')){
+    if ((localStorage.getItem('arEsten') == null) || (localStorage.getItem('arEsten') == 'vazio')) {
         arEsten.checked = false;
-        
-    }else{
+
+    } else {
         arEsten.checked = true;
 
     }
-    if((localStorage.getItem('arDiabet') == null) || (localStorage.getItem('arDiabet') == 'vazio')){
+    if ((localStorage.getItem('arDiabet') == null) || (localStorage.getItem('arDiabet') == 'vazio')) {
         arDiabet.checked = false;
-        
-    }else{
+
+    } else {
         arDiabet.checked = true;
 
     }
-    if((localStorage.getItem('arDoenVasc') == null) || (localStorage.getItem('arDoenVasc') == 'vazio')){
+    if ((localStorage.getItem('arDoenVasc') == null) || (localStorage.getItem('arDoenVasc') == 'vazio')) {
         arDoenVasc.checked = false;
-        
-    }else{
+
+    } else {
         arDoenVasc.checked = true;
 
     }
-    if((localStorage.getItem('arInsuf') == null) || (localStorage.getItem('arInsuf') == 'vazio')){
+    if ((localStorage.getItem('arInsuf') == null) || (localStorage.getItem('arInsuf') == 'vazio')) {
         arInsuf.checked = false;
-        
-    }else{
+
+    } else {
         arInsuf.checked = true;
 
     }
-    if((localStorage.getItem('arAngina') == null) || (localStorage.getItem('arAngina') == 'vazio')){
+    if ((localStorage.getItem('arAngina') == null) || (localStorage.getItem('arAngina') == 'vazio')) {
         arAngina.checked = false;
-        
-    }else{
+
+    } else {
         arAngina.checked = false;
 
     }
-    if((localStorage.getItem('arDoencRenal') == null) || (localStorage.getItem('arDoencRenal') == 'vazio')){
+    if ((localStorage.getItem('arDoencRenal') == null) || (localStorage.getItem('arDoencRenal') == 'vazio')) {
         arDoencRenal.checked = false;
-        
-    }else{
+
+    } else {
         arDoencRenal.checked = true;
 
     }

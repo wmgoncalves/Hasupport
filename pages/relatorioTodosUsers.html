@@ -54,31 +54,34 @@
       </nav>
     </div>
     <div class="body-relatorio">
-      <div class="titulo-pdf">
-        <h2>TODOS OS USUARIOS DO SUS</h2>
-      </div>
-      <div class="retorno-select-2">
-        <!-- colocar aqui o retorno da escolha!! -->
-        <!-- tabela temporaria!! -->
+      <div class="container">
+        <div class="titulo-pdf">
 
-        <table>
-          <tr>
-            <th>Cartão do SUS</th>
-            <th>CPF</th>
-            <th>Nome</th>
-            <th>Idade</th>
-          </tr>
-          <tr>
-            <td>111222233334444</td>
-            <td>11122233344</td>
-            <td>TestBot</td>
-            <td>01</td>
-          </tr>
-        </table>
+          <h2>TODOS OS USUARIOS DO SUS</h2>
+        </div>
+        <div class="retorno-select-2">
+          <!-- colocar aqui o retorno da escolha!! -->
+          <!-- tabela temporaria!! -->
+
+          <table>
+            <tr>
+              <th>Cartão do SUS</th>
+              <th>CPF</th>
+              <th>Nome</th>
+              <th>Idade</th>
+            </tr>
+            <tr>
+              <td>111222233334444</td>
+              <td>11122233344</td>
+              <td>TestBot</td>
+              <td>01</td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div class="botao-relatorio">
         <a class="botao-padrao">
-          <button id="">IMPRIMIR</button>
+          <button id="" onclick="downloadPDF()">IMPRIMIR</button>
         </a>
       </div>
     </div>
@@ -86,6 +89,8 @@
   <script src="../js/logoutSistema.js"></script>
   <script src="../js/bootstrap-js/bootstrap.js"></script>
   <script type="module" src="../backend/relatorio/relTodosUsers.js"></script>
+  <script src="../js/Script imprimir.js"></script>
+  <script src="../js/html2pdf.bundle.min.js"></script>
 
 </body>
 

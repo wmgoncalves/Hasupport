@@ -359,9 +359,18 @@ function insertEstratificacaoEtapa2() {
 }
 function calculaImc(peso, altura) {
     let el = document.querySelector('#retorno-calculo-imc');
+    let resultadoimc = document.querySelector('#retorno-calculo-imc2')
     let result = parseInt(peso) / (parseFloat(altura) * parseFloat(altura));
     console.log(result);
-    
+    resultadoimc.innerHTML = result.toFixed(2);
+    let checkimc = document.querySelector('#br-obs');
+    if (result > 30) {
+        checkimc.checked = true;
+    }
+    else {
+        checkimc.checked = false;
+    }
+
 
     localStorage.setItem('imc', result);
 

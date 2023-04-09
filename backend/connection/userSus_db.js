@@ -48,6 +48,14 @@ export async function insertUserSus(cartSus, cpf, nome, dataNasc, sexo, idEquipe
     return results.affectedRows;
 }
 
+export async function todos_users() {
+    const conn = await connect();
+    let [rows] = await conn.query('SELECT * FROM user_sus');
+    await conn.end();
+    return rows;
+}
+
+
 // export async function updateUserSus(cartSus, cpf, nome, dataNasc, sexo, idEquipe){
 //     const conn = await connect();
 //     let [results] = await conn.query(

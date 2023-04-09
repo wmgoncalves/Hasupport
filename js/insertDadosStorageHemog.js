@@ -1,6 +1,6 @@
 const btnHemogCalcular = document.querySelector('#btn-hemog-calcular');
 
-function insertHemograma(){
+function insertHemograma() {
     let hemogHemac = document.querySelector('#hemog-hemac').value;
     let hemogHemogl = document.querySelector('#hemog-hemogl').value;
     let hemogHemat = document.querySelector('#hemog-hemat').value;
@@ -21,7 +21,7 @@ function insertHemograma(){
     let hemogUreia = document.querySelector('#hemog-ureia').value;
     let hemogTgo = document.querySelector('#hemog-tgo').value;
     let hemogTgp = document.querySelector('#hemog-tgp').value;
-        
+
     localStorage.setItem('hemogHemac', hemogHemac);
     localStorage.setItem('hemogHemogl', hemogHemogl);
     localStorage.setItem('hemogHemat', hemogHemat);
@@ -44,15 +44,16 @@ function insertHemograma(){
     localStorage.setItem('hemogTgp', hemogTgp);
 
     console.log('Sucesso Hemograma:', hemogHemac, hemogHemogl, hemogHemat, hemogHeuc,
-         hemogHinf, hemogHlaq, hemogHlic, hemogColes, hemogHdl, hemogTrig,
-         hemogHemogGlic, hemogCreat, hemogPotass, hemogEqu, hemogMicroa, hemogAlbum,
-         hemogAcid, hemogUreia,hemogTgo, hemogTgp);
+        hemogHinf, hemogHlaq, hemogHlic, hemogColes, hemogHdl, hemogTrig,
+        hemogHemogGlic, hemogCreat, hemogPotass, hemogEqu, hemogMicroa, hemogAlbum,
+        hemogAcid, hemogUreia, hemogTgo, hemogTgp);
 
     let hemogramaSalvo = document.querySelector('#retorno-salvo-hemograma');
     hemogramaSalvo.innerHTML = 'Salvo com sucesso';
     hemogramaSalvo.style.color = 'green';
-    setTimeout(function(){
+    setTimeout(function () {
         hemogramaSalvo.innerHTML = '...';
+        window.location = 'pageAvaClinic.html'
 
     }, 3000);
 

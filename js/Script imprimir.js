@@ -1,8 +1,8 @@
 function downloadPDF() {
-  const item = document.querySelector(".Content");
+  const item = document.querySelector(".container");
 
   var opt = {
-    margin: 1,
+    margin: 0,
     filename: "myfile.pdf",
     html2canvas: { scale: 2 },
     jsPDF: { unit: "in", format: "letter", orientation: "portrait" },

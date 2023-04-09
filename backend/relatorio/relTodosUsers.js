@@ -1,4 +1,4 @@
-import { lastUsersSus } from "../connection/userSus_db.js";
+import { todos_users } from "../connection/userSus_db.js";
 
 async function printTodosUsers() {
   let result = document.querySelector(".retorno-select-2");
@@ -12,7 +12,7 @@ async function printTodosUsers() {
                 <th> Sexo </th>
             </tr>
             `;
-  let rows = await lastUsersSus();
+  let rows = await todos_users();
   // console.log(rows);
   // console.log(rows.length);
 
