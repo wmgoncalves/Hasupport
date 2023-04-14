@@ -120,10 +120,10 @@ function torno_brac() {
 		result_torno_braquial = 'Presença de Doença Obstrutiva';
 	}
 	else if (result_torno_braquial <= 0.99) {
-		result_torno_braquial = 'Limítrofes';
+		result_torno_braquial = 'Limítrofe';
 	}
 	else if (result_torno_braquial <= 1.4) {
-		result_torno_braquial = 'Normais';
+		result_torno_braquial = 'Normal';
 	}
 	else {
 		result_torno_braquial = 'Incompressibilidade arterial devido a provável calcificação';
