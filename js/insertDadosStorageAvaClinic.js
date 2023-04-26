@@ -357,6 +357,7 @@ function insertEstratificacaoEtapa2() {
         etapa2PaSistol, localStorage.getItem('etapa2Tratada'));
 
 }
+
 function calculaImc(peso, altura) {
     let el = document.querySelector('#retorno-calculo-imc');
     let resultadoimc = document.querySelector('#retorno-calculo-imc2')

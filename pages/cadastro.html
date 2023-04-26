@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/cadastro.css">
-    <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.css">
-    <title>HAsupport</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/cadastro.css">
+  <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.css">
+  <title>HAsupport</title>
 </head>
+
 <body>
   <div class="fundo-cadastro-global">
     <div class="fundo-cadastro">
@@ -18,47 +20,48 @@
         </div>
         
       -->
-        <div class="img">
-          <img src="../assets/enf2.png">
-        </div>
-        <div class="form" onsubmit="return false">
-          <form>
-            <div>
-              <p id="acesso-negado"></p>
-            </div>
-            <div>
-              <input id="login" class="login" name="login" required="required" type="text" placeholder="Nome de usuário"/>
-            </div>
-            <div>
-              <input id="senha" class="senha" name="senha" required="required" type="password" placeholder="Senha"/>
-            </div>
-            <div>
-              <!--apos login redirecionar para adm_area.html-->
-              <button id="logar">ENTRAR</button>
-            </div>
-            <div>
-              <a href="./cad_equipe.html">
-                CADASTRAR-SE
-              </a>
-            </div>
-          </form>
-        </div>
+      <div class="img">
+        <img src="../assets/enf2.png">
       </div>
-      <footer class="footer">
-        <div>
-          <h4>Desenvolvido por:<a href="./pageDireitos.html">FWLE</a></h4>
-        </div>
-        <div class="footer-logos">
-          <img src="../assets/cuidar_tech.png">
-          <img src="../assets/ufsm_logo.png">
-          <img src="../assets/pracces.jpeg">
-        </div>
-      </footer>
+      <div class="form" onsubmit="return false">
+        <form>
+          <div>
+            <p id="acesso-negado"></p>
+          </div>
+          <div>
+            <input id="login" class="login" name="login" required="required" type="text" placeholder="Nome de usuário" />
+          </div>
+          <div>
+            <input id="senha" class="senha" name="senha" required="required" type="password" placeholder="Senha" />
+          </div>
+          <div>
+            <!--apos login redirecionar para adm_area.html-->
+            <button id="logar">ENTRAR</button>
+          </div>
+          <div>
+            <a href="./cad_equipe.html">
+              CADASTRAR-SE
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="footer">
+      <div>
+        <h4>Desenvolvido por<a href="./pageDireitos.html">Clique Aqui</a></h4>
+      </div>
+      <div class="footer-logos">
+        <img src="../assets/cuidar_tech.png">
+        <img src="../assets/ufsm_logo.png">
+        <img src="../assets/pracces.jpeg">
+      </div>
+    </footer>
   </div>
   <script>
     localStorage.clear();
     console.log("Storage Limpo");
   </script>
-    <script type="module" src="../backend/equipe_js/login.js"></script>
+  <script type="module" src="../backend/equipe_js/login.js"></script>
 </body>
+
 </html>

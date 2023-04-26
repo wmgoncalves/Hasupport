@@ -674,8 +674,25 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    }
     
-}
+    .pageDireitos h1 {
+    font-weight: bold;
+    text-align: right;
+    width: 30%;
+    }
+    
+    .pageDireitos h4 {
+    font-weight: bold;
+    text-align: left;
+    width: 60%;
+    }
+    
+    .pageDireitos h5 {
+    text-align: justify;
+    width: 60%;
+    }
+
 /*fomatação botao pagina relatorios*/
 .botao-relatorio{
     padding-top: 20px;
