@@ -22,21 +22,33 @@ retornaValoresHemograma();
 
 /*Funcão para marcar checkeds, ateriormente informados*/
 function verificaCheckeds() {
-    let dataAtual = parseInt(new Date().toLocaleString().substring(6, 10));
+    let dataAtual = new Date();
+    const anoAtual = dataAtual.getFullYear();
+    const mesAtual = dataAtual.getMonth() + 1;
+    const diaAtual = dataAtual.getDate();
     let dataInformada = 0;
+    let idade = 0;
     if ((localStorage.getItem('userCadData')) == null) {
         dataInformada = '';
         /*Salva idade em localstorage*/
         localStorage.setItem('userCadIdade', dataInformada);
 
     } else {
-        dataInformada = parseInt((localStorage.getItem('userCadData')).toLocaleString().substring(0, 4));
-        /*Salva idade em localstorage*/
-        localStorage.setItem('userCadIdade', (dataAtual - dataInformada));
+        dataInformada = localStorage.getItem('userCadData');
+        const dataNascimento = new Date(dataInformada);
+        const anoNascimento = dataNascimento.getFullYear();
+        const mesNascimento = dataNascimento.getMonth() + 1;
+        const diaNascimento = dataNascimento.getDate();
+        idade = anoAtual - anoNascimento;
 
+        if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
+            idade--;
+        }
+        /*Salva idade em localstorage*/
+        localStorage.setItem('userCadIdade', idade);
     }
 
-    console.log('Data hj: ', dataAtual, dataInformada, (dataAtual - dataInformada));
+    console.log('Data hj: ', dataAtual, dataInformada, (idade));
 
     if (localStorage.getItem('userCadSexo') === 'Masculino') {
         checkMasc.checked = true;

@@ -25,7 +25,7 @@ function insertPasPad() {
 function insertImc() {
     let peso = document.querySelector('#imc-peso').value;
     let altura = document.querySelector('#imc-altura').value;
-
+    altura = altura.replace(",", ".");
 
     localStorage.setItem('peso', peso);
     localStorage.setItem('altura', altura);
