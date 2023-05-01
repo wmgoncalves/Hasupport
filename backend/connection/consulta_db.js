@@ -31,3 +31,19 @@ export async function searchAllAltoRisco(){
     await conn.end();
     return rows;
 }
+
+//BUSCAR ULTIMA CONSULTA
+export async function searchUltimaConsulta(idUserSus){
+    const conn = await connect();
+    let [row] = await conn.query("SELECT * FROM consulta WHERE fk_id_usersus = ? ORDER BY data_cons DESC LIMIT 1", [idUserSus]);
+    await conn.end();
+    // console.log(row[0]);
+    if (row[0] === undefined){
+        // console.log("NÃO TEM");
+        return 'indefinido';
+    }
+    else {
+        // console.log(row[0]);
+        return row[0];
+    }
+}
