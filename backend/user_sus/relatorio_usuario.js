@@ -4,7 +4,7 @@ function iniciar_atendimento() {
   window.location = "../pages/menu2.html";
 }
 function Ultima_consulta() {
-  window.location = "../pages/relatorio_por_nome.html";
+  window.location = "../pages/relatorioConsulta.html";
 }
 btniniciar_atend.addEventListener("click", iniciar_atendimento);
 btnrelatorio_consult.addEventListener("click", Ultima_consulta);
