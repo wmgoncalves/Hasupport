@@ -1,5 +1,5 @@
 function downloadPDF() {
-  const item = document.querySelector(".container");
+  const item = document.querySelector(".conteudo_relatorio");
 
   var opt = {
     margin: 0,
