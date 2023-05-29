@@ -5,20 +5,20 @@ const idEquipe = localStorage.getItem('id_equipe');
 const idUserSus = localStorage.getItem('idUserSus');
 const nivelUser = localStorage.getItem('ConfigNivelUser');
 
-function finalizaConsulta(){
-    retornoFinalizaCosulta.innerHTML = 'Salvando dados. Aguarde...';
+function finalizaConsulta() {
+    retornoFinalizaCosulta.innerHTML = 'Salvando dados. Aguarde... Para visualizar e imprimir o atendimento realizado retorne ao MENU INICIAL, selecione a opção (BUSCAR USUÁRIO(A)/RELATÓRIO INDIVIDUAL, digite o cartão SUS)';
     retornoFinalizaCosulta.style.color = 'green';
     retornoFinalizaCosulta.style.fontSize = '1.2rem';
 
-    setTimeout(function(){
-        retornoFinalizaCosulta.innerHTML = 'Dados salvos com sucesso!!';
+    setTimeout(function () {
+        retornoFinalizaCosulta.innerHTML = 'Dados salvos com sucesso!! Para visualizar e imprimir o atendimento realizado retorne ao MENU INICIAL, selecione a opção (BUSCAR USUÁRIO(A)/RELATÓRIO INDIVIDUAL, digite o cartão SUS)';
         retornoFinalizaCosulta.style.color = 'green';
         localStorage.clear();
         console.log('# LocalStorage Limpo #');
-        
-    }, 3000); 
 
-    setTimeout(function(){
+    }, 3000);
+
+    setTimeout(function () {
         retornoFinalizaCosulta.innerHTML = '...';
         retornoFinalizaCosulta.style.color = 'black';
         localStorage.setItem('ehAdmin', saveUser);
@@ -29,9 +29,9 @@ function finalizaConsulta(){
         console.log('Id Equipe: ', localStorage.getItem('id_equipe'));
         console.log('Id User Sus: ', localStorage.getItem('idUserSus'));
         console.log('Nivel user: ', localStorage.getItem('ConfigNivelUser'));
-        
+
         window.location = "../pages/adm_area.html";
-        
+
     }, 5000);
 
 }
