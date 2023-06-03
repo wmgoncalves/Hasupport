@@ -19,5 +19,6 @@ function finalizaAvaClinic() {
         window.location = 'pageDiagnosEnf.html'
 
     }, 4000);
+
 }
 btnAvaClinic.addEventListener("click", finalizaAvaClinic);
