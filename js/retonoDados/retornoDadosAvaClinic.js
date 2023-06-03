@@ -57,7 +57,7 @@ function verificaCheckeds() {
         checkMasc.checked = false;
 
     }
-    if ((dataAtual - dataInformada) > 65) {
+    if (localStorage.getItem('userCadIdade') > 65) {
         checkIdade.checked = true;
 
     } else {
