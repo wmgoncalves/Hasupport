@@ -3,7 +3,7 @@ import { connect } from "./db_connect.js";
 //BUSCAR ALTO RISCO
 export async function searchAltoRisco(idUserSus){
     const conn = await connect();
-    let [row] = await conn.query("SELECT clas_estrat FROM consulta WHERE fk_cart_sus = ? ORDER BY data_cons DESC LIMIT 1", [idUserSus]);
+    let [row] = await conn.query("SELECT clas_estrat FROM consulta WHERE fk_id_usersus = ? ORDER BY data_cons DESC LIMIT 1", [idUserSus]);
     await conn.end();
     // console.log(row[0]);
     if (row[0] === undefined){
@@ -21,11 +21,11 @@ export async function searchAllAltoRisco(){
     const conn = await connect();
     let [rows] = await conn.query(`
         SELECT cart_sus, cpf, nome, sexo, data_nasc FROM user_sus u
-        JOIN consulta c ON u.cart_sus = c.fk_cart_sus
+        JOIN consulta c ON u.id_usersus = c.fk_id_usersus
         WHERE c.clas_estrat LIKE "ALTO RISCO"
         AND c.data_cons = (
             SELECT MAX(data_cons) FROM consulta
-            WHERE fk_cart_sus = u.cart_sus
+            WHERE fk_id_usersus = u.id_usersus
         )`
     );
     await conn.end();
@@ -35,7 +35,7 @@ export async function searchAllAltoRisco(){
 //BUSCAR ULTIMA CONSULTA
 export async function searchUltimaConsulta(idUserSus){
     const conn = await connect();
-    let [row] = await conn.query("SELECT * FROM consulta WHERE fk_cart_sus = ? ORDER BY data_cons DESC LIMIT 1", [idUserSus]);
+    let [row] = await conn.query("SELECT * FROM consulta WHERE fk_id_usersus = ? ORDER BY data_cons DESC LIMIT 1", [idUserSus]);
     await conn.end();
     // console.log(row[0]);
     if (row[0] === undefined){
