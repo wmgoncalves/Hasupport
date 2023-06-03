@@ -13,7 +13,7 @@ async function printUltimaConsulta() {
 
     let basic_info = `
         <div class="info">
-            <h3>Dados do Usuário</h3>
+            <h3>Dados do Usuário(a)</h3>
             <div class="infos">
                 <div>
                     <p><strong>Nome:</strong> ${row[0].nome}</p>
@@ -43,9 +43,9 @@ async function printUltimaConsulta() {
                     <p><strong>Classificação do IMC:</strong> ${row.clas_imc}</p>
                 </div>
                 <div>
-                    <p><strong>Classificação Abdomen:</strong> ${row.clas_abdo}</p>
-                    <p><strong>Classificação Cintura Quadril:</strong> ${row.clas_cint_quad}</p>
-                    <p><strong>Classificação Tornozelo Braquial:</strong> ${row.clas_torn_brac}</p>
+                    <p><strong> Classificação Circunferência abdominal:</strong> ${row.clas_abdo}</p>
+                    <p><strong> Classificação Cintura-Quadril:</strong> ${row.clas_cint_quad}</p>
+                    <p><strong> Classificação Índice Tornozelo-Braquial:</strong> ${row.clas_torn_brac}</p>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@ async function printUltimaConsulta() {
 
     let estrat = `
         <div class="info html2pdf__page-break">
-            <h3>Estratificação</h3>
+            <h3>Estratificação do Risco Cardiovascular</h3>
             <p><strong>Classificação da Estratificação:</strong> ${row.clas_estrat}</p>
             <p>${row.indicadores}</p>
         </div>
