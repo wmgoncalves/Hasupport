@@ -34,7 +34,7 @@ async function printUltimaConsulta() {
 
     let info_consulta = `
         <div class="info">
-            <h3>Consulta</h3>
+            <h3>Exame físico/avaliação clínica</h3>
             <div class="infos">
                 <div>
                     <p><strong>PAS:</strong> ${row.pas}</p>
