@@ -59,7 +59,7 @@ async function printUltimaConsulta() {
             <p>${indi}</p>
         </div>
     `;
-    let nec_psBio;
+    let nec_psBio = '';
     if (row.list_psicobio != '') {
         nec_psBio = `
         <div class="info html2pdf__page-break">
@@ -68,7 +68,7 @@ async function printUltimaConsulta() {
         </div>
     `;
     }
-    let nec_psSoc;
+    let nec_psSoc = '';
     if (row.list_psicosoc) {
         nec_psSoc = `
         <div class="info html2pdf__page-break">
@@ -77,7 +77,7 @@ async function printUltimaConsulta() {
         </div>
     `;
     }
-    let nec_psEsp;
+    let nec_psEsp = '';
     if (row.list_psicoesp) {
         nec_psEsp = `
         <div class="info html2pdf__page-break">
