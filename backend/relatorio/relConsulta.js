@@ -29,12 +29,13 @@ async function printUltimaConsulta() {
     `;
 
     row = await searchUltimaConsulta(idUser);
-
     console.log(row);
+    let data_consulta = row.data_cons.getDate() + '/' + (row.data_cons.getMonth() + 1) + '/' + row.data_cons.getFullYear();
 
     let info_consulta = `
         <div class="info">
             <h3>Exame físico/avaliação clínica</h3>
+            <p>Data da consulta: ${data_consulta}</p>
             <div class="infos">
                 <div>
                     <p><strong>PAS:</strong> ${row.pas}</p>
@@ -50,36 +51,41 @@ async function printUltimaConsulta() {
             </div>
         </div>
     `;
-
+    let indi = row.indicadores.replaceAll('\n', '<br>')
     let estrat = `
         <div class="info html2pdf__page-break">
             <h3>Estratificação do Risco Cardiovascular</h3>
             <p><strong>Classificação da Estratificação:</strong> ${row.clas_estrat}</p>
-            <p>${row.indicadores}</p>
+            <p>${indi}</p>
         </div>
     `;
-
-    let nec_psBio = `
+    let nec_psBio;
+    if (row.list_psicobio != '') {
+        nec_psBio = `
         <div class="info html2pdf__page-break">
             <h3>Necessidades Psicobiológicas</h3>
             <p>${row.list_psicobio}</p>
         </div>
     `;
-
-    let nec_psSoc = `
+    }
+    let nec_psSoc;
+    if (row.list_psicosoc) {
+        nec_psSoc = `
         <div class="info html2pdf__page-break">
             <h3>Necessidades Psicosociais</h3>
             <p>${row.list_psicosoc}</p>
         </div>
     `;
-
-    let nec_psEsp = `
+    }
+    let nec_psEsp;
+    if (row.list_psicoesp) {
+        nec_psEsp = `
         <div class="info html2pdf__page-break">
             <h3>Necessidades Psicoespirituais</h3>
             <p>${row.list_psicoesp}</p>
         </div>
     `;
-
+    }
     result.innerHTML = basic_info + info_consulta + estrat + nec_psBio + nec_psSoc + nec_psEsp;
 }
 

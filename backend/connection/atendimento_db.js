@@ -20,7 +20,7 @@ function ajustaIndicadores() {
 
     let listBaixo = '';
     for (let i = 0; i < baixoRisco.length; i++) {
-        if (baixoRisco[i] != null) {
+        if (baixoRisco[i] != 'vazio') {
             listBaixo += baixoRisco[i] + "\n";
         }
     }
@@ -47,17 +47,13 @@ function ajustaIndicadores() {
 
     let listAlto = '';
     for (let i = 0; i < altoRisco.length; i++) {
-        if (altoRisco[i] != null) {
+        if (altoRisco[i] != 'vazio') {
             listAlto += altoRisco[i] + "\n";
         }
     }
 
     if (listAlto != '') {
-        indicadores = "- Alto Risco:\n" + listAlto;
-    }
-
-    if (indicadores != '') {
-        indicadores = "INDICADORES:\n" + indicadores;
+        indicadores += "- Alto Risco:\n" + listAlto;
     }
 
     return indicadores;
@@ -133,10 +129,6 @@ function ajustaListPsicobio() {
         lista_final += "- Terapêutica:\n" + ter + "\n";
     }
 
-    if (lista_final != '') {
-        lista_final = "NECESSIDADES PSICOBIOLÓGICAS:\n" + lista_final;
-    }
-
     console.log(lista_final);
     return lista_final;
 }
@@ -162,9 +154,6 @@ function ajustaListPsicossoc() {
         lista_final += "- Educação para Saúde e Aprendizagem:\n" + edu + "\n";
     }
 
-    if (lista_final != '') {
-        lista_final = "NECESSIDADES PSICOSSOCIAIS:\n" + lista_final;
-    }
 
     console.log(lista_final);
     return lista_final;
@@ -176,7 +165,7 @@ function ajustaListPsicoesp() {
     //RELIGIOSIDADE E ESPIRITUALIDADE
     let reg = generalList('reg');
     if (reg != '') {
-        lista_final = "NECESSIDADES PSICOESPIRITUAIS:\n- Religiosidade e Espiritualidade:\n" + reg + "\n";
+        lista_final = "- Religiosidade e Espiritualidade:\n" + reg + "\n";
     }
 
     console.log(lista_final);

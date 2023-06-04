@@ -44,9 +44,12 @@
 
 /* Específico da página do relatório da última consulta */
 .retorno-select-3 {
+    text-align: left;
+}
+.retorno-select-3 h3{
+
     text-align: center;
 }
-
 .info {
     border-top: 2px solid black;
     margin: 20px 100px;
