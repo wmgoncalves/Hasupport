@@ -37,16 +37,20 @@ async function printUltimaConsulta() {
             <h3>Exame físico/avaliação clínica</h3>
             <p>Data da consulta: ${data_consulta}</p>
             <div class="infos">
-                <div>
-                    <p><strong>PAS:</strong> ${row.pas}</p>
+                <div class="exames">
+                    <p><strong>PAS:</strong> ${row.pas} / <strong>PAD:</strong> ${row.pad}</p>
                     <p><strong>Classificação da HA:</strong> ${row.clas_ha}</p>
-                    <p><strong>IMC:</strong> ${row.imc}</p>
+                    <p><strong>IMC:</strong> ${row.imc.toFixed(2)}</p>
                     <p><strong>Classificação do IMC:</strong> ${row.clas_imc}</p>
                 </div>
                 <div>
                     <p><strong> Classificação Circunferência abdominal:</strong> ${row.clas_abdo}</p>
+                    <p><strong> Circunferência abdominal:</strong> ${row.circ_abdo}</p>
                     <p><strong> Classificação Cintura-Quadril:</strong> ${row.clas_cint_quad}</p>
+                    <p><strong> Cintura-Quadril:</strong> ${row.cint_quad.toFixed(2)}</p>
                     <p><strong> Classificação Índice Tornozelo-Braquial:</strong> ${row.clas_torn_brac}</p>
+                    <p><strong> Índice Tornozelo-Braquial:</strong> ${row.torn_brac.toFixed(2)}</p>
+                    
                 </div>
             </div>
         </div>
@@ -61,28 +65,31 @@ async function printUltimaConsulta() {
     `;
     let nec_psBio = '';
     if (row.list_psicobio != '') {
+        let Psicobio = row.list_psicobio.replaceAll('\n', '<br>')
         nec_psBio = `
         <div class="info html2pdf__page-break">
             <h3>Necessidades Psicobiológicas</h3>
-            <p>${row.list_psicobio}</p>
+            <p>${Psicobio}</p>
         </div>
     `;
     }
     let nec_psSoc = '';
     if (row.list_psicosoc) {
+        let Psicosoc = row.list_psicosoc.replaceAll('\n', '<br>')
         nec_psSoc = `
         <div class="info html2pdf__page-break">
             <h3>Necessidades Psicosociais</h3>
-            <p>${row.list_psicosoc}</p>
+            <p>${Psicosoc}</p>
         </div>
     `;
     }
     let nec_psEsp = '';
     if (row.list_psicoesp) {
+        let Psicoesp = row.list_psicoesp.replaceAll('\n', '<br>')
         nec_psEsp = `
         <div class="info html2pdf__page-break">
             <h3>Necessidades Psicoespirituais</h3>
-            <p>${row.list_psicoesp}</p>
+            <p>${Psicoesp}</p>
         </div>
     `;
     }

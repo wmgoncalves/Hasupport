@@ -59,15 +59,25 @@ function ajustaIndicadores() {
     return indicadores;
 }
 
-function generalList(nome) {
+function generalList(nome, dig) {
     let lista = '';
     let tot = localStorage.getItem(`qtd-${nome}`);
-    for (let i = 0; i < tot; i++) {
+    for (let i = 0; i < dig; i++) {
         let item = `${nome}-${i}`;
         let check = localStorage.getItem(item);
         // console.log(check);
         if (check != null)
             lista += check + ".\n";
+    }
+    if (lista != '') {
+        lista = 'Diagnósticos/Resultados de enfermagem: \n' + lista + 'Intervenções de Enfermagem: \n';
+        for (let i = dig; i < tot; i++) {
+            let item = `${nome}-${i}`;
+            let check = localStorage.getItem(item);
+            // console.log(check);
+            if (check != null)
+                lista += check + ".\n";
+        }
     }
     return lista;
 }
@@ -76,55 +86,55 @@ function ajustaListPsicobio() {
     let lista_final = '';
 
     //OXIGENAÇÃO
-    let oxi = generalList('oxi');
+    let oxi = generalList('oxi', 2);
     if (oxi != '') {
         lista_final += "- Oxigenação:\n" + oxi + "\n";
     }
 
     //NUTRIÇÃO
-    let nut = generalList('nut');
+    let nut = generalList('nut', 17);
     if (nut != '') {
         lista_final += "- Nutrição:\n" + nut + "\n";
     }
 
     //SONO E REPOUSO
-    let son = generalList('son');
+    let son = generalList('son', 3);
     if (son != '') {
         lista_final += "- Sono e Repouso:\n" + son + "\n";
     }
 
     //ATIVIDADE FÍSICA
-    let fis = generalList('fis');
+    let fis = generalList('fis', 5);
     if (fis != '') {
         lista_final += "- Atividade Física:\n" + fis + "\n";
     }
 
     //REG. VASCULAR
-    let vas = generalList('vas');
+    let vas = generalList('vas', 15);
     if (vas != '') {
         lista_final += "- Regulação Vascular:\n" + vas + "\n";
     }
 
     //REG. HORMONAL
-    let hor = generalList('hor');
+    let hor = generalList('hor', 1);
     if (hor != '') {
         lista_final += "- Regulação Hormonal:\n" + hor + "\n";
     }
 
     //REG. NEUROLÓGICA
-    let neu = generalList('neu');
+    let neu = generalList('neu', 3);
     if (neu != '') {
         lista_final += "- Regulação Neurológica:\n" + neu + "\n";
     }
 
     //ÓRGÃOS DO SENTIDO
-    let sen = generalList('sen');
+    let sen = generalList('sen', 2);
     if (sen != '') {
         lista_final += "- Órgãos do Sentido:\n" + sen + "\n";
     }
 
     //TERAPÊUTICA
-    let ter = generalList('ter');
+    let ter = generalList('ter', 4);
     if (ter != '') {
         lista_final += "- Terapêutica:\n" + ter + "\n";
     }
@@ -137,19 +147,19 @@ function ajustaListPsicossoc() {
     let lista_final = '';
 
     //AMOR E ACEITAÇÃO
-    let amo = generalList('amo');
+    let amo = generalList('amo', 1);
     if (amo != '') {
         lista_final += "- Amor e Aceitação:\n" + amo + "\n";
     }
 
     //LIBERDADE E PARTICIPAÇÃO
-    let lib = generalList('lib');
+    let lib = generalList('lib', 2);
     if (lib != '') {
         lista_final += "- Liberdade e Aceitação:\n" + lib + "\n";
     }
 
     //EDUCAÇÃO PARA SAÚDE E APRENDIZAGEM
-    let edu = generalList('edu');
+    let edu = generalList('edu', 5);
     if (edu != '') {
         lista_final += "- Educação para Saúde e Aprendizagem:\n" + edu + "\n";
     }
@@ -163,7 +173,7 @@ function ajustaListPsicoesp() {
     let lista_final = '';
 
     //RELIGIOSIDADE E ESPIRITUALIDADE
-    let reg = generalList('reg');
+    let reg = generalList('reg', 1);
     if (reg != '') {
         lista_final = "- Religiosidade e Espiritualidade:\n" + reg + "\n";
     }
@@ -178,11 +188,15 @@ export async function saveConsulta() {
 
     let idUserSus = localStorage.getItem('idUserSus');
     let pas = localStorage.getItem('pas');
+    let pad = localStorage.getItem('pad');
     let clas_ha = localStorage.getItem('clas_ha');
     let imc = localStorage.getItem('imc');
     let clas_imc = localStorage.getItem('clas_imc');
+    let circ_abdo = localStorage.getItem('circAbdomCm');
     let clas_abdo = localStorage.getItem('clas_abdo');
+    let cint_quad = localStorage.getItem('cint_quad');
     let clas_cint_quad = localStorage.getItem('clas_cint_quad');
+    let torn_brac = localStorage.getItem('torn_brac');
     let clas_torn_braq = localStorage.getItem('clas_torn_braq');
 
     //INDICADORES
@@ -217,8 +231,8 @@ export async function saveConsulta() {
     // console.log(ajustaIndicadores());
     const conn = await connect();
     let [results] = await conn.query(
-        'INSERT INTO consulta (data_cons, fk_id_usersus, pas, clas_ha, imc, clas_imc, clas_abdo, clas_cint_quad, clas_torn_brac, indicadores, clas_estrat, list_psicobio, list_psicosoc, list_psicoesp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-        [cur_date, idUserSus, pas, clas_ha, imc, clas_imc, clas_abdo, clas_cint_quad, clas_torn_braq, indicadores, clas_estrat, list_psicobio, list_psicosoc, list_psicoesp],
+        'INSERT INTO consulta (data_cons, fk_id_usersus, pas, clas_ha, imc, clas_imc, clas_abdo, clas_cint_quad, clas_torn_brac, indicadores, clas_estrat, list_psicobio, list_psicosoc, list_psicoesp, pad, circ_abdo, cint_quad, torn_brac) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+        [cur_date, idUserSus, pas, clas_ha, imc, clas_imc, clas_abdo, clas_cint_quad, clas_torn_braq, indicadores, clas_estrat, list_psicobio, list_psicosoc, list_psicoesp, pad, circ_abdo, cint_quad, torn_brac],
         function (err) {
             if (err) throw err;
         }

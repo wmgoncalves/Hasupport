@@ -85,7 +85,8 @@ function cint_quadril() {
 	let result_final = document.querySelector("#retorno-calculo-cint-quadr");
 	let sexo = localStorage.getItem('userCadSexo');
 
-	result = circun_abdmon / circun_quadril
+	result = circun_abdmon / circun_quadril;
+	localStorage.setItem('cint_quad', result);
 
 	if (sexo == 'Masculino') {
 		if (result > 0.9) {
@@ -115,7 +116,7 @@ function torno_brac() {
 	let result_final_tornozelobraquial = document.querySelector("#retorno-calculo-torn-braq");
 
 	result_torno_braquial = tornozelo / braquial;
-
+	localStorage.setItem('torn_brac', result_torno_braquial);
 	if (result_torno_braquial < 0.9) {
 		result_torno_braquial = 'Presença de Doença Obstrutiva';
 	}
