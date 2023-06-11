@@ -16,7 +16,7 @@ function finalizaConsulta() {
         localStorage.clear();
         console.log('# LocalStorage Limpo #');
 
-    }, 3000);
+    }, 10000);
 
     setTimeout(function () {
         retornoFinalizaCosulta.innerHTML = '...';
