@@ -6,7 +6,7 @@ const idUserSus = localStorage.getItem('idUserSus');
 const nivelUser = localStorage.getItem('ConfigNivelUser');
 
 function finalizaConsulta() {
-    retornoFinalizaCosulta.innerHTML = 'Salvando dados. Aguarde... Para visualizar e imprimir o atendimento realizado retorne ao MENU INICIAL, selecione a opção (BUSCAR USUÁRIO(A)/RELATÓRIO INDIVIDUAL, digite o cartão SUS)';
+    retornoFinalizaCosulta.innerHTML = 'Salvando dados. Aguarde...Para visualizar e imprimir o atendimento realizado retorne ao MENU INICIAL, selecione a opção Buscar usuário(a) - relatório individual/realizar atendimento subsequente';
     retornoFinalizaCosulta.style.color = 'green';
     retornoFinalizaCosulta.style.fontSize = '1.2rem';
 
