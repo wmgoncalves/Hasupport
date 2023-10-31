@@ -38,7 +38,12 @@ function insertImc() {
 function insertCircAbdom() {
     let circAbdomCm = document.querySelector('#circ-abdom-cm').value;
 
+    let cintQuadrAbdomCm = document.querySelector('#cint-quadr-abdom-cm')
+
     localStorage.setItem('circAbdomCm', circAbdomCm);
+
+    cintQuadrAbdomCm.value = circAbdomCm;
+    localStorage.setItem('cintQuadrAbdomCm', cintQuadrAbdomCm.value);
 
     console.log('Sucesso Circunferencia Abdominal:', circAbdomCm);
 
