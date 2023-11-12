@@ -7,7 +7,7 @@ async function chooseSearch() {
     console.log(option);
 
     if (option == 1) {
-        console.log("Todos usuários do SUS com Alto Risco.");
+        console.log("Usuários(as) com maior risco cardiovascular");
         window.location = "./relatorioAltoRisco.html";
     }
     else if (option == 2) {
