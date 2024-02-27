@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../../css/bootstrap-css/bootstrap.css">
   <link rel="stylesheet" href="../../../css/global.css">
   <link rel="stylesheet" href="../../../css/necessidades.css">
-  <title>HAsupport</title>
+  <title>EnfHA</title>
 </head>
 
 <body>
@@ -16,7 +16,8 @@
     <div class="menu">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -56,7 +57,8 @@
     <div class="sub-menu-necess">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -103,15 +105,25 @@
               <label for="ox-resp-prej">Padrão respiratório prejudicado</label>
             </div>
             <div>
-              <p>Intervenções de Enfermagem</p>
+              <div class="style-checkbox">
+                <input id="ox-resp-prej" type="checkbox" name="Tabagismo prévio">
+                <label for="ox-resp-prej">Tabagismo prévio</label>
+              </div>
+              <div class="style-checkbox">
+                <input id="ox-resp-prej" type="checkbox" name="Abandono ao tabagismo">
+                <label for="ox-resp-prej">Abandono ao tabagismo</label>
+              </div>
             </div>
+            <p>Intervenções de Enfermagem</p>
             <div class="style-checkbox">
-              <input id="ox-agen-retor" type="checkbox" name="Agendar retorno do(a) usuário(a) com hipertensão arterial à Unidade de Saúde, conforme avaliação e necessidade">
+              <input id="ox-agen-retor" type="checkbox"
+                name="Agendar retorno do(a) usuário(a) com hipertensão arterial à Unidade de Saúde, conforme avaliação e necessidade">
               <label for="ox-agen-retor">Agendar retorno do(a) usuário(a) com hipertensão arterial à Unidade de Saúde,
                 conforme avaliação e necessidade</label>
             </div>
             <div class="style-checkbox">
-              <input id="ox-encam-cons" type="checkbox" name="Encaminhar para consulta médica, se exame físico alterado">
+              <input id="ox-encam-cons" type="checkbox"
+                name="Encaminhar para consulta médica, se exame físico alterado">
               <label for="ox-encam-cons">Encaminhar para consulta médica, se exame físico alterado</label>
             </div>
             <div class="style-checkbox">
@@ -126,7 +138,8 @@
               <label for="ox-parar-fumar">Incentivar a parar de fumar</label>
             </div>
             <div class="style-checkbox">
-              <input id="ox-instr-encor" type="checkbox" name="Instruir e encorajar sobre oexercício respiratório (diafragmático) e a tosse eficaz">
+              <input id="ox-instr-encor" type="checkbox"
+                name="Instruir e encorajar sobre oexercício respiratório (diafragmático) e a tosse eficaz">
               <label for="ox-instr-encor">Instruir e encorajar sobre o exercício respiratório (diafragmático) e a tosse
                 eficaz</label>
             </div>
@@ -139,7 +152,8 @@
               <label for="ox-orien-habit">Orientar a manter os hábitos de respiração</label>
             </div>
             <div class="style-checkbox">
-              <input id="ox-orien-tabaco" type="checkbox" name="Orientar as complicações do tabaco para o aparelho respiratório">
+              <input id="ox-orien-tabaco" type="checkbox"
+                name="Orientar as complicações do tabaco para o aparelho respiratório">
               <label for="ox-orien-tabaco">Orientar as complicações do tabaco para o aparelho respiratório</label>
             </div>
             <div class="style-checkbox">
@@ -150,7 +164,8 @@
                 boca)</label>
             </div>
             <div class="style-checkbox">
-              <input id="ox-pesq-alter" type="checkbox" name="Pesquisar sobre alterações na respiração durante a consulta de enfermagem">
+              <input id="ox-pesq-alter" type="checkbox"
+                name="Pesquisar sobre alterações na respiração durante a consulta de enfermagem">
               <label for="ox-pesq-alter">Pesquisar sobre alterações na respiração durante a consulta de
                 enfermagem</label>
             </div>
@@ -168,20 +183,25 @@
               <input id="ox-verif-vitais" type="checkbox" name="Verificar e registrar sinais vitais">
               <label for="ox-verif-vitais">Verificar e registrar sinais vitais</label>
             </div>
-            <div>
-              <p id="retorno-oxigenacao"></p>
-            </div>
-            <div>
-              <button type="submit" id="btn-oxigenacao-salvar">Salvar</button>
-            </div>
-          </form>
+        
+        <div>
+          <p id="retorno-oxigenacao"></p>
         </div>
+        <div class="d-flex flex-row">
+          <a href="../pageNecessBiolog.html" class="botao-voltar botao-voltar-big-3">
+            VOLTAR
+          </a>
+          <button type="submit" id="btn-oxigenacao-salvar">Salvar</button>
+        </div>
+        </form>
+      </div>
       </div>
     </div>
-    <script src="../../../js/saveStorageNhb/oxigenacao.js"></script>
-    <script src="../../../js/logoutSistema.js"></script>
-    <script src="../../../js/verificaNivelUserFooter.js"></script>
-    <script src="../../../js/bootstrap-js/bootstrap.js"></script>
+  </div>
+  <script src="../../../js/saveStorageNhb/oxigenacao.js"></script>
+  <script src="../../../js/logoutSistema.js"></script>
+  <script src="../../../js/verificaNivelUserFooter.js"></script>
+  <script src="../../../js/bootstrap-js/bootstrap.js"></script>
 </body>
 
 </html>
