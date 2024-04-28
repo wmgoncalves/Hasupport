@@ -366,7 +366,7 @@ function insertEstratificacaoEtapa2() {
 function calculaImc(peso, altura) {
     let el = document.querySelector('#retorno-calculo-imc');
     let resultadoimc = document.querySelector('#retorno-calculo-imc2')
-    let result = parseInt(peso) / (parseFloat(altura) * parseFloat(altura));
+    let result = parseFloat(peso.replace(",",".")) / (parseFloat(altura.replace(",",".")) * parseFloat(altura.replace(",",".")));
     console.log(result);
     resultadoimc.innerHTML = result.toFixed(2);
     let checkimc = document.querySelector('#br-obs');

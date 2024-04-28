@@ -56,6 +56,7 @@ async function printUltimaConsulta() {
         </div>
     `;
     let indi = row.indicadores.replaceAll('\n', '<br>')
+    indi=indi.replaceAll("Não fumante","")
     let estrat = `
         <div class="info html2pdf__page-break">
             <h3>Estratificação do Risco Cardiovascular</h3>
